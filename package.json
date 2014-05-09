@@ -1,0 +1,32 @@
+{
+  "name": "simple",
+  "version": "0.1.0",
+  "description": "Yet another CSS framwork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtiam57/simple.git"
+  },
+  "keywords": [
+    "angularjs",
+    "scaffolding"
+  ],
+  "author": "Christiam Mena <christiam.mena@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xtiam57/simple/issues"
+  },
+  "homepage": "https://github.com/xtiam57/seimple",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-newer": "~0.7.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}
