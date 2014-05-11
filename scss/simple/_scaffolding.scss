@@ -1,0 +1,27 @@
+// Must be 100% for off canvas to work
+html, body { height: 100%; }
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html,
+body { font-size: $base-font-size; }
+
+// Default body styles
+body {
+  background: $body-bg;
+  color: $body-font-color;
+  padding: 0;
+  margin: 0;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-style: $body-font-style;
+  line-height: 1; // Set to $base-line-height to take on browser default of 150%
+  position: relative;
+  cursor: $cursor-default-value;
+  -moz-osx-font-smoothing: grayscale;
+}

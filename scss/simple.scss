@@ -1,6 +1,12 @@
-@import "normalize";
+@import "compass/css3";
 
-body {
-  background-color: blue;
-  color: white;
-}
+@import "simple/_mixins";
+@import "simple/_settings";
+
+@import "normalize";
+@import "simple/_scaffolding";
+
+
+@import "simple/_grid";
+@import "simple/_type";
+@import "simple/_utilities";

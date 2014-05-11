@@ -68,6 +68,7 @@ module.exports = function (grunt) {
           lineNumbers: true,
           banner: '/* the banner */',
           quiet: true,
+          compass: true,
         },
         files: {
           'css/simple.css': 'scss/simple.scss'

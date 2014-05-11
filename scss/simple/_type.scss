@@ -1,0 +1,265 @@
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+
+a {
+  color: $anchor-font-color;
+  text-decoration: $anchor-text-decoration;
+  line-height: inherit;
+
+  &:hover,
+  &:focus {
+    color: $anchor-font-color-hover;
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  img { border:none; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-style: $header-font-style;
+  color: $header-font-color;
+  text-rendering: $header-text-rendering;
+  margin-top: $header-top-margin;
+  margin-bottom: $header-bottom-margin;
+  line-height: $header-line-height;
+  word-wrap: $header-word-wrap;
+
+  small {
+    font-size: $small-font-size;
+    color: $small-font-color;
+    line-height: 0;
+  }
+}
+
+h1 { font-size: $h1-font-size - rem-calc(10); }
+h2 { font-size: $h2-font-size - rem-calc(10); }
+h3 { font-size: $h3-font-size - rem-calc(5); }
+h4 { font-size: $h4-font-size - rem-calc(5); }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+
+p {
+  font-family: $paragraph-font-family;
+  font-weight: $paragraph-font-weight;
+  font-size: $paragraph-font-size;
+  line-height: $paragraph-line-height;
+  margin-bottom: $paragraph-margin-bottom;
+  text-rendering: $paragraph-text-rendering;
+
+  &.lead {
+    font-size: $paragraph-font-size + rem-calc(3.5);
+    line-height: 1.6;
+  }
+
+  & aside {
+    font-size: $paragraph-aside-font-size;
+    line-height: $paragraph-aside-line-height;
+    font-style: $paragraph-aside-font-style;
+  }
+}
+
+
+// Background colors
+@include bg-variant('.bg-primary', $primary-color, #fff);
+@include bg-variant('.bg-secundary', $secundary-color, #fff);
+@include bg-variant('.bg-default', $default-color, inherit);
+@include bg-variant('.bg-info', $info-color, #fff);
+@include bg-variant('.bg-danger', $danger-color, #fff);
+@include bg-variant('.bg-warning', $warning-color, #fff);
+@include bg-variant('.bg-success', $success-color, #fff);
+@include bg-variant('.bg-dark', $dark-color, #fff);
+@include bg-variant('.bg-muted', $muted-color, #fff);
+@include bg-variant('.bg-white', #fff, inherit);
+
+// Text color variant
+@include color-variant('.text-primary', $primary-color);
+@include color-variant('.text-secundary', $secundary-color);
+@include color-variant('.text-default', $default-color);
+@include color-variant('.text-info', $info-color);
+@include color-variant('.text-danger', $danger-color);
+@include color-variant('.text-warning', $warning-color);
+@include color-variant('.text-success', $success-color);
+@include color-variant('.text-dark', $dark-color);
+@include color-variant('.text-muted', $muted-color);
+@include color-variant('.text-white', #fff);
+
+// Generates text align and justify classes
+.text-left    { text-align: left !important; }
+.text-right   { text-align: right !important; }
+.text-center  { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+
+
+.subheader {
+  line-height: $subheader-line-height;
+  color: $subheader-font-color;
+  font-weight: $subheader-font-weight;
+  margin-top: $subheader-top-margin;
+  margin-bottom: $subheader-bottom-margin;
+}
+
+hr {
+  border: $hr-border-style $hr-border-color;
+  border-width: $hr-border-width 0 0;
+  clear: both;
+  margin: $hr-margin 0 ($hr-margin - rem-calc($hr-border-width));
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b,
+.text-bold,
+.text-strong {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+code {
+  font-family: $code-font-family;
+  font-weight: $code-font-weight;
+  color: $code-color;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: $list-font-size;
+  line-height: $list-line-height;
+  margin-bottom: $list-margin-bottom;
+  list-style-position: $list-style-position;
+  font-family: $list-font-family;
+}
+
+ul {
+  margin-#{$default-float}: $list-side-margin;
+  &.no-bullet {
+    margin-#{$default-float}: $list-side-margin-no-bullet;
+    li {
+      ul,
+      ol {
+        margin-#{$default-float}: $list-nested-margin;
+        margin-bottom: 0;
+        list-style: none;
+      }
+    }
+  }
+}
+
+/* Unordered Lists */
+ul {
+  li {
+    ul,
+    ol {
+      margin-#{$default-float}: $list-nested-margin;
+      margin-bottom: 0;
+    }
+  }
+  &.square,
+  &.circle,
+  &.disc {
+    li ul { list-style: inherit; }
+  }
+
+  &.square { list-style-type: square; margin-#{$default-float}: $list-side-margin;}
+  &.circle { list-style-type: circle; margin-#{$default-float}: $list-side-margin;}
+  &.disc { list-style-type: disc; margin-#{$default-float}: $list-side-margin;}
+  &.no-bullet { list-style: none; }
+}
+
+/* Ordered Lists */
+ol {
+  margin-#{$default-float}: $list-ordered-side-margin;
+  li {
+    ul,
+    ol {
+      margin-#{$default-float}: $list-nested-margin;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Definition Lists */
+dl {
+  dt {
+    margin-bottom: $definition-list-header-margin-bottom;
+    font-weight: $definition-list-header-weight;
+  }
+  dd { margin-bottom: $definition-list-margin-bottom; }
+}
+
+/* Abbreviations */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: $body-font-color;
+  border-bottom: $acronym-underline;
+  cursor: $cursor-help-value;
+}
+abbr {
+  text-transform: none;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0 0 $paragraph-margin-bottom;
+  padding: $blockquote-padding;
+  border-#{$default-float}: $blockquote-border;
+
+  cite {
+    display: block;
+    font-size: $blockquote-cite-font-size;
+    color: $blockquote-cite-font-color;
+    &:before {
+      content: "\2014 \0020";
+    }
+
+    a,
+    a:visited {
+      color: $blockquote-cite-link-color;
+    }
+  }
+}
+blockquote,
+blockquote p {
+  line-height: $paragraph-line-height;
+  color: $blockquote-font-color;
+}
