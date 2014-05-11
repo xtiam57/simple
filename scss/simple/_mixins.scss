@@ -40,10 +40,10 @@ $rem-base: 16px !default;
 
 @mixin color-variant($parent, $color) {
   #{$parent} {
-    color: $color;
+    color: $color !important;
   }
   a#{$parent}:hover {
-    color: darken($color, 10%);
+    color: darken($color, 10%) !important;
   }
 }
 
@@ -58,7 +58,6 @@ $rem-base: 16px !default;
 //    `:before` to contain the top-margins of child elements.
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
-
 @mixin clearfix() {
   &:before,
   &:after {

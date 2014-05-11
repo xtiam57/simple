@@ -25,3 +25,10 @@ body {
   cursor: $cursor-default-value;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Fixing collapsing margins
+html,
+body,
+div {
+  overflow: auto;
+}

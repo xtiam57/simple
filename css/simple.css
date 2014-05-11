@@ -177,46 +177,52 @@ html, body { font-size: 100%; }
 /* line 15, ../scss/simple/_scaffolding.scss */
 body { background: white; color: #666666; padding: 0; margin: 0; font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: default; -moz-osx-font-smoothing: grayscale; }
 
+/* line 30, ../scss/simple/_scaffolding.scss */
+html, body, div { overflow: auto; }
+
 /* Typography resets */
 /* line 2, ../scss/simple/_type.scss */
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; position: relative; }
 
-/* line 25, ../scss/simple/_type.scss */
+/* line 26, ../scss/simple/_type.scss */
 a { color: #2ecc71; text-decoration: none; line-height: inherit; }
-/* line 30, ../scss/simple/_type.scss */
+/* line 31, ../scss/simple/_type.scss */
 a:hover, a:focus { color: #28af61; }
-/* line 38, ../scss/simple/_type.scss */
+/* line 39, ../scss/simple/_type.scss */
 a img { border: none; }
 
-/* line 41, ../scss/simple/_type.scss */
+/* line 42, ../scss/simple/_type.scss */
 h1, h2, h3, h4, h5, h6 { font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 1.4; word-wrap: break-word; }
-/* line 52, ../scss/simple/_type.scss */
+/* line 53, ../scss/simple/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 65%; color: #9c9c9c; line-height: 0; }
 
-/* line 59, ../scss/simple/_type.scss */
+/* line 60, ../scss/simple/_type.scss */
 h1 { font-size: 2.125rem; }
 
-/* line 60, ../scss/simple/_type.scss */
+/* line 61, ../scss/simple/_type.scss */
 h2 { font-size: 1.6875rem; }
 
-/* line 61, ../scss/simple/_type.scss */
+/* line 62, ../scss/simple/_type.scss */
 h3 { font-size: 1.375rem; }
 
-/* line 62, ../scss/simple/_type.scss */
+/* line 63, ../scss/simple/_type.scss */
 h4 { font-size: 1.125rem; }
 
-/* line 63, ../scss/simple/_type.scss */
+/* line 64, ../scss/simple/_type.scss */
 h5 { font-size: 1.125rem; }
 
-/* line 64, ../scss/simple/_type.scss */
+/* line 65, ../scss/simple/_type.scss */
 h6 { font-size: 1rem; }
 
-/* line 66, ../scss/simple/_type.scss */
+/* line 67, ../scss/simple/_type.scss */
 p { font-family: inherit; font-weight: normal; font-size: 1rem; line-height: 1.428; margin-bottom: 1.25rem; text-rendering: optimizeLegibility; }
-/* line 74, ../scss/simple/_type.scss */
+/* line 75, ../scss/simple/_type.scss */
 p.lead { font-size: 1.21875rem; line-height: 1.6; }
-/* line 79, ../scss/simple/_type.scss */
+/* line 80, ../scss/simple/_type.scss */
 p aside { font-size: 0.875rem; line-height: 1.35; font-style: italic; }
+
+/* line 88, ../scss/simple/_type.scss */
+div p:last-child { margin-bottom: 0; }
 
 /* line 29, ../scss/simple/_mixins.scss */
 .bg-primary { background-color: #2ecc71; color: white; }
@@ -279,151 +285,151 @@ a.bg-muted:hover { background-color: gray; color: #e6e6e6; }
 a.bg-white:hover { background-color: #e6e6e6; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-primary { color: #2ecc71; }
+.text-primary { color: #2ecc71 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-primary:hover { color: #25a25a; }
+a.text-primary:hover { color: #25a25a !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-secundary { color: #333333; }
+.text-secundary { color: #333333 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-secundary:hover { color: #1a1a1a; }
+a.text-secundary:hover { color: #1a1a1a !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-default { color: #f2f2f2; }
+.text-default { color: #f2f2f2 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-default:hover { color: #d8d8d8; }
+a.text-default:hover { color: #d8d8d8 !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-info { color: #00a9ec; }
+.text-info { color: #00a9ec !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-info:hover { color: #0084b9; }
+a.text-info:hover { color: #0084b9 !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-danger { color: #e51400; }
+.text-danger { color: #e51400 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-danger:hover { color: #b21000; }
+a.text-danger:hover { color: #b21000 !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-warning { color: #e76f00; }
+.text-warning { color: #e76f00 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-warning:hover { color: #b45600; }
+a.text-warning:hover { color: #b45600 !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-success { color: #339933; }
+.text-success { color: #339933 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-success:hover { color: #267326; }
+a.text-success:hover { color: #267326 !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-dark { color: #2c3e50; }
+.text-dark { color: #2c3e50 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-dark:hover { color: #1a242f; }
+a.text-dark:hover { color: #1a242f !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-muted { color: #999999; }
+.text-muted { color: #999999 !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-muted:hover { color: gray; }
+a.text-muted:hover { color: gray !important; }
 
 /* line 42, ../scss/simple/_mixins.scss */
-.text-white { color: white; }
+.text-white { color: white !important; }
 
 /* line 45, ../scss/simple/_mixins.scss */
-a.text-white:hover { color: #e6e6e6; }
-
-/* line 112, ../scss/simple/_type.scss */
-.text-left { text-align: left !important; }
-
-/* line 113, ../scss/simple/_type.scss */
-.text-right { text-align: right !important; }
-
-/* line 114, ../scss/simple/_type.scss */
-.text-center { text-align: center !important; }
-
-/* line 115, ../scss/simple/_type.scss */
-.text-justify { text-align: justify !important; }
+a.text-white:hover { color: #e6e6e6 !important; }
 
 /* line 118, ../scss/simple/_type.scss */
+.text-left { text-align: left !important; }
+
+/* line 119, ../scss/simple/_type.scss */
+.text-right { text-align: right !important; }
+
+/* line 120, ../scss/simple/_type.scss */
+.text-center { text-align: center !important; }
+
+/* line 121, ../scss/simple/_type.scss */
+.text-justify { text-align: justify !important; }
+
+/* line 123, ../scss/simple/_type.scss */
 .subheader { line-height: 1.4; color: #6f6f6f; font-weight: normal; margin-top: 0.2rem; margin-bottom: 0.5rem; }
 
-/* line 126, ../scss/simple/_type.scss */
+/* line 131, ../scss/simple/_type.scss */
 hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25rem 0 1.1875rem; height: 0; }
 
 /* Helpful Typography Defaults */
-/* line 135, ../scss/simple/_type.scss */
+/* line 140, ../scss/simple/_type.scss */
 em, i { font-style: italic; line-height: inherit; }
 
-/* line 141, ../scss/simple/_type.scss */
+/* line 146, ../scss/simple/_type.scss */
 strong, b, .text-bold, .text-strong { font-weight: bold; line-height: inherit; }
 
-/* line 149, ../scss/simple/_type.scss */
+/* line 154, ../scss/simple/_type.scss */
 small { font-size: 65%; line-height: inherit; }
 
-/* line 154, ../scss/simple/_type.scss */
+/* line 159, ../scss/simple/_type.scss */
 code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #a95100; }
 
 /* Lists */
-/* line 161, ../scss/simple/_type.scss */
+/* line 166, ../scss/simple/_type.scss */
 ul, ol, dl { font-size: 1rem; line-height: 1.428; margin-bottom: 1.25rem; list-style-position: outside; font-family: inherit; }
 
-/* line 171, ../scss/simple/_type.scss */
-ul { margin-left: 1.1rem; }
-/* line 173, ../scss/simple/_type.scss */
-ul.no-bullet { margin-left: 0; }
 /* line 176, ../scss/simple/_type.scss */
+ul { margin-left: 1.1rem; }
+/* line 178, ../scss/simple/_type.scss */
+ul.no-bullet { margin-left: 0; }
+/* line 181, ../scss/simple/_type.scss */
 ul.no-bullet li ul, ul.no-bullet li ol { margin-left: 1.25rem; margin-bottom: 0; list-style: none; }
 
 /* Unordered Lists */
-/* line 189, ../scss/simple/_type.scss */
+/* line 194, ../scss/simple/_type.scss */
 ul li ul, ul li ol { margin-left: 1.25rem; margin-bottom: 0; }
-/* line 198, ../scss/simple/_type.scss */
-ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
-/* line 201, ../scss/simple/_type.scss */
-ul.square { list-style-type: square; margin-left: 1.1rem; }
-/* line 202, ../scss/simple/_type.scss */
-ul.circle { list-style-type: circle; margin-left: 1.1rem; }
 /* line 203, ../scss/simple/_type.scss */
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+/* line 206, ../scss/simple/_type.scss */
+ul.square { list-style-type: square; margin-left: 1.1rem; }
+/* line 207, ../scss/simple/_type.scss */
+ul.circle { list-style-type: circle; margin-left: 1.1rem; }
+/* line 208, ../scss/simple/_type.scss */
 ul.disc { list-style-type: disc; margin-left: 1.1rem; }
-/* line 204, ../scss/simple/_type.scss */
+/* line 209, ../scss/simple/_type.scss */
 ul.no-bullet { list-style: none; }
 
 /* Ordered Lists */
-/* line 208, ../scss/simple/_type.scss */
+/* line 213, ../scss/simple/_type.scss */
 ol { margin-left: 1.4rem; }
-/* line 211, ../scss/simple/_type.scss */
+/* line 216, ../scss/simple/_type.scss */
 ol li ul, ol li ol { margin-left: 1.25rem; margin-bottom: 0; }
 
 /* Definition Lists */
-/* line 221, ../scss/simple/_type.scss */
+/* line 226, ../scss/simple/_type.scss */
 dl dt { margin-bottom: 0.3rem; font-weight: bold; }
-/* line 225, ../scss/simple/_type.scss */
+/* line 230, ../scss/simple/_type.scss */
 dl dd { margin-bottom: 0.75rem; }
 
 /* Abbreviations */
-/* line 229, ../scss/simple/_type.scss */
+/* line 234, ../scss/simple/_type.scss */
 abbr, acronym { text-transform: uppercase; font-size: 90%; color: #666666; border-bottom: 1px dotted #dddddd; cursor: help; }
 
-/* line 237, ../scss/simple/_type.scss */
+/* line 242, ../scss/simple/_type.scss */
 abbr { text-transform: none; }
 
 /* Blockquotes */
-/* line 242, ../scss/simple/_type.scss */
-blockquote { margin: 0 0 1.25rem; padding: 0.5625rem 1.25rem 0 1.1875rem; border-left: 1px solid #dddddd; }
 /* line 247, ../scss/simple/_type.scss */
+blockquote { margin: 0 0 1.25rem; padding: 0.5625rem 1.25rem 0 1.1875rem; border-left: 1px solid #dddddd; }
+/* line 252, ../scss/simple/_type.scss */
 blockquote cite { display: block; font-size: 0.8125rem; color: #555555; }
-/* line 251, ../scss/simple/_type.scss */
+/* line 256, ../scss/simple/_type.scss */
 blockquote cite:before { content: "\2014 \0020"; }
-/* line 255, ../scss/simple/_type.scss */
+/* line 260, ../scss/simple/_type.scss */
 blockquote cite a, blockquote cite a:visited { color: #555555; }
 
-/* line 261, ../scss/simple/_type.scss */
+/* line 266, ../scss/simple/_type.scss */
 blockquote, blockquote p { line-height: 1.428; color: #6f6f6f; }
 
 /* line 1, ../scss/simple/_utilities.scss */
@@ -435,7 +441,7 @@ blockquote, blockquote p { line-height: 1.428; color: #6f6f6f; }
 /* line 9, ../scss/simple/_utilities.scss */
 .center-block { display: block; margin-left: auto; margin-right: auto; }
 
-/* line 63, ../scss/simple/_mixins.scss */
+/* line 62, ../scss/simple/_mixins.scss */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
-/* line 68, ../scss/simple/_mixins.scss */
+/* line 67, ../scss/simple/_mixins.scss */
 .clearfix:after { clear: both; }
