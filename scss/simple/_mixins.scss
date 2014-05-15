@@ -24,29 +24,6 @@ $rem-base: 16px !default;
   @return $num / ($num * 0 + 1);
 }
 
-// color variants
-@mixin bg-variant($parent, $bg-color, $color) {
-  #{$parent} {
-    background-color: $bg-color;
-    color: $color;
-  }
-  a#{$parent}:hover {
-    background-color: darken($bg-color, 10%);
-    @if ($color != inherit) {
-      color: darken($color, 10%);
-    }
-  }
-}
-
-@mixin color-variant($parent, $color) {
-  #{$parent} {
-    color: $color !important;
-  }
-  a#{$parent}:hover {
-    color: darken($color, 10%) !important;
-  }
-}
-
 // Clearfix
 //
 // For modern browsers

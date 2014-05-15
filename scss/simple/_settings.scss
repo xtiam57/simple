@@ -8,7 +8,7 @@ $body-font-style: normal;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-$base-font-size: 100% !default;
+$base-font-size: 16px !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
 $base-line-height: 150% !default;
@@ -23,25 +23,35 @@ $default-float: left;
 
 // We use these as default colors throughout
 $primary-color: #2ecc71 !default;
-$secundary-color: #333 !default;
+$primary-contrast-color: #fff !default;
+
+$secundary-color: #2c3e50 !default;
+$secundary-contrast-color: #fff !default;
+
 $default-color: #f2f2f2 !default;
+$default-contrast-color: $body-font-color !default;
+
 $info-color: #00A9EC !default;
-$danger-color: #E51400 !default;
+$info-contrast-color: #fff !default;
+
+$danger-color: #cf280e !default;
+$danger-contrast-color: #fff !default;
+
 $warning-color: #E76F00 !default;
-$success-color: #339933 !default;
-$dark-color: #2c3e50 !default;
-$muted-color: #999 !default;
+$warning-contrast-color: #fff !default;
+
+$success-color: #2ecc71 !default;
+$success-contrast-color: #fff !default;
+
+$dark-color: #111 !default;
+$dark-contrast-color: #fff !default;
+
+$muted-color: #bbb !default;
+$muted-contrast-color: #fff !default;
 
 // We use these to make sure border radius matches unless we want it different.
-$global-radius: 3px;
+$global-radius: 5px;
 $global-rounded: 1000px;
-
-// Media Query Ranges
-$small-range: (0em, 40em);
-$medium-range: (40.063em, 64em);
-$large-range: (64.063em, 90em);
-$xlarge-range: (90.063em, 120em);
-$xxlarge-range: (120.063em, 99999999em);
 
 // We use these to control header font styles
 $header-font-family: $body-font-family;
@@ -77,7 +87,7 @@ $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 $small-font-size: 65%;
-$small-font-color: scale-color($header-font-color, $lightness: 55%);
+$small-font-color: #999;
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit;
@@ -85,15 +95,23 @@ $paragraph-font-weight: normal;
 $paragraph-font-size: 1rem;
 $paragraph-line-height: 1.428;
 $paragraph-margin-bottom: rem-calc(20);
-$paragraph-aside-font-size: rem-calc(14);
-$paragraph-aside-line-height: 1.35;
-$paragraph-aside-font-style: italic;
 $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
 $code-color: scale-color($warning-color, $lightness: -27%);
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: bold;
+
+// We use these to style <pre> tags
+$pre-color: scale-color($warning-color, $lightness: -27%);
+$pre-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$pre-font-weight: normal;
+$pre-display: block;
+$pre-padding: rem-calc(15);
+$pre-margin: 0;
+$pre-line-height: $paragraph-line-height;
+$pre-bg: #f2f2f2;
+$pre-border-color: #ddd;
 
 // We use these to style anchors
 $anchor-text-decoration: none;
@@ -121,6 +139,24 @@ $definition-list-header-weight: bold;
 $definition-list-header-margin-bottom: .3rem;
 $definition-list-margin-bottom: rem-calc(12);
 
+// We use this to control the margins and padding of the inline list.
+$inline-list-top-margin: 0;
+$inline-list-opposite-margin: 0;
+$inline-list-bottom-margin: rem-calc(17);
+$inline-list-default-float-margin: rem-calc(-22);
+$inline-list-default-float-list-margin: rem-calc(22);
+
+$inline-list-padding: 0;
+
+// We use this to control the overflow of the inline list.
+$inline-list-overflow: hidden;
+
+// We use this to control the list items
+$inline-list-display: block;
+
+// We use this to control any elments within list items
+$inline-list-children-display: block;
+
 // We use these to style blockquotes
 $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
 $blockquote-padding: rem-calc(9 20 0 19);
@@ -133,8 +169,8 @@ $blockquote-cite-link-color: $blockquote-cite-font-color;
 $acronym-underline: 1px dotted #ddd;
 
 // We use these to control padding and margin
-// $microformat-padding: rem-calc(10 12);
-// $microformat-margin: rem-calc(0 0 20 0);
+$global-padding: rem-calc(10 12);
+$global-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
 // $microformat-border-width: 1px;
@@ -148,3 +184,124 @@ $cursor-default-value: default !default;
 $cursor-pointer-value: pointer !default;
 $cursor-help-value: help !default;
 $cursor-text-value: text !default;
+
+
+
+
+
+
+//== Media queries breakpoints
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1300px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// xLarge screen / HD desktop
+$screen-xlg:                  1900px !default;
+$screen-xlg-min:              $screen-xlg !default;
+$screen-xlg-desktop:          $screen-xlg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xlg-min - 1) !default;
+
+//== Grid system
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         20px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+
+// Small screen / tablet
+$container-tablet:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            ((940px + $grid-gutter-width)) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1240px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+// xLarge screen / HD desktop
+$container-xlarge-desktop:      ((1860px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-xlg:                 $container-xlarge-desktop !default;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em, 99999999em);
+
+$column-gutter: rem-calc(30) !default;
+$total-columns: 12 !default;
+
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+
+// Legacy
+$small: $medium-up;
+$medium: $medium-up;
+$large: $large-up;

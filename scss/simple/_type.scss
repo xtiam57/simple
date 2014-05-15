@@ -1,3 +1,26 @@
+// color variants
+@mixin bg-variant($parent, $bg-color, $color) {
+  #{$parent} {
+    background-color: $bg-color;
+    color: $color;
+  }
+  a#{$parent}:hover {
+    background-color: darken($bg-color, 10%);
+    @if ($color != inherit) {
+      color: darken($color, 10%);
+    }
+  }
+}
+
+@mixin color-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+  a#{$parent}:hover {
+    color: darken($color, 10%) !important;
+  }
+}
+
 /* Typography resets */
 div,
 dl,
@@ -55,6 +78,14 @@ h1, h2, h3, h4, h5, h6 {
     color: $small-font-color;
     line-height: 0;
   }
+
+  &.subheader {
+    line-height: $subheader-line-height;
+    color: $subheader-font-color;
+    font-weight: $subheader-font-weight;
+    margin-top: $subheader-top-margin;
+    margin-bottom: $subheader-bottom-margin;
+  }
 }
 
 h1 { font-size: $h1-font-size - rem-calc(10); }
@@ -76,31 +107,19 @@ p {
     font-size: $paragraph-font-size + rem-calc(3.5);
     line-height: 1.6;
   }
-
-  & aside {
-    font-size: $paragraph-aside-font-size;
-    line-height: $paragraph-aside-line-height;
-    font-style: $paragraph-aside-font-style;
-  }
-}
-
-div {
-  p:last-child {
-    margin-bottom: 0;
-  }
 }
 
 // Background colors
-@include bg-variant('.bg-primary', $primary-color, #fff);
-@include bg-variant('.bg-secundary', $secundary-color, #fff);
-@include bg-variant('.bg-default', $default-color, inherit);
-@include bg-variant('.bg-info', $info-color, #fff);
-@include bg-variant('.bg-danger', $danger-color, #fff);
-@include bg-variant('.bg-warning', $warning-color, #fff);
-@include bg-variant('.bg-success', $success-color, #fff);
-@include bg-variant('.bg-dark', $dark-color, #fff);
-@include bg-variant('.bg-muted', $muted-color, #fff);
-@include bg-variant('.bg-white', #fff, inherit);
+@include bg-variant('.background-primary', $primary-color, $primary-contrast-color);
+@include bg-variant('.background-secundary', $secundary-color, $secundary-contrast-color);
+@include bg-variant('.background-default', $default-color, $default-contrast-color);
+@include bg-variant('.background-info', $info-color, $info-contrast-color);
+@include bg-variant('.background-danger', $danger-color, $danger-contrast-color);
+@include bg-variant('.background-warning', $warning-color, $warning-contrast-color);
+@include bg-variant('.background-success', $success-color, $success-contrast-color);
+@include bg-variant('.background-dark', $dark-color, $dark-contrast-color);
+@include bg-variant('.background-muted', $muted-color, $muted-contrast-color);
+@include bg-variant('.background-white', #fff, inherit);
 
 // Text color variant
 @include color-variant('.text-primary', $primary-color);
@@ -119,14 +138,6 @@ div {
 .text-right   { text-align: right !important; }
 .text-center  { text-align: center !important; }
 .text-justify { text-align: justify !important; }
-
-.subheader {
-  line-height: $subheader-line-height;
-  color: $subheader-font-color;
-  font-weight: $subheader-font-weight;
-  margin-top: $subheader-top-margin;
-  margin-bottom: $subheader-bottom-margin;
-}
 
 hr {
   border: $hr-border-style $hr-border-color;
@@ -160,6 +171,26 @@ code {
   font-family: $code-font-family;
   font-weight: $code-font-weight;
   color: $code-color;
+}
+
+// Blocks of code
+pre {
+  font-family: $pre-font-family;
+  font-weight: $pre-font-weight;
+  color: $pre-color;
+  display: $pre-display;
+  padding: $pre-padding;
+  margin: $pre-margin;
+  line-height: $pre-line-height;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    white-space: pre-wrap;
+  }
 }
 
 /* Lists */
@@ -221,6 +252,27 @@ ol {
   }
 }
 
+/* Inline list */
+ul,
+ol {
+  &.inline-list {
+    margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
+    margin-#{$default-float}: $inline-list-default-float-margin;
+    margin-#{$opposite-direction}: $inline-list-opposite-margin;
+    padding: $inline-list-padding;
+    list-style: none;
+    overflow: $inline-list-overflow;
+
+    & > li {
+      list-style: none;
+      float: $default-float;
+      margin-#{$default-float}: $inline-list-default-float-list-margin;
+      display: $inline-list-display;
+      &>* { display: $inline-list-children-display; }
+    }
+  }
+}
+
 /* Definition Lists */
 dl {
   dt {
@@ -260,6 +312,16 @@ blockquote {
     a,
     a:visited {
       color: $blockquote-cite-link-color;
+    }
+  }
+
+  &.right {
+    border-#{$default-float}: none;
+    border-#{$opposite-direction}: $blockquote-border;
+    text-align: $opposite-direction;
+
+    cite {
+      text-align: $opposite-direction;
     }
   }
 }

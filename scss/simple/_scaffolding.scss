@@ -28,7 +28,10 @@ body {
 
 // Fixing collapsing margins
 html,
-body,
-div {
+body {
   overflow: auto;
+}
+
+div {
+  overflow: hidden;
 }
