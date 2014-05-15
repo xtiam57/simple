@@ -1,9 +1,15 @@
+// +++++
 // Scaffolding
+// +++++
 $body-bg: #FFF;
 $body-font-color: #666;
 $body-font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
@@ -20,6 +26,27 @@ $font-smoothing: antialiased;
 $text-direction: ltr;
 $opposite-direction: right;
 $default-float: left;
+
+// We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
+$cursor-crosshair-value: crosshair !default;
+$cursor-default-value: default !default;
+$cursor-pointer-value: pointer !default;
+$cursor-help-value: help !default;
+$cursor-text-value: text !default;
+
+
+// +++++
+// Utilities
+// +++++
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 5px;
+$global-rounded: 1000px;
+
+
+// +++++
+// Type
+// +++++
 
 // We use these as default colors throughout
 $primary-color: #2ecc71 !default;
@@ -48,10 +75,6 @@ $dark-contrast-color: #fff !default;
 
 $muted-color: #bbb !default;
 $muted-contrast-color: #fff !default;
-
-// We use these to make sure border radius matches unless we want it different.
-$global-radius: 5px;
-$global-rounded: 1000px;
 
 // We use these to control header font styles
 $header-font-family: $body-font-family;
@@ -98,17 +121,17 @@ $paragraph-margin-bottom: rem-calc(20);
 $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-$code-color: scale-color($warning-color, $lightness: -27%);
+$code-color: scale-color($danger-color, $lightness: -27%);
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: bold;
 
 // We use these to style <pre> tags
-$pre-color: scale-color($warning-color, $lightness: -27%);
+$pre-color: scale-color($danger-color, $lightness: -27%);
 $pre-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $pre-font-weight: normal;
 $pre-display: block;
 $pre-padding: rem-calc(15);
-$pre-margin: 0;
+$pre-margin-bottom: rem-calc(20);
 $pre-line-height: $paragraph-line-height;
 $pre-bg: #f2f2f2;
 $pre-border-color: #ddd;
@@ -169,8 +192,8 @@ $blockquote-cite-link-color: $blockquote-cite-font-color;
 $acronym-underline: 1px dotted #ddd;
 
 // We use these to control padding and margin
-$global-padding: rem-calc(10 12);
-$global-margin: rem-calc(0 0 20 0);
+// $global-padding: rem-calc(10 12);
+// $global-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
 // $microformat-border-width: 1px;
@@ -178,19 +201,57 @@ $global-margin: rem-calc(0 0 20 0);
 // $microformat-border-color: #ddd;
 
 
-// We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
-$cursor-crosshair-value: crosshair !default;
-$cursor-default-value: default !default;
-$cursor-pointer-value: pointer !default;
-$cursor-help-value: help !default;
-$cursor-text-value: text !default;
+// +++++
+// Buttons
+// +++++
+
+// We use these to build padding for buttons.
+$button-xs: rem-calc(10) !default;
+$button-sm: rem-calc(14) !default;
+$button-md: rem-calc(16) !default;
+$button-lg: rem-calc(18) !default;
+$button-default: rem-calc(10 18) !default;
+
+// We use this to control the display property.
+$button-display: inline-block !default;
+$button-margin-bottom: rem-calc(20) !default;
+$button-cursor: $cursor-pointer-value !default;
+
+// We use these to control button text styles.
+$button-font-family: $body-font-family !default;
+$button-font-color: #fff !default;
+$button-font-color-alt: #333 !default;
+$button-font-xs: rem-calc(11) !default;
+$button-font-sm: rem-calc(13) !default;
+$button-font-md: rem-calc(16) !default;
+$button-font-lg: rem-calc(20) !default;
+$button-font-default: rem-calc($base-font-size - 2) !default;
+$button-font-weight: $font-weight-normal !default;
+$button-font-align: center !default;
+
+// We use these to control various hover effects.
+$button-function-factor: 10% !default;
+
+// We use these to control button border styles.
+$button-border-width: 1px !default;
+$button-border-style: solid !default;
+$button-bg: $primary-color !default;
+
+// We use this to set the default radius used throughout the core.
+$button-radius: $global-radius !default;
+$button-round: $global-rounded !default;
+
+// We use this to set default opacity for disabled buttons.
+$button-disabled-opacity: 0.7 !default;
 
 
 
 
 
 
-//== Media queries breakpoints
+// +++++
+// Media queries breakpoints
+// +++++
 
 // Extra small screen / phone
 $screen-xs:                  480px !default;
@@ -223,7 +284,10 @@ $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 $screen-lg-max:              ($screen-xlg-min - 1) !default;
 
-//== Grid system
+
+// +++++
+// Grid System
+// +++++
 
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
@@ -234,9 +298,6 @@ $grid-gutter-width:         20px !default;
 $grid-float-breakpoint:     $screen-sm-min !default;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
-
-
-//== Container sizes
 
 // Small screen / tablet
 $container-tablet:             ((720px + $grid-gutter-width)) !default;

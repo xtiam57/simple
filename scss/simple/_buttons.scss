@@ -1,0 +1,54 @@
+@mixin button-variant($bg, $color, $function-factor: $button-function-factor) {
+  color: $color;
+  border-color: darken($bg, $function-factor * 0.5);
+  background-color: $bg;
+
+  &:hover,
+  &:focus {
+    background-color: darken($bg, $function-factor);
+    border-color: darken($bg, $function-factor * 1.1);
+  }
+
+  &.outline {
+    color: $bg;
+    border-color: $bg;
+    background-color: $color;
+
+    &:hover,
+    &:focus {
+      background-color: $bg;
+      border-color: darken($bg, $function-factor * 1.1);
+      color: $color;
+    }
+  }
+}
+
+button,
+.button {
+  padding: $button-default;
+  margin-bottom: $button-margin-bottom;
+  display: $button-display;
+  font-size: $button-font-default;
+  border-width: $button-border-width;
+  border-style: $button-border-style;
+  white-space: nowrap;
+  font-weight: $button-font-weight;
+  text-align: $button-font-align;
+  cursor: $button-cursor;
+
+  @include button-variant($button-bg, $button-font-color);
+
+  @include single-transition(all);
+
+  &.secundary { @include button-variant($secundary-color, $secundary-contrast-color); }
+  &.default   { @include button-variant($default-color, $default-contrast-color); }
+  &.info      { @include button-variant($info-color, $info-contrast-color); }
+  &.danger    { @include button-variant($danger-color, $danger-contrast-color); }
+  &.warning   { @include button-variant($warning-color, $warning-contrast-color); }
+  &.success   { @include button-variant($success-color, $success-contrast-color); }
+  &.dark      { @include button-variant($dark-color, $dark-contrast-color); }
+  &.muted     { @include button-variant($muted-color, $muted-contrast-color); }
+
+
+
+}

@@ -180,7 +180,7 @@ pre {
   color: $pre-color;
   display: $pre-display;
   padding: $pre-padding;
-  margin: $pre-margin;
+  margin: 0 0 $pre-margin-bottom;
   line-height: $pre-line-height;
   word-break: break-all;
   word-wrap: break-word;
