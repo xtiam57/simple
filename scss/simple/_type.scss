@@ -1,26 +1,3 @@
-// color variants
-@mixin bg-variant($parent, $bg-color, $color) {
-  #{$parent} {
-    background-color: $bg-color;
-    color: $color;
-  }
-  a#{$parent}:hover {
-    background-color: darken($bg-color, 10%);
-    @if ($color != inherit) {
-      color: darken($color, 10%);
-    }
-  }
-}
-
-@mixin color-variant($parent, $color) {
-  #{$parent} {
-    color: $color !important;
-  }
-  a#{$parent}:hover {
-    color: darken($color, 10%) !important;
-  }
-}
-
 /* Typography resets */
 div,
 dl,
@@ -41,8 +18,8 @@ p,
 blockquote,
 th,
 td {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -50,6 +27,7 @@ a {
   color: $anchor-font-color;
   text-decoration: $anchor-text-decoration;
   line-height: inherit;
+  @include single-transition(color, .25s);
 
   &:hover,
   &:focus {
@@ -68,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: $header-font-style;
   color: $header-font-color;
   text-rendering: $header-text-rendering;
-  margin-top: $header-top-margin;
-  margin-bottom: $header-bottom-margin;
+  @include rem(margin-top, $header-top-margin);
+  @include rem(margin-bottom, $header-bottom-margin);
   line-height: $header-line-height;
   word-wrap: $header-word-wrap;
 
@@ -83,60 +61,48 @@ h1, h2, h3, h4, h5, h6 {
     line-height: $subheader-line-height;
     color: $subheader-font-color;
     font-weight: $subheader-font-weight;
-    margin-top: $subheader-top-margin;
-    margin-bottom: $subheader-bottom-margin;
+    @include rem(margin-top, $subheader-top-margin);
+    @include rem(margin-bottom, $subheader-bottom-margin);
   }
 
-  &.xlarge-header { @include rem(font-size, $xlarge-font-size); }
-  &.xxlarge-header { @include rem(font-size, $xxlarge-font-size); }
+  &.xlarge-header {
+    @include rem(font-size, $xlarge-font-size);
+    letter-spacing: $xlarge-letter-spacing;
+  }
+
+  &.xxlarge-header {
+    @include rem(font-size, $xxlarge-font-size);
+    letter-spacing: $xxlarge-letter-spacing;
+  }
 }
 
-h1 { @include rem(font-size, $h1-font-size); }
-h2 { @include rem(font-size, $h2-font-size); }
-h3 { @include rem(font-size, $h3-font-size); }
-h4 { @include rem(font-size, $h4-font-size); }
-h5 { @include rem(font-size, $h5-font-size); }
-h6 { @include rem(font-size, $h6-font-size); }
-
+h1 { @include rem(font-size, $h1-font-size); letter-spacing: $h1-letter-spacing; }
+h2 { @include rem(font-size, $h2-font-size); letter-spacing: $h2-letter-spacing; }
+h3 { @include rem(font-size, $h3-font-size); letter-spacing: $h3-letter-spacing; }
+h4 { @include rem(font-size, $h4-font-size); letter-spacing: $h4-letter-spacing; }
+h5 { @include rem(font-size, $h5-font-size); letter-spacing: $h5-letter-spacing; }
+h6 { @include rem(font-size, $h6-font-size); letter-spacing: $h6-letter-spacing; }
 
 p {
   font-family: $paragraph-font-family;
   font-weight: $paragraph-font-weight;
-  font-size: $paragraph-font-size;
+  @include rem(font-size, $paragraph-font-size);
   line-height: $paragraph-line-height;
-  margin-bottom: $paragraph-margin-bottom;
+  @include rem(margin-bottom, $paragraph-margin-bottom);
   text-rendering: $paragraph-text-rendering;
+  color: $paragraph-font-color;
 
   &.lead {
     @include rem(font-size, $paragraph-font-size * ($lead-scale / 100%));
     line-height: $lead-line-height;
+    color: $lead-font-color;
   }
 }
 
-// Background colors
-@include bg-variant('.background-primary', $primary-color, $primary-contrast-color);
-@include bg-variant('.background-default', $default-color, $default-contrast-color);
-@include bg-variant('.background-info', $info-color, $info-contrast-color);
-@include bg-variant('.background-danger', $danger-color, $danger-contrast-color);
-@include bg-variant('.background-warning', $warning-color, $warning-contrast-color);
-@include bg-variant('.background-success', $success-color, $success-contrast-color);
-@include bg-variant('.background-dark', $dark-color, $dark-contrast-color);
-@include bg-variant('.background-white', #fff, inherit);
-
-// Text color variant
-@include color-variant('.text-primary', $primary-color);
-@include color-variant('.text-default', $default-color);
-@include color-variant('.text-info', $info-color);
-@include color-variant('.text-danger', $danger-color);
-@include color-variant('.text-warning', $warning-color);
-@include color-variant('.text-success', $success-color);
-@include color-variant('.text-dark', $dark-color);
-@include color-variant('.text-white', #fff);
-
 // Generates text align and justify classes
-.text-left    { text-align: left !important; }
-.text-right   { text-align: right !important; }
-.text-center  { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
 .text-justify { text-align: justify !important; }
 
 hr {
@@ -171,8 +137,8 @@ code {
   font-family: $code-font-family;
   font-weight: $code-font-weight;
   color: $code-color;
-  padding: 2px 4px;
-  font-size: 90%;
+  @include rem(padding, $code-padding);
+  @include rem(font-size, $base-font-size);
   background-color: $code-bg;
 }
 
@@ -182,8 +148,8 @@ pre {
   font-weight: $pre-font-weight;
   color: $pre-color;
   display: $pre-display;
-  padding: $pre-padding;
-  margin: 0 0 $pre-margin-bottom;
+  @include rem(padding, $pre-padding);
+  @include rem(margin, 0 0 $pre-margin-bottom);
   line-height: $pre-line-height;
   word-break: break-all;
   word-wrap: break-word;
@@ -200,17 +166,17 @@ pre {
 ul,
 ol,
 dl {
-  font-size: $list-font-size;
+  @include rem(font-size, $list-font-size);
   line-height: $list-line-height;
-  margin-bottom: $list-margin-bottom;
+  @include rem(margin-bottom, $list-margin-bottom);
   list-style-position: $list-style-position;
   font-family: $list-font-family;
 }
 
 ul {
-  margin-#{$default-float}: $list-side-margin;
+  @include rem(margin-#{$default-float}, $list-side-margin);
   &.no-bullet {
-    margin-#{$default-float}: $list-side-margin-no-bullet;
+    @include rem(margin-#{$default-float}, $list-side-margin-no-bullet);
     li {
       ul,
       ol {
@@ -237,15 +203,15 @@ ul {
     li ul { list-style: inherit; }
   }
 
-  &.square { list-style-type: square; margin-#{$default-float}: $list-side-margin;}
-  &.circle { list-style-type: circle; margin-#{$default-float}: $list-side-margin;}
-  &.disc { list-style-type: disc; margin-#{$default-float}: $list-side-margin;}
+  &.square { list-style-type: square; @include rem(margin-#{$default-float}, $list-side-margin); }
+  &.circle { list-style-type: circle; @include rem(margin-#{$default-float}, $list-side-margin); }
+  &.disc { list-style-type: disc; @include rem(margin-#{$default-float}, $list-side-margin); }
   &.no-bullet { list-style: none; }
 }
 
 /* Ordered Lists */
 ol {
-  margin-#{$default-float}: $list-ordered-side-margin;
+  @include rem(margin-#{$default-float}, $list-ordered-side-margin);
   li {
     ul,
     ol {
@@ -261,13 +227,13 @@ ol {
   &.inline-list {
     @include rem(margin, $inline-list-top-margin auto $inline-list-bottom-margin auto);
     @include rem(margin-#{$default-float}, $inline-list-default-float-margin);
-    margin-#{$opposite-direction}: $inline-list-opposite-margin;
-    padding: $inline-list-padding;
+    @include rem(margin-#{$opposite-direction}, $inline-list-opposite-margin);
+    @include rem(padding, $inline-list-padding);
     list-style: none;
     overflow: $inline-list-overflow;
 
     & > li {
-      padding: $inline-list-children-padding;
+      @include rem(padding, $inline-list-children-padding);
       list-style: none;
       float: $default-float;
       @include rem(margin-#{$default-float}, $inline-list-default-float-list-margin);
@@ -280,7 +246,7 @@ ol {
 /* Definition Lists */
 dl {
   dt {
-    margin-bottom: $definition-list-header-margin-bottom;
+    @include rem(margin-bottom, $definition-list-header-margin-bottom);
     font-weight: $definition-list-header-weight;
   }
   dd { @include rem(margin-bottom, $definition-list-margin-bottom); }
@@ -290,7 +256,7 @@ dl {
 abbr,
 acronym {
   text-transform: uppercase;
-  font-size: 90%;
+  font-size: $acronym-font-size;
   color: $body-font-color;
   border-bottom: $acronym-underline;
   cursor: $cursor-help-value;
@@ -301,7 +267,7 @@ abbr {
 
 /* Blockquotes */
 blockquote {
-  margin: 0 0 $paragraph-margin-bottom;
+  @include rem(margin, 0 0 $paragraph-margin-bottom);
   @include rem(padding, $blockquote-padding);
   border-#{$default-float}: $blockquote-border;
 
@@ -334,3 +300,23 @@ blockquote p {
   line-height: $paragraph-line-height;
   color: $blockquote-font-color;
 }
+
+// Background colors
+.bg-primary { @include bg-variant($primary-color); }
+.bg-secundary { @include bg-variant($secundary-color); }
+.bg-default { @include bg-variant($default-color); }
+.bg-info { @include bg-variant($info-color); }
+.bg-danger { @include bg-variant($danger-color); }
+.bg-warning { @include bg-variant($warning-color); }
+.bg-success { @include bg-variant($success-color); }
+.bg-white { @include bg-variant(#fff); }
+
+// // Text color variant
+.text-primary { @include color-variant($primary-color); }
+.text-secundary { @include color-variant($secundary-color); }
+.text-default { @include color-variant($default-color); }
+.text-info { @include color-variant($info-color); }
+.text-danger { @include color-variant($danger-color); }
+.text-warning { @include color-variant($warning-color); }
+.text-success { @include color-variant($success-color); }
+.text-white { @include color-variant(#fff); }

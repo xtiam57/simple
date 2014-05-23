@@ -73,8 +73,8 @@ button,
   @include button-outline($button-bg, $button-font-color);
 
   &.dark {
-    @include button-variant($dark-color, $dark-contrast-color);
-    @include button-outline($dark-color, $dark-contrast-color);
+    // @include button-variant($dark-color, $dark-contrast-color);
+    // @include button-outline($dark-color, $dark-contrast-color);
   }
 
   &.default {

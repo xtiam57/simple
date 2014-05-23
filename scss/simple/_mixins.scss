@@ -69,3 +69,13 @@
     clear: both;
   }
 }
+
+// Text color
+@mixin color-variant($color) {
+  color: $color !important;
+}
+
+// bg color
+@mixin bg-variant($bg-color) {
+  background-color: $bg-color !important;
+}
