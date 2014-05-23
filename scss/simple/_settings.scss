@@ -1,29 +1,54 @@
 // +++++
 // Scaffolding
 // +++++
+
+// We use these as default colors throughout
+$primary-color: #2ecc71 !default;
+$default-color: #f2f2f2 !default;
+$info-color: #00A9EC !default;
+$danger-color: #cf280e !default;
+$warning-color: #E76F00 !default;
+$success-color: #2ecc71 !default;
+$dark-color: #2c3e50 !default;
+
+$primary-contrast-color: #fff !default;
+$default-contrast-color: #666 !default;
+$info-contrast-color: #fff !default;
+$danger-contrast-color: #fff !default;
+$warning-contrast-color: #fff !default;
+$success-contrast-color: #fff !default;
+$dark-contrast-color: #fff !default;
+
+// We use these to define body style
 $body-bg: #FFF;
 $body-font-color: #666;
-$body-font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
+$body-padding: 0 !default;
+$body-margin: 0 !default;
 
 // We use these to define default font weights
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
+$font-weight-bolder: 900 !default;
+$font-weight-bold: 700 !default;
+$font-weight-normal: 400 !default;
+$font-weight-light: 300 !default;
+$font-weight-lighter: 200 !default;
 
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
 $base-font-size: 16px !default;
+$rem-base: $base-font-size !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
-$base-line-height: 150% !default;
+$base-line-height: 1.5 !default;
+$base-line-height-computed: floor(($base-font-size * $base-line-height)) !default; // ~24px
 
 // We use this to control font-smoothing
 $font-smoothing: antialiased;
 
 // We use these to control text direction settings
-$text-direction: ltr;
 $opposite-direction: right;
 $default-float: left;
 
@@ -35,6 +60,9 @@ $cursor-help-value: help !default;
 $cursor-text-value: text !default;
 
 
+
+
+
 // +++++
 // Utilities
 // +++++
@@ -44,109 +72,86 @@ $global-radius: 5px;
 $global-rounded: 1000px;
 
 
+
+
+
 // +++++
 // Type
 // +++++
-
-// We use these as default colors throughout
-$primary-color: #2ecc71 !default;
-$primary-contrast-color: #fff !default;
-
-$secundary-color: #2c3e50 !default;
-$secundary-contrast-color: #fff !default;
-
-$default-color: #f2f2f2 !default;
-$default-contrast-color: $body-font-color !default;
-
-$info-color: #00A9EC !default;
-$info-contrast-color: #fff !default;
-
-$danger-color: #cf280e !default;
-$danger-contrast-color: #fff !default;
-
-$warning-color: #E76F00 !default;
-$warning-contrast-color: #fff !default;
-
-$success-color: #2ecc71 !default;
-$success-contrast-color: #fff !default;
-
-$dark-color: #111 !default;
-$dark-contrast-color: #fff !default;
-
-$muted-color: #bbb !default;
-$muted-contrast-color: #fff !default;
-
-// We use these to control header font styles
-$header-font-family: $body-font-family;
-$header-font-weight: normal;
-$header-font-style: normal;
-$header-font-color: #222;
-$header-line-height: 1.4;
-$header-top-margin: .2rem;
-$header-bottom-margin: .5rem;
-$header-text-rendering: optimizeLegibility;
-$header-word-wrap: break-word;
 
 // We use these to style anchors
 $anchor-text-decoration: none !default;
 $anchor-text-decoration-hover: none !default;
 $anchor-font-color: $primary-color !default;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
+$anchor-font-color-hover: darken($anchor-font-color, 20%) !default;
+
+// We use these to control header font styles
+$header-font-family: $body-font-family;
+$header-font-weight: $font-weight-normal;
+$header-font-style: normal;
+$header-font-color: #222;
+$header-line-height: 1.3;
+$header-top-margin: 0;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+$header-word-wrap: break-word;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(44);
-$h2-font-size: rem-calc(37);
-$h3-font-size: rem-calc(27);
-$h4-font-size: rem-calc(23);
-$h5-font-size: rem-calc(18);
-$h6-font-size: 1rem;
+// Modular scale: 16px @ 1:1.333
+$h1-font-size: 50.517px;
+$h2-font-size: 37.897px;
+$h3-font-size: 28.43px;
+$h4-font-size: 21.328px;
+$h5-font-size: 16px;
+$h6-font-size: 12.003px;
+
+// This sizes are for big headings helpers
+$xxlarge-font-size: 89.763px !default;
+$xlarge-font-size: 67.339px !default;
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4;
-$subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-color: lighten($header-font-color, 35%);
 $subheader-font-weight: normal;
-$subheader-top-margin: .2rem;
+$subheader-top-margin: 0;
 $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 $small-font-size: 65%;
-$small-font-color: #999;
+$small-font-color: lighten($header-font-color, 45%);
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit;
 $paragraph-font-weight: normal;
-$paragraph-font-size: 1rem;
+$paragraph-font-size: $base-font-size;
 $paragraph-line-height: 1.428;
-$paragraph-margin-bottom: rem-calc(20);
+$paragraph-margin-bottom: .5rem;
 $paragraph-text-rendering: optimizeLegibility;
+$lead-scale: 140%;
+$lead-line-height: 1.6;
 
 // We use these to style <code> tags
-$code-color: scale-color($danger-color, $lightness: -27%);
+$code-color: darken($danger-color, 5%);
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: bold;
+$code-bg: #f9f2f4 !default;
 
 // We use these to style <pre> tags
-$pre-color: scale-color($danger-color, $lightness: -27%);
+$pre-color: darken($danger-color, 5%);
 $pre-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $pre-font-weight: normal;
 $pre-display: block;
-$pre-padding: rem-calc(15);
-$pre-margin-bottom: rem-calc(20);
+$pre-padding: 15px;
+$pre-margin-bottom: .5rem;
 $pre-line-height: $paragraph-line-height;
-$pre-bg: #f2f2f2;
-$pre-border-color: #ddd;
-
-// We use these to style anchors
-$anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$pre-bg: #f9f9f9;
+$pre-border-color: darken(#f9f9f9, 10%);
 
 // We use these to style the <hr> element
 $hr-border-width: 1px;
 $hr-border-style: solid;
 $hr-border-color: #ddd;
-$hr-margin: rem-calc(20);
+$hr-margin: 20px;
 
 // We use these to style lists
 $list-font-family: $paragraph-font-family;
@@ -157,17 +162,17 @@ $list-style-position: outside;
 $list-side-margin: 1.1rem;
 $list-ordered-side-margin: 1.4rem;
 $list-side-margin-no-bullet: 0;
-$list-nested-margin: rem-calc(20);
+$list-nested-margin: 20px;
 $definition-list-header-weight: bold;
 $definition-list-header-margin-bottom: .3rem;
-$definition-list-margin-bottom: rem-calc(12);
+$definition-list-margin-bottom: 12px;
 
 // We use this to control the margins and padding of the inline list.
 $inline-list-top-margin: 0;
 $inline-list-opposite-margin: 0;
-$inline-list-bottom-margin: rem-calc(17);
-$inline-list-default-float-margin: rem-calc(-22);
-$inline-list-default-float-list-margin: rem-calc(22);
+$inline-list-bottom-margin: 17px;
+$inline-list-default-float-margin: -22px;
+$inline-list-default-float-list-margin: 22px;
 
 $inline-list-padding: 0;
 
@@ -179,26 +184,20 @@ $inline-list-display: block;
 
 // We use this to control any elments within list items
 $inline-list-children-display: block;
+$inline-list-children-padding: 0;
 
 // We use these to style blockquotes
-$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-font-color: lighten($header-font-color, 45%);
+$blockquote-padding: 9px 20px;
 $blockquote-border: 1px solid #ddd;
-$blockquote-cite-font-size: rem-calc(13);
-$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+$blockquote-cite-font-size: 13px;
+$blockquote-cite-font-color: lighten($header-font-color, 10%);
 $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
 $acronym-underline: 1px dotted #ddd;
 
-// We use these to control padding and margin
-// $global-padding: rem-calc(10 12);
-// $global-margin: rem-calc(0 0 20 0);
 
-// We use these to control the border styles
-// $microformat-border-width: 1px;
-// $microformat-border-style: solid;
-// $microformat-border-color: #ddd;
 
 
 // +++++
@@ -206,15 +205,15 @@ $acronym-underline: 1px dotted #ddd;
 // +++++
 
 // We use these to build padding for buttons.
-$button-xs: rem-calc(10) !default;
-$button-sm: rem-calc(14) !default;
-$button-md: rem-calc(16) !default;
-$button-lg: rem-calc(18) !default;
-$button-default: rem-calc(10 18) !default;
+$button-xs: 10px !default;
+$button-sm: 14px !default;
+$button-md: 16px !default;
+$button-lg: 18px !default;
+$button-padding: 10px 20px !default;
 
 // We use this to control the display property.
 $button-display: inline-block !default;
-$button-margin-bottom: rem-calc(20) !default;
+$button-margin-bottom: .5rem !default;
 $button-cursor: $cursor-pointer-value !default;
 
 // We use these to control button text styles.
@@ -225,7 +224,7 @@ $button-font-xs: rem-calc(11) !default;
 $button-font-sm: rem-calc(13) !default;
 $button-font-md: rem-calc(16) !default;
 $button-font-lg: rem-calc(20) !default;
-$button-font-default: rem-calc($base-font-size - 2) !default;
+$button-font-default: $base-font-size - 2 !default;
 $button-font-weight: $font-weight-normal !default;
 $button-font-align: center !default;
 
@@ -242,7 +241,10 @@ $button-radius: $global-radius !default;
 $button-round: $global-rounded !default;
 
 // We use this to set default opacity for disabled buttons.
-$button-disabled-opacity: 0.7 !default;
+$button-disabled-opacity: 0.8 !default;
+
+
+
 
 
 
@@ -283,6 +285,9 @@ $screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 $screen-lg-max:              ($screen-xlg-min - 1) !default;
+
+
+
 
 
 // +++++

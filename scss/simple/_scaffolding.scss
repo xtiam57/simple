@@ -1,5 +1,15 @@
-// Must be 100% for off canvas to work
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  font-size: $base-font-size;
+  // Fixing collapsing margins
+  overflow: auto;
+  -webkit-font-smoothing: $font-smoothing;
+  -webkit-text-size-adjust: auto;
+  -moz-text-size-adjust: auto;
+  -ms-text-size-adjust: auto;
+  -o-text-size-adjust: auto;
+  text-size-adjust: auto;
+}
 
 // Set box-sizing globally to handle padding and border widths
 *,
@@ -8,26 +18,17 @@ html, body { height: 100%; }
   @include box-sizing(border-box);
 }
 
-html,
-body { font-size: $base-font-size; }
-
 // Default body styles
 body {
   background: $body-bg;
   color: $body-font-color;
-  padding: 0;
-  margin: 0;
+  padding: $body-padding;
+  margin: $body-margin;
   font-family: $body-font-family;
   font-weight: $body-font-weight;
   font-style: $body-font-style;
-  line-height: 1; // Set to $base-line-height to take on browser default of 150%
-  position: relative;
+  line-height: $base-line-height;
   cursor: $cursor-default-value;
+  position: relative;
   -moz-osx-font-smoothing: grayscale;
-}
-
-// Fixing collapsing margins
-html,
-body {
-  overflow: auto;
 }

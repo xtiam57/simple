@@ -5,10 +5,29 @@
 
   &:hover,
   &:focus {
+    color: $color;
     background-color: darken($bg, $function-factor);
-    border-color: darken($bg, $function-factor * 1.1);
+    border-color: darken($bg, $function-factor * 0.9);
   }
 
+  &:active,
+  &.active {
+    outline: 0;
+    color: $color;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    pointer-events: none;
+    @include opacity($button-disabled-opacity);
+    @include box-shadow(none);
+  }
+}
+
+@mixin button-outline($bg, $color, $function-factor: $button-function-factor) {
   &.outline {
     color: $bg;
     border-color: $bg;
@@ -17,38 +36,94 @@
     &:hover,
     &:focus {
       background-color: $bg;
-      border-color: darken($bg, $function-factor * 1.1);
+      border-color: $bg;
       color: $color;
+    }
+
+    &.transparent {
+      color: $bg;
+      border-color: $bg;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: $bg;
+        border-color: $bg;
+        color: $color;
+      }
     }
   }
 }
 
 button,
 .button {
-  padding: $button-default;
+  @include rem(padding, $button-padding);
   margin-bottom: $button-margin-bottom;
   display: $button-display;
-  font-size: $button-font-default;
+  @include rem(font-size, $button-font-default);
   border-width: $button-border-width;
   border-style: $button-border-style;
   white-space: nowrap;
   font-weight: $button-font-weight;
   text-align: $button-font-align;
   cursor: $button-cursor;
+  @include single-transition(all, .5s);
 
   @include button-variant($button-bg, $button-font-color);
+  @include button-outline($button-bg, $button-font-color);
 
-  @include single-transition(all);
+  &.dark {
+    @include button-variant($dark-color, $dark-contrast-color);
+    @include button-outline($dark-color, $dark-contrast-color);
+  }
 
-  &.secundary { @include button-variant($secundary-color, $secundary-contrast-color); }
-  &.default   { @include button-variant($default-color, $default-contrast-color); }
-  &.info      { @include button-variant($info-color, $info-contrast-color); }
-  &.danger    { @include button-variant($danger-color, $danger-contrast-color); }
-  &.warning   { @include button-variant($warning-color, $warning-contrast-color); }
-  &.success   { @include button-variant($success-color, $success-contrast-color); }
-  &.dark      { @include button-variant($dark-color, $dark-contrast-color); }
-  &.muted     { @include button-variant($muted-color, $muted-contrast-color); }
+  &.default {
+    @include button-variant($default-color, $default-contrast-color);
+    @include button-outline($default-contrast-color, #fff);
+  }
 
+  &.info {
+    @include button-variant($info-color, $info-contrast-color);
+    @include button-outline($info-color, $info-contrast-color);
+  }
 
+  &.danger {
+    @include button-variant($danger-color, $danger-contrast-color);
+    @include button-outline($danger-color, $danger-contrast-color);
+  }
 
+  &.warning {
+    @include button-variant($warning-color, $warning-contrast-color);
+    @include button-outline($warning-color, $warning-contrast-color);
+  }
+
+  &.success {
+    @include button-variant($success-color, $success-contrast-color);
+    @include button-outline($success-color, $success-contrast-color);
+  }
+
+  &.link {
+    color: $success-color;
+    border-color: darken(transparent, $button-function-factor * 0.5);
+    background-color: transparent;
+    text-decoration: $anchor-text-decoration;
+
+    &:hover,
+    &:focus {
+      color: darken($success-color, $button-function-factor);
+      background-color: transparent;
+
+      @if $anchor-text-decoration-hover != $anchor-text-decoration {
+        text-decoration: $anchor-text-decoration-hover;
+      }
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      pointer-events: none;
+      @include opacity($button-disabled-opacity);
+      @include box-shadow(none);
+    }
+  }
 }

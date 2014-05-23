@@ -86,14 +86,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: $subheader-top-margin;
     margin-bottom: $subheader-bottom-margin;
   }
+
+  &.xlarge-header { @include rem(font-size, $xlarge-font-size); }
+  &.xxlarge-header { @include rem(font-size, $xxlarge-font-size); }
 }
 
-h1 { font-size: $h1-font-size - rem-calc(10); }
-h2 { font-size: $h2-font-size - rem-calc(10); }
-h3 { font-size: $h3-font-size - rem-calc(5); }
-h4 { font-size: $h4-font-size - rem-calc(5); }
-h5 { font-size: $h5-font-size; }
-h6 { font-size: $h6-font-size; }
+h1 { @include rem(font-size, $h1-font-size); }
+h2 { @include rem(font-size, $h2-font-size); }
+h3 { @include rem(font-size, $h3-font-size); }
+h4 { @include rem(font-size, $h4-font-size); }
+h5 { @include rem(font-size, $h5-font-size); }
+h6 { @include rem(font-size, $h6-font-size); }
+
 
 p {
   font-family: $paragraph-font-family;
@@ -104,33 +108,29 @@ p {
   text-rendering: $paragraph-text-rendering;
 
   &.lead {
-    font-size: $paragraph-font-size + rem-calc(3.5);
-    line-height: 1.6;
+    @include rem(font-size, $paragraph-font-size * ($lead-scale / 100%));
+    line-height: $lead-line-height;
   }
 }
 
 // Background colors
 @include bg-variant('.background-primary', $primary-color, $primary-contrast-color);
-@include bg-variant('.background-secundary', $secundary-color, $secundary-contrast-color);
 @include bg-variant('.background-default', $default-color, $default-contrast-color);
 @include bg-variant('.background-info', $info-color, $info-contrast-color);
 @include bg-variant('.background-danger', $danger-color, $danger-contrast-color);
 @include bg-variant('.background-warning', $warning-color, $warning-contrast-color);
 @include bg-variant('.background-success', $success-color, $success-contrast-color);
 @include bg-variant('.background-dark', $dark-color, $dark-contrast-color);
-@include bg-variant('.background-muted', $muted-color, $muted-contrast-color);
 @include bg-variant('.background-white', #fff, inherit);
 
 // Text color variant
 @include color-variant('.text-primary', $primary-color);
-@include color-variant('.text-secundary', $secundary-color);
 @include color-variant('.text-default', $default-color);
 @include color-variant('.text-info', $info-color);
 @include color-variant('.text-danger', $danger-color);
 @include color-variant('.text-warning', $warning-color);
 @include color-variant('.text-success', $success-color);
 @include color-variant('.text-dark', $dark-color);
-@include color-variant('.text-muted', $muted-color);
 @include color-variant('.text-white', #fff);
 
 // Generates text align and justify classes
@@ -143,7 +143,7 @@ hr {
   border: $hr-border-style $hr-border-color;
   border-width: $hr-border-width 0 0;
   clear: both;
-  margin: $hr-margin 0 ($hr-margin - rem-calc($hr-border-width));
+  @include rem(margin, ($hr-margin - $hr-border-width * 0.5) 0);
   height: 0;
 }
 
@@ -171,6 +171,9 @@ code {
   font-family: $code-font-family;
   font-weight: $code-font-weight;
   color: $code-color;
+  padding: 2px 4px;
+  font-size: 90%;
+  background-color: $code-bg;
 }
 
 // Blocks of code
@@ -211,7 +214,7 @@ ul {
     li {
       ul,
       ol {
-        margin-#{$default-float}: $list-nested-margin;
+        @include rem(margin-#{$default-float}, $list-nested-margin);
         margin-bottom: 0;
         list-style: none;
       }
@@ -224,7 +227,7 @@ ul {
   li {
     ul,
     ol {
-      margin-#{$default-float}: $list-nested-margin;
+      @include rem(margin-#{$default-float}, $list-nested-margin);
       margin-bottom: 0;
     }
   }
@@ -246,7 +249,7 @@ ol {
   li {
     ul,
     ol {
-      margin-#{$default-float}: $list-nested-margin;
+      @include rem(margin-#{$default-float}, $list-nested-margin);
       margin-bottom: 0;
     }
   }
@@ -256,17 +259,18 @@ ol {
 ul,
 ol {
   &.inline-list {
-    margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
-    margin-#{$default-float}: $inline-list-default-float-margin;
+    @include rem(margin, $inline-list-top-margin auto $inline-list-bottom-margin auto);
+    @include rem(margin-#{$default-float}, $inline-list-default-float-margin);
     margin-#{$opposite-direction}: $inline-list-opposite-margin;
     padding: $inline-list-padding;
     list-style: none;
     overflow: $inline-list-overflow;
 
     & > li {
+      padding: $inline-list-children-padding;
       list-style: none;
       float: $default-float;
-      margin-#{$default-float}: $inline-list-default-float-list-margin;
+      @include rem(margin-#{$default-float}, $inline-list-default-float-list-margin);
       display: $inline-list-display;
       &>* { display: $inline-list-children-display; }
     }
@@ -279,7 +283,7 @@ dl {
     margin-bottom: $definition-list-header-margin-bottom;
     font-weight: $definition-list-header-weight;
   }
-  dd { margin-bottom: $definition-list-margin-bottom; }
+  dd { @include rem(margin-bottom, $definition-list-margin-bottom); }
 }
 
 /* Abbreviations */
@@ -298,12 +302,12 @@ abbr {
 /* Blockquotes */
 blockquote {
   margin: 0 0 $paragraph-margin-bottom;
-  padding: $blockquote-padding;
+  @include rem(padding, $blockquote-padding);
   border-#{$default-float}: $blockquote-border;
 
   cite {
     display: block;
-    font-size: $blockquote-cite-font-size;
+    @include rem(font-size, $blockquote-cite-font-size);
     color: $blockquote-cite-font-color;
     &:before {
       content: "\2014 \0020";

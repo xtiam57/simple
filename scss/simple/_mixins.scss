@@ -1,27 +1,51 @@
-// rem-cal, convert-to-rem and strip-unit taken form Foundation Framework
-// https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
-$rem-base: 16px !default;
+// rem convertion thanks to http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+//
+// The mixin relies on a function to parse the integer from a value with a unit
+// We define a list of values for both units
+// We iterate through each value in the given parameter $values
+// If the value is either auto or 0, we append it to the list as-is
+// If the value has a unit, we split it to get both the unit and the raw value
+// We append according values to the lists depending on the unit of the given value
+// If the two lists are the same, we ouput only one (like margin-top: 0)
+// We output the result
 
-@function rem-calc($values, $base-value: $rem-base) {
-  $max: length($values);
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
 
-  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+@mixin rem($property, $values, $base: $rem-base) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
 
-  $remValues: ();
-  @for $i from 1 through $max {
-    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / parseInt($base) + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * parseInt($base) + px));
+        $rem: append($rem, $value);
+      }
+    }
   }
-  @return $remValues;
-}
 
-@function convert-to-rem($value, $base-value: $rem-base)  {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
-  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
-  @return $value;
-}
-
-@function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
 }
 
 // Clearfix

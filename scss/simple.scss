@@ -1,14 +1,17 @@
+// Some Compass modules
 @import "compass/css3";
 
-@import "simple/_mixins";
-@import "simple/_settings";
+// Some really awesome vendors
+@import "normalize";
 @import "font-awesome/font-awesome";
 
-@import "normalize";
+// The core and heart of Simple
+@import "simple/_settings";
+@import "simple/_mixins";
+
+// Here's where the magic of Simple truly begins!
 @import "simple/_scaffolding";
-
-
+@import "simple/_utilities";
 @import "simple/_grid";
 @import "simple/_type";
-@import "simple/_utilities";
 @import "simple/_buttons";

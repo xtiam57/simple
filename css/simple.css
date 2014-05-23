@@ -1,4 +1,170 @@
 /* the banner */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+/* line 9, ../scss/normalize.scss */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+/* line 19, ../scss/normalize.scss */
+body { margin: 0; }
+
+/* HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+/* line 32, ../scss/normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** 1. Correct `inline-block` display not defined in IE 8/9. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+/* line 52, ../scss/normalize.scss */
+audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+/* line 65, ../scss/normalize.scss */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+/* line 75, ../scss/normalize.scss */
+[hidden], template { display: none; }
+
+/* Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+/* line 87, ../scss/normalize.scss */
+a { background: transparent; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+/* line 95, ../scss/normalize.scss */
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics ========================================================================== */
+/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+/* line 107, ../scss/normalize.scss */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+/* line 115, ../scss/normalize.scss */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari and Chrome. */
+/* line 124, ../scss/normalize.scss */
+dfn { font-style: italic; }
+
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+/* line 133, ../scss/normalize.scss */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9. */
+/* line 142, ../scss/normalize.scss */
+mark { background: #ff0; color: #000; }
+
+/** Address inconsistent and variable font size in all browsers. */
+/* line 151, ../scss/normalize.scss */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+/* line 159, ../scss/normalize.scss */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+/* line 167, ../scss/normalize.scss */
+sup { top: -0.5em; }
+
+/* line 171, ../scss/normalize.scss */
+sub { bottom: -0.25em; }
+
+/* Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9/10. */
+/* line 182, ../scss/normalize.scss */
+img { border: 0; }
+
+/** Correct overflow not hidden in IE 9/10/11. */
+/* line 190, ../scss/normalize.scss */
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari. */
+/* line 201, ../scss/normalize.scss */
+figure { margin: 1em 40px; }
+
+/** Address differences between Firefox and other browsers. */
+/* line 209, ../scss/normalize.scss */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Contain overflow in all browsers. */
+/* line 219, ../scss/normalize.scss */
+pre { overflow: auto; }
+
+/** Address odd `em`-unit font size rendering in all browsers. */
+/* line 227, ../scss/normalize.scss */
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* Forms ========================================================================== */
+/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
+/* line 250, ../scss/normalize.scss */
+button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+/* line 264, ../scss/normalize.scss */
+button { overflow: visible; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+/* line 275, ../scss/normalize.scss */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+/* line 288, ../scss/normalize.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+/* line 300, ../scss/normalize.scss */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** Remove inner padding and border in Firefox 4+. */
+/* line 309, ../scss/normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+/* line 320, ../scss/normalize.scss */
+input { line-height: normal; }
+
+/** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.  1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+/* line 332, ../scss/normalize.scss */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+/* line 344, ../scss/normalize.scss */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof). */
+/* line 355, ../scss/normalize.scss */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+/* line 368, ../scss/normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Define consistent border, margin, and padding. */
+/* line 377, ../scss/normalize.scss */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+/* line 388, ../scss/normalize.scss */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** Remove default vertical scrollbar in IE 8/9/10/11. */
+/* line 397, ../scss/normalize.scss */
+textarea { overflow: auto; }
+
+/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+/* line 406, ../scss/normalize.scss */
+optgroup { font-weight: bold; }
+
+/* Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+/* line 417, ../scss/normalize.scss */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* line 422, ../scss/normalize.scss */
+td, th { padding: 0; }
+
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1212,192 +1378,43 @@
 /* line 412, ../scss/font-awesome/_icons.scss */
 .fa-plus-square-o:before { content: "\f196"; }
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
-/* line 9, ../scss/normalize.scss */
-html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
-
-/** Remove default margin. */
-/* line 19, ../scss/normalize.scss */
-body { margin: 0; }
-
-/* HTML5 display definitions ========================================================================== */
-/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
-/* line 32, ../scss/normalize.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
-
-/** 1. Correct `inline-block` display not defined in IE 8/9. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
-/* line 52, ../scss/normalize.scss */
-audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
-
-/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
-/* line 65, ../scss/normalize.scss */
-audio:not([controls]) { display: none; height: 0; }
-
-/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
-/* line 75, ../scss/normalize.scss */
-[hidden], template { display: none; }
-
-/* Links ========================================================================== */
-/** Remove the gray background color from active links in IE 10. */
-/* line 87, ../scss/normalize.scss */
-a { background: transparent; }
-
-/** Improve readability when focused and also mouse hovered in all browsers. */
-/* line 95, ../scss/normalize.scss */
-a:active, a:hover { outline: 0; }
-
-/* Text-level semantics ========================================================================== */
-/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
-/* line 107, ../scss/normalize.scss */
-abbr[title] { border-bottom: 1px dotted; }
-
-/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
-/* line 115, ../scss/normalize.scss */
-b, strong { font-weight: bold; }
-
-/** Address styling not present in Safari and Chrome. */
-/* line 124, ../scss/normalize.scss */
-dfn { font-style: italic; }
-
-/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
-/* line 133, ../scss/normalize.scss */
-h1 { font-size: 2em; margin: 0.67em 0; }
-
-/** Address styling not present in IE 8/9. */
-/* line 142, ../scss/normalize.scss */
-mark { background: #ff0; color: #000; }
-
-/** Address inconsistent and variable font size in all browsers. */
-/* line 151, ../scss/normalize.scss */
-small { font-size: 80%; }
-
-/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 159, ../scss/normalize.scss */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-
-/* line 167, ../scss/normalize.scss */
-sup { top: -0.5em; }
-
-/* line 171, ../scss/normalize.scss */
-sub { bottom: -0.25em; }
-
-/* Embedded content ========================================================================== */
-/** Remove border when inside `a` element in IE 8/9/10. */
-/* line 182, ../scss/normalize.scss */
-img { border: 0; }
-
-/** Correct overflow not hidden in IE 9/10/11. */
-/* line 190, ../scss/normalize.scss */
-svg:not(:root) { overflow: hidden; }
-
-/* Grouping content ========================================================================== */
-/** Address margin not present in IE 8/9 and Safari. */
-/* line 201, ../scss/normalize.scss */
-figure { margin: 1em 40px; }
-
-/** Address differences between Firefox and other browsers. */
-/* line 209, ../scss/normalize.scss */
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
-
-/** Contain overflow in all browsers. */
-/* line 219, ../scss/normalize.scss */
-pre { overflow: auto; }
-
-/** Address odd `em`-unit font size rendering in all browsers. */
-/* line 227, ../scss/normalize.scss */
-code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
-
-/* Forms ========================================================================== */
-/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
-/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
-/* line 250, ../scss/normalize.scss */
-button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
-
-/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
-/* line 264, ../scss/normalize.scss */
-button { overflow: visible; }
-
-/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
-/* line 275, ../scss/normalize.scss */
-button, select { text-transform: none; }
-
-/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
-/* line 288, ../scss/normalize.scss */
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
-
-/** Re-set default cursor for disabled elements. */
-/* line 300, ../scss/normalize.scss */
-button[disabled], html input[disabled] { cursor: default; }
-
-/** Remove inner padding and border in Firefox 4+. */
-/* line 309, ../scss/normalize.scss */
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-
-/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
-/* line 320, ../scss/normalize.scss */
-input { line-height: normal; }
-
-/** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.  1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
-/* line 332, ../scss/normalize.scss */
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
-
-/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
-/* line 344, ../scss/normalize.scss */
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
-
-/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof). */
-/* line 355, ../scss/normalize.scss */
-input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
-
-/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
-/* line 368, ../scss/normalize.scss */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-
-/** Define consistent border, margin, and padding. */
-/* line 377, ../scss/normalize.scss */
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-
-/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
-/* line 388, ../scss/normalize.scss */
-legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
-
-/** Remove default vertical scrollbar in IE 8/9/10/11. */
-/* line 397, ../scss/normalize.scss */
-textarea { overflow: auto; }
-
-/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
-/* line 406, ../scss/normalize.scss */
-optgroup { font-weight: bold; }
-
-/* Tables ========================================================================== */
-/** Remove most spacing between table cells. */
-/* line 417, ../scss/normalize.scss */
-table { border-collapse: collapse; border-spacing: 0; }
-
-/* line 422, ../scss/normalize.scss */
-td, th { padding: 0; }
-
-/* line 2, ../scss/simple/_scaffolding.scss */
-html, body { height: 100%; }
-
-/* line 5, ../scss/simple/_scaffolding.scss */
-*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-/* line 11, ../scss/simple/_scaffolding.scss */
-html, body { font-size: 16px; }
+/* line 1, ../scss/simple/_scaffolding.scss */
+html, body { height: 100%; font-size: 16px; overflow: auto; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: auto; -moz-text-size-adjust: auto; -ms-text-size-adjust: auto; -o-text-size-adjust: auto; text-size-adjust: auto; }
 
 /* line 15, ../scss/simple/_scaffolding.scss */
-body { background: white; color: #666666; padding: 0; margin: 0; font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: default; -moz-osx-font-smoothing: grayscale; }
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 30, ../scss/simple/_scaffolding.scss */
-html, body { overflow: auto; }
+/* line 22, ../scss/simple/_scaffolding.scss */
+body { background: white; color: #666666; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1.5; cursor: default; position: relative; -moz-osx-font-smoothing: grayscale; }
+
+/* line 1, ../scss/simple/_utilities.scss */
+.pull-left { float: left !important; }
+
+/* line 5, ../scss/simple/_utilities.scss */
+.pull-right { float: right !important; }
+
+/* line 9, ../scss/simple/_utilities.scss */
+.centered-block { display: block; margin-left: auto; margin-right: auto; }
+
+/* line 63, ../scss/simple/_mixins.scss */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+/* line 68, ../scss/simple/_mixins.scss */
+.clearfix:after { clear: both; }
+
+/* line 19, ../scss/simple/_utilities.scss */
+.rounded { -moz-border-radius: 1000px; -webkit-border-radius: 1000px; border-radius: 1000px; }
+
+/* line 23, ../scss/simple/_utilities.scss */
+.radius { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
+/* line 27, ../scss/simple/_utilities.scss */
+.hug { margin-top: 0; }
 
 /* line 119, ../scss/simple/_grid.scss */
 .container { padding-left: 10px; padding-right: 10px; }
-/* line 39, ../scss/simple/_mixins.scss */
+/* line 63, ../scss/simple/_mixins.scss */
 .container:before, .container:after { content: " "; display: table; }
-/* line 44, ../scss/simple/_mixins.scss */
+/* line 68, ../scss/simple/_mixins.scss */
 .container:after { clear: both; }
 /* line 7, ../scss/simple/_grid.scss */
 .container.centered { margin-right: auto; margin-left: auto; }
@@ -1412,18 +1429,18 @@ html, body { overflow: auto; }
 
 /* line 138, ../scss/simple/_grid.scss */
 .container-fluid { padding-left: 10px; padding-right: 10px; }
-/* line 39, ../scss/simple/_mixins.scss */
+/* line 63, ../scss/simple/_mixins.scss */
 .container-fluid:before, .container-fluid:after { content: " "; display: table; }
-/* line 44, ../scss/simple/_mixins.scss */
+/* line 68, ../scss/simple/_mixins.scss */
 .container-fluid:after { clear: both; }
 /* line 7, ../scss/simple/_grid.scss */
 .container-fluid.centered { margin-right: auto; margin-left: auto; }
 
 /* line 143, ../scss/simple/_grid.scss */
 .row { margin-left: -10px; margin-right: -10px; overflow: hidden; }
-/* line 39, ../scss/simple/_mixins.scss */
+/* line 63, ../scss/simple/_mixins.scss */
 .row:before, .row:after { content: " "; display: table; }
-/* line 44, ../scss/simple/_mixins.scss */
+/* line 68, ../scss/simple/_mixins.scss */
 .row:after { clear: both; }
 
 /* line 36, ../scss/simple/_grid.scss */
@@ -2008,51 +2025,49 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 /* line 49, ../scss/simple/_type.scss */
 a { color: #2ecc71; text-decoration: none; line-height: inherit; }
 /* line 54, ../scss/simple/_type.scss */
-a:hover, a:focus { color: #28af61; }
+a:hover, a:focus { color: #1b7943; }
 /* line 62, ../scss/simple/_type.scss */
 a img { border: none; }
 
 /* line 65, ../scss/simple/_type.scss */
-h1, h2, h3, h4, h5, h6 { font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 1.4; word-wrap: break-word; }
+h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: 400; font-style: normal; color: #222222; text-rendering: optimizeLegibility; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.3; word-wrap: break-word; }
 /* line 76, ../scss/simple/_type.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 65%; color: #999999; line-height: 0; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 65%; color: #959595; line-height: 0; }
 /* line 82, ../scss/simple/_type.scss */
-h1.subheader, h2.subheader, h3.subheader, h4.subheader, h5.subheader, h6.subheader { line-height: 1.4; color: #6f6f6f; font-weight: normal; margin-top: 0.2rem; margin-bottom: 0.5rem; }
-
+h1.subheader, h2.subheader, h3.subheader, h4.subheader, h5.subheader, h6.subheader { line-height: 1.4; color: #7b7b7b; font-weight: normal; margin-top: 0; margin-bottom: 0.5rem; }
+/* line 90, ../scss/simple/_type.scss */
+h1.xlarge-header, h2.xlarge-header, h3.xlarge-header, h4.xlarge-header, h5.xlarge-header, h6.xlarge-header { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 67.339px; /* 9 */ font-size: 4.20869rem; /* 9 */ }
 /* line 91, ../scss/simple/_type.scss */
-h1 { font-size: 2.125rem; }
-
-/* line 92, ../scss/simple/_type.scss */
-h2 { font-size: 1.6875rem; }
-
-/* line 93, ../scss/simple/_type.scss */
-h3 { font-size: 1.375rem; }
+h1.xxlarge-header, h2.xxlarge-header, h3.xxlarge-header, h4.xxlarge-header, h5.xxlarge-header, h6.xxlarge-header { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 89.763px; /* 9 */ font-size: 5.61019rem; /* 9 */ }
 
 /* line 94, ../scss/simple/_type.scss */
-h4 { font-size: 1.125rem; }
+h1 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 50.517px; /* 9 */ font-size: 3.15731rem; /* 9 */ }
 
 /* line 95, ../scss/simple/_type.scss */
-h5 { font-size: 1.125rem; }
+h2 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 37.897px; /* 9 */ font-size: 2.36856rem; /* 9 */ }
 
 /* line 96, ../scss/simple/_type.scss */
-h6 { font-size: 1rem; }
+h3 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 28.43px; /* 9 */ font-size: 1.77688rem; /* 9 */ }
+
+/* line 97, ../scss/simple/_type.scss */
+h4 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 21.328px; /* 9 */ font-size: 1.333rem; /* 9 */ }
 
 /* line 98, ../scss/simple/_type.scss */
-p { font-family: inherit; font-weight: normal; font-size: 1rem; line-height: 1.428; margin-bottom: 1.25rem; text-rendering: optimizeLegibility; }
-/* line 106, ../scss/simple/_type.scss */
-p.lead { font-size: 1.21875rem; line-height: 1.6; }
+h5 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 16px; /* 9 */ font-size: 1rem; /* 9 */ }
+
+/* line 99, ../scss/simple/_type.scss */
+h6 { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 12.003px; /* 9 */ font-size: 0.75019rem; /* 9 */ }
+
+/* line 102, ../scss/simple/_type.scss */
+p { font-family: inherit; font-weight: normal; font-size: 16px; line-height: 1.428; margin-bottom: 0.5rem; text-rendering: optimizeLegibility; }
+/* line 110, ../scss/simple/_type.scss */
+p.lead { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 22.4px; /* 9 */ font-size: 1.4rem; /* 9 */ line-height: 1.6; }
 
 /* line 3, ../scss/simple/_type.scss */
 .background-primary { background-color: #2ecc71; color: white; }
 
 /* line 7, ../scss/simple/_type.scss */
 a.background-primary:hover { background-color: #25a25a; color: #e6e6e6; }
-
-/* line 3, ../scss/simple/_type.scss */
-.background-secundary { background-color: #2c3e50; color: white; }
-
-/* line 7, ../scss/simple/_type.scss */
-a.background-secundary:hover { background-color: #1a242f; color: #e6e6e6; }
 
 /* line 3, ../scss/simple/_type.scss */
 .background-default { background-color: #f2f2f2; color: #666666; }
@@ -2085,16 +2100,10 @@ a.background-warning:hover { background-color: #b45600; color: #e6e6e6; }
 a.background-success:hover { background-color: #25a25a; color: #e6e6e6; }
 
 /* line 3, ../scss/simple/_type.scss */
-.background-dark { background-color: #111111; color: white; }
+.background-dark { background-color: #2c3e50; color: white; }
 
 /* line 7, ../scss/simple/_type.scss */
-a.background-dark:hover { background-color: black; color: #e6e6e6; }
-
-/* line 3, ../scss/simple/_type.scss */
-.background-muted { background-color: #bbbbbb; color: white; }
-
-/* line 7, ../scss/simple/_type.scss */
-a.background-muted:hover { background-color: #a2a2a2; color: #e6e6e6; }
+a.background-dark:hover { background-color: #1a242f; color: #e6e6e6; }
 
 /* line 3, ../scss/simple/_type.scss */
 .background-white { background-color: white; color: inherit; }
@@ -2107,12 +2116,6 @@ a.background-white:hover { background-color: #e6e6e6; }
 
 /* line 19, ../scss/simple/_type.scss */
 a.text-primary:hover { color: #25a25a !important; }
-
-/* line 16, ../scss/simple/_type.scss */
-.text-secundary { color: #2c3e50 !important; }
-
-/* line 19, ../scss/simple/_type.scss */
-a.text-secundary:hover { color: #1a242f !important; }
 
 /* line 16, ../scss/simple/_type.scss */
 .text-default { color: #f2f2f2 !important; }
@@ -2145,16 +2148,10 @@ a.text-warning:hover { color: #b45600 !important; }
 a.text-success:hover { color: #25a25a !important; }
 
 /* line 16, ../scss/simple/_type.scss */
-.text-dark { color: #111111 !important; }
+.text-dark { color: #2c3e50 !important; }
 
 /* line 19, ../scss/simple/_type.scss */
-a.text-dark:hover { color: black !important; }
-
-/* line 16, ../scss/simple/_type.scss */
-.text-muted { color: #bbbbbb !important; }
-
-/* line 19, ../scss/simple/_type.scss */
-a.text-muted:hover { color: #a2a2a2 !important; }
+a.text-dark:hover { color: #1a242f !important; }
 
 /* line 16, ../scss/simple/_type.scss */
 .text-white { color: white !important; }
@@ -2175,7 +2172,7 @@ a.text-white:hover { color: #e6e6e6 !important; }
 .text-justify { text-align: justify !important; }
 
 /* line 142, ../scss/simple/_type.scss */
-hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25rem 0 1.1875rem; height: 0; }
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ /* 4 */ /* 5 */ margin: 19.5px 0; /* 9 */ margin: 1.21875rem 0; /* 9 */ height: 0; }
 
 /* Helpful Typography Defaults */
 /* line 151, ../scss/simple/_type.scss */
@@ -2188,171 +2185,197 @@ strong, b, .text-bold, .text-strong { font-weight: bold; line-height: inherit; }
 small { font-size: 65%; line-height: inherit; }
 
 /* line 170, ../scss/simple/_type.scss */
-code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #971d0a; }
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #b7230c; padding: 2px 4px; font-size: 90%; background-color: #f9f2f4; }
 
-/* line 177, ../scss/simple/_type.scss */
-pre { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; color: #971d0a; display: block; padding: 0.9375rem; margin: 0 0 1.25rem; line-height: 1.428; word-break: break-all; word-wrap: break-word; background-color: #f2f2f2; border: 1px solid #dddddd; }
-/* line 191, ../scss/simple/_type.scss */
+/* line 180, ../scss/simple/_type.scss */
+pre { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; color: #b7230c; display: block; padding: 15px; margin: 0 0 0.5rem; line-height: 1.428; word-break: break-all; word-wrap: break-word; background-color: #f9f9f9; border: 1px solid #e0e0e0; }
+/* line 194, ../scss/simple/_type.scss */
 pre code { white-space: pre-wrap; }
 
 /* Lists */
-/* line 197, ../scss/simple/_type.scss */
-ul, ol, dl { font-size: 1rem; line-height: 1.428; margin-bottom: 1.25rem; list-style-position: outside; font-family: inherit; }
+/* line 200, ../scss/simple/_type.scss */
+ul, ol, dl { font-size: 16px; line-height: 1.428; margin-bottom: 0.5rem; list-style-position: outside; font-family: inherit; }
 
-/* line 207, ../scss/simple/_type.scss */
+/* line 210, ../scss/simple/_type.scss */
 ul { margin-left: 1.1rem; }
-/* line 209, ../scss/simple/_type.scss */
-ul.no-bullet { margin-left: 0; }
 /* line 212, ../scss/simple/_type.scss */
-ul.no-bullet li ul, ul.no-bullet li ol { margin-left: 1.25rem; margin-bottom: 0; list-style: none; }
+ul.no-bullet { margin-left: 0; }
+/* line 215, ../scss/simple/_type.scss */
+ul.no-bullet li ul, ul.no-bullet li ol { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-left: 20px; /* 9 */ margin-left: 1.25rem; /* 9 */ margin-bottom: 0; list-style: none; }
 
 /* Unordered Lists */
-/* line 225, ../scss/simple/_type.scss */
-ul li ul, ul li ol { margin-left: 1.25rem; margin-bottom: 0; }
-/* line 234, ../scss/simple/_type.scss */
-ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+/* line 228, ../scss/simple/_type.scss */
+ul li ul, ul li ol { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-left: 20px; /* 9 */ margin-left: 1.25rem; /* 9 */ margin-bottom: 0; }
 /* line 237, ../scss/simple/_type.scss */
-ul.square { list-style-type: square; margin-left: 1.1rem; }
-/* line 238, ../scss/simple/_type.scss */
-ul.circle { list-style-type: circle; margin-left: 1.1rem; }
-/* line 239, ../scss/simple/_type.scss */
-ul.disc { list-style-type: disc; margin-left: 1.1rem; }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
 /* line 240, ../scss/simple/_type.scss */
+ul.square { list-style-type: square; margin-left: 1.1rem; }
+/* line 241, ../scss/simple/_type.scss */
+ul.circle { list-style-type: circle; margin-left: 1.1rem; }
+/* line 242, ../scss/simple/_type.scss */
+ul.disc { list-style-type: disc; margin-left: 1.1rem; }
+/* line 243, ../scss/simple/_type.scss */
 ul.no-bullet { list-style: none; }
 
 /* Ordered Lists */
-/* line 244, ../scss/simple/_type.scss */
-ol { margin-left: 1.4rem; }
 /* line 247, ../scss/simple/_type.scss */
-ol li ul, ol li ol { margin-left: 1.25rem; margin-bottom: 0; }
+ol { margin-left: 1.4rem; }
+/* line 250, ../scss/simple/_type.scss */
+ol li ul, ol li ol { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-left: 20px; /* 9 */ margin-left: 1.25rem; /* 9 */ margin-bottom: 0; }
 
 /* Inline list */
-/* line 258, ../scss/simple/_type.scss */
-ul.inline-list, ol.inline-list { margin: 0 auto 1.0625rem auto; margin-left: -1.375rem; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
-/* line 266, ../scss/simple/_type.scss */
-ul.inline-list > li, ol.inline-list > li { list-style: none; float: left; margin-left: 1.375rem; display: block; }
-/* line 271, ../scss/simple/_type.scss */
+/* line 261, ../scss/simple/_type.scss */
+ul.inline-list, ol.inline-list { /* 3 */ /* 3 */ /* 4 */ /* 5 */ /* 4 */ /* 5 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ /* 4 */ /* 5 */ margin: 0 auto 17px auto; /* 9 */ margin: 0 auto 1.0625rem auto; /* 9 */ /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-left: -22px; /* 9 */ margin-left: -1.375rem; /* 9 */ margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+/* line 269, ../scss/simple/_type.scss */
+ul.inline-list > li, ol.inline-list > li { padding: 0; list-style: none; float: left; /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-left: 22px; /* 9 */ margin-left: 1.375rem; /* 9 */ display: block; }
+/* line 275, ../scss/simple/_type.scss */
 ul.inline-list > li > *, ol.inline-list > li > * { display: block; }
 
 /* Definition Lists */
-/* line 278, ../scss/simple/_type.scss */
-dl dt { margin-bottom: 0.3rem; font-weight: bold; }
 /* line 282, ../scss/simple/_type.scss */
-dl dd { margin-bottom: 0.75rem; }
+dl dt { margin-bottom: 0.3rem; font-weight: bold; }
+/* line 286, ../scss/simple/_type.scss */
+dl dd { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ margin-bottom: 12px; /* 9 */ margin-bottom: 0.75rem; /* 9 */ }
 
 /* Abbreviations */
-/* line 286, ../scss/simple/_type.scss */
+/* line 290, ../scss/simple/_type.scss */
 abbr, acronym { text-transform: uppercase; font-size: 90%; color: #666666; border-bottom: 1px dotted #dddddd; cursor: help; }
 
-/* line 294, ../scss/simple/_type.scss */
+/* line 298, ../scss/simple/_type.scss */
 abbr { text-transform: none; }
 
 /* Blockquotes */
-/* line 299, ../scss/simple/_type.scss */
-blockquote { margin: 0 0 1.25rem; padding: 0.5625rem 1.25rem 0 1.1875rem; border-left: 1px solid #dddddd; }
-/* line 304, ../scss/simple/_type.scss */
-blockquote cite { display: block; font-size: 0.8125rem; color: #555555; }
+/* line 303, ../scss/simple/_type.scss */
+blockquote { margin: 0 0 0.5rem; /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ padding: 9px 20px; /* 9 */ padding: 0.5625rem 1.25rem; /* 9 */ border-left: 1px solid #dddddd; }
 /* line 308, ../scss/simple/_type.scss */
-blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite { display: block; /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 13px; /* 9 */ font-size: 0.8125rem; /* 9 */ color: #3c3c3c; }
 /* line 312, ../scss/simple/_type.scss */
-blockquote cite a, blockquote cite a:visited { color: #555555; }
-/* line 318, ../scss/simple/_type.scss */
+blockquote cite:before { content: "\2014 \0020"; }
+/* line 316, ../scss/simple/_type.scss */
+blockquote cite a, blockquote cite a:visited { color: #3c3c3c; }
+/* line 322, ../scss/simple/_type.scss */
 blockquote.right { border-left: none; border-right: 1px solid #dddddd; text-align: right; }
-/* line 323, ../scss/simple/_type.scss */
+/* line 327, ../scss/simple/_type.scss */
 blockquote.right cite { text-align: right; }
 
-/* line 328, ../scss/simple/_type.scss */
-blockquote, blockquote p { line-height: 1.428; color: #6f6f6f; }
+/* line 332, ../scss/simple/_type.scss */
+blockquote, blockquote p { line-height: 1.428; color: #959595; }
 
-/* line 1, ../scss/simple/_utilities.scss */
-.pull-left { float: left !important; }
-
-/* line 5, ../scss/simple/_utilities.scss */
-.pull-right { float: right !important; }
-
-/* line 9, ../scss/simple/_utilities.scss */
-.centered-block { display: block; margin-left: auto; margin-right: auto; }
-
-/* line 39, ../scss/simple/_mixins.scss */
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-/* line 44, ../scss/simple/_mixins.scss */
-.clearfix:after { clear: both; }
-
-/* line 19, ../scss/simple/_utilities.scss */
-.rounded { -moz-border-radius: 1000px; -webkit-border-radius: 1000px; border-radius: 1000px; }
-
-/* line 23, ../scss/simple/_utilities.scss */
-.radius { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-
-/* line 26, ../scss/simple/_buttons.scss */
-button, .button { padding: 0.625rem 1.125rem; margin-bottom: 1.25rem; display: inline-block; font-size: 0.875rem; border-width: 1px; border-style: solid; white-space: nowrap; font-weight: normal; text-align: center; cursor: pointer; color: white; border-color: #29b765; background-color: #2ecc71; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
+/* line 58, ../scss/simple/_buttons.scss */
+button, .button { /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ padding: 10px 20px; /* 9 */ padding: 0.625rem 1.25rem; /* 9 */ margin-bottom: 0.5rem; display: inline-block; /* 3 */ /* 3 */ /* 4 */ /* 6 */ /* 6 */ /* 7 */ font-size: 14px; /* 9 */ font-size: 0.875rem; /* 9 */ border-width: 1px; border-style: solid; white-space: nowrap; font-weight: 400; text-align: center; cursor: pointer; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; color: white; border-color: #29b765; background-color: #2ecc71; }
 /* line 6, ../scss/simple/_buttons.scss */
-button:hover, button:focus, .button:hover, .button:focus { background-color: #25a25a; border-color: #249e58; }
-/* line 12, ../scss/simple/_buttons.scss */
+button:hover, button:focus, .button:hover, .button:focus { color: white; background-color: #25a25a; border-color: #26a75c; }
+/* line 13, ../scss/simple/_buttons.scss */
+button:active, button.active, .button:active, .button.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.disabled, button[disabled], fieldset[disabled] button, .button.disabled, .button[disabled], fieldset[disabled] .button { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
 button.outline, .button.outline { color: #2ecc71; border-color: #2ecc71; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.outline:hover, button.outline:focus, .button.outline:hover, .button.outline:focus { background-color: #2ecc71; border-color: #249e58; color: white; }
+/* line 36, ../scss/simple/_buttons.scss */
+button.outline:hover, button.outline:focus, .button.outline:hover, .button.outline:focus { background-color: #2ecc71; border-color: #2ecc71; color: white; }
 /* line 43, ../scss/simple/_buttons.scss */
-button.secundary, .button.secundary { color: white; border-color: #233140; background-color: #2c3e50; }
+button.outline.transparent, .button.outline.transparent { color: #2ecc71; border-color: #2ecc71; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.outline.transparent:hover, button.outline.transparent:focus, .button.outline.transparent:hover, .button.outline.transparent:focus { background-color: #2ecc71; border-color: #2ecc71; color: white; }
+/* line 75, ../scss/simple/_buttons.scss */
+button.dark, .button.dark { color: white; border-color: #233140; background-color: #2c3e50; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.secundary:hover, button.secundary:focus, .button.secundary:hover, .button.secundary:focus { background-color: #1a242f; border-color: #18222c; }
-/* line 12, ../scss/simple/_buttons.scss */
-button.secundary.outline, .button.secundary.outline { color: #2c3e50; border-color: #2c3e50; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.secundary.outline:hover, button.secundary.outline:focus, .button.secundary.outline:hover, .button.secundary.outline:focus { background-color: #2c3e50; border-color: #18222c; color: white; }
-/* line 44, ../scss/simple/_buttons.scss */
+button.dark:hover, button.dark:focus, .button.dark:hover, .button.dark:focus { color: white; background-color: #1a242f; border-color: #1c2732; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.dark:active, button.dark.active, .button.dark:active, .button.dark.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.dark.disabled, button.dark[disabled], fieldset[disabled] button.dark, .button.dark.disabled, .button.dark[disabled], fieldset[disabled] .button.dark { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
+button.dark.outline, .button.dark.outline { color: #2c3e50; border-color: #2c3e50; background-color: white; }
+/* line 36, ../scss/simple/_buttons.scss */
+button.dark.outline:hover, button.dark.outline:focus, .button.dark.outline:hover, .button.dark.outline:focus { background-color: #2c3e50; border-color: #2c3e50; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.dark.outline.transparent, .button.dark.outline.transparent { color: #2c3e50; border-color: #2c3e50; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.dark.outline.transparent:hover, button.dark.outline.transparent:focus, .button.dark.outline.transparent:hover, .button.dark.outline.transparent:focus { background-color: #2c3e50; border-color: #2c3e50; color: white; }
+/* line 80, ../scss/simple/_buttons.scss */
 button.default, .button.default { color: #666666; border-color: #e5e5e5; background-color: #f2f2f2; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.default:hover, button.default:focus, .button.default:hover, .button.default:focus { background-color: #d8d8d8; border-color: #d6d6d6; }
-/* line 12, ../scss/simple/_buttons.scss */
-button.default.outline, .button.default.outline { color: #f2f2f2; border-color: #f2f2f2; background-color: #666666; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.default.outline:hover, button.default.outline:focus, .button.default.outline:hover, .button.default.outline:focus { background-color: #f2f2f2; border-color: #d6d6d6; color: #666666; }
-/* line 45, ../scss/simple/_buttons.scss */
+button.default:hover, button.default:focus, .button.default:hover, .button.default:focus { color: #666666; background-color: #d8d8d8; border-color: #dbdbdb; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.default:active, button.default.active, .button.default:active, .button.default.active { outline: 0; color: #666666; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.default.disabled, button.default[disabled], fieldset[disabled] button.default, .button.default.disabled, .button.default[disabled], fieldset[disabled] .button.default { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
+button.default.outline, .button.default.outline { color: #666666; border-color: #666666; background-color: white; }
+/* line 36, ../scss/simple/_buttons.scss */
+button.default.outline:hover, button.default.outline:focus, .button.default.outline:hover, .button.default.outline:focus { background-color: #666666; border-color: #666666; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.default.outline.transparent, .button.default.outline.transparent { color: #666666; border-color: #666666; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.default.outline.transparent:hover, button.default.outline.transparent:focus, .button.default.outline.transparent:hover, .button.default.outline.transparent:focus { background-color: #666666; border-color: #666666; color: white; }
+/* line 85, ../scss/simple/_buttons.scss */
 button.info, .button.info { color: white; border-color: #0097d3; background-color: #00a9ec; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.info:hover, button.info:focus, .button.info:hover, .button.info:focus { background-color: #0084b9; border-color: #0081b4; }
-/* line 12, ../scss/simple/_buttons.scss */
+button.info:hover, button.info:focus, .button.info:hover, .button.info:focus { color: white; background-color: #0084b9; border-color: #0088be; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.info:active, button.info.active, .button.info:active, .button.info.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.info.disabled, button.info[disabled], fieldset[disabled] button.info, .button.info.disabled, .button.info[disabled], fieldset[disabled] .button.info { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
 button.info.outline, .button.info.outline { color: #00a9ec; border-color: #00a9ec; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.info.outline:hover, button.info.outline:focus, .button.info.outline:hover, .button.info.outline:focus { background-color: #00a9ec; border-color: #0081b4; color: white; }
-/* line 46, ../scss/simple/_buttons.scss */
+/* line 36, ../scss/simple/_buttons.scss */
+button.info.outline:hover, button.info.outline:focus, .button.info.outline:hover, .button.info.outline:focus { background-color: #00a9ec; border-color: #00a9ec; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.info.outline.transparent, .button.info.outline.transparent { color: #00a9ec; border-color: #00a9ec; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.info.outline.transparent:hover, button.info.outline.transparent:focus, .button.info.outline.transparent:hover, .button.info.outline.transparent:focus { background-color: #00a9ec; border-color: #00a9ec; color: white; }
+/* line 90, ../scss/simple/_buttons.scss */
 button.danger, .button.danger { color: white; border-color: #b7230c; background-color: #cf280e; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.danger:hover, button.danger:focus, .button.danger:hover, .button.danger:focus { background-color: #9f1f0b; border-color: #9a1e0a; }
-/* line 12, ../scss/simple/_buttons.scss */
+button.danger:hover, button.danger:focus, .button.danger:hover, .button.danger:focus { color: white; background-color: #9f1f0b; border-color: #a4200b; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.danger:active, button.danger.active, .button.danger:active, .button.danger.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.danger.disabled, button.danger[disabled], fieldset[disabled] button.danger, .button.danger.disabled, .button.danger[disabled], fieldset[disabled] .button.danger { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
 button.danger.outline, .button.danger.outline { color: #cf280e; border-color: #cf280e; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.danger.outline:hover, button.danger.outline:focus, .button.danger.outline:hover, .button.danger.outline:focus { background-color: #cf280e; border-color: #9a1e0a; color: white; }
-/* line 47, ../scss/simple/_buttons.scss */
+/* line 36, ../scss/simple/_buttons.scss */
+button.danger.outline:hover, button.danger.outline:focus, .button.danger.outline:hover, .button.danger.outline:focus { background-color: #cf280e; border-color: #cf280e; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.danger.outline.transparent, .button.danger.outline.transparent { color: #cf280e; border-color: #cf280e; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.danger.outline.transparent:hover, button.danger.outline.transparent:focus, .button.danger.outline.transparent:hover, .button.danger.outline.transparent:focus { background-color: #cf280e; border-color: #cf280e; color: white; }
+/* line 95, ../scss/simple/_buttons.scss */
 button.warning, .button.warning { color: white; border-color: #ce6300; background-color: #e76f00; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus { background-color: #b45600; border-color: #af5400; }
-/* line 12, ../scss/simple/_buttons.scss */
+button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus { color: white; background-color: #b45600; border-color: #b95900; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.warning:active, button.warning.active, .button.warning:active, .button.warning.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.warning.disabled, button.warning[disabled], fieldset[disabled] button.warning, .button.warning.disabled, .button.warning[disabled], fieldset[disabled] .button.warning { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
 button.warning.outline, .button.warning.outline { color: #e76f00; border-color: #e76f00; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.warning.outline:hover, button.warning.outline:focus, .button.warning.outline:hover, .button.warning.outline:focus { background-color: #e76f00; border-color: #af5400; color: white; }
+/* line 36, ../scss/simple/_buttons.scss */
+button.warning.outline:hover, button.warning.outline:focus, .button.warning.outline:hover, .button.warning.outline:focus { background-color: #e76f00; border-color: #e76f00; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.warning.outline.transparent, .button.warning.outline.transparent { color: #e76f00; border-color: #e76f00; background-color: transparent; }
 /* line 48, ../scss/simple/_buttons.scss */
+button.warning.outline.transparent:hover, button.warning.outline.transparent:focus, .button.warning.outline.transparent:hover, .button.warning.outline.transparent:focus { background-color: #e76f00; border-color: #e76f00; color: white; }
+/* line 100, ../scss/simple/_buttons.scss */
 button.success, .button.success { color: white; border-color: #29b765; background-color: #2ecc71; }
 /* line 6, ../scss/simple/_buttons.scss */
-button.success:hover, button.success:focus, .button.success:hover, .button.success:focus { background-color: #25a25a; border-color: #249e58; }
-/* line 12, ../scss/simple/_buttons.scss */
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus { color: white; background-color: #25a25a; border-color: #26a75c; }
+/* line 13, ../scss/simple/_buttons.scss */
+button.success:active, button.success.active, .button.success:active, .button.success.active { outline: 0; color: white; background-image: none; -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+/* line 21, ../scss/simple/_buttons.scss */
+button.success.disabled, button.success[disabled], fieldset[disabled] button.success, .button.success.disabled, .button.success[disabled], fieldset[disabled] .button.success { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 31, ../scss/simple/_buttons.scss */
 button.success.outline, .button.success.outline { color: #2ecc71; border-color: #2ecc71; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.success.outline:hover, button.success.outline:focus, .button.success.outline:hover, .button.success.outline:focus { background-color: #2ecc71; border-color: #249e58; color: white; }
-/* line 49, ../scss/simple/_buttons.scss */
-button.dark, .button.dark { color: white; border-color: #040404; background-color: #111111; }
-/* line 6, ../scss/simple/_buttons.scss */
-button.dark:hover, button.dark:focus, .button.dark:hover, .button.dark:focus { background-color: black; border-color: black; }
-/* line 12, ../scss/simple/_buttons.scss */
-button.dark.outline, .button.dark.outline { color: #111111; border-color: #111111; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.dark.outline:hover, button.dark.outline:focus, .button.dark.outline:hover, .button.dark.outline:focus { background-color: #111111; border-color: black; color: white; }
-/* line 50, ../scss/simple/_buttons.scss */
-button.muted, .button.muted { color: white; border-color: #aeaeae; background-color: #bbbbbb; }
-/* line 6, ../scss/simple/_buttons.scss */
-button.muted:hover, button.muted:focus, .button.muted:hover, .button.muted:focus { background-color: #a2a2a2; border-color: #9f9f9f; }
-/* line 12, ../scss/simple/_buttons.scss */
-button.muted.outline, .button.muted.outline { color: #bbbbbb; border-color: #bbbbbb; background-color: white; }
-/* line 17, ../scss/simple/_buttons.scss */
-button.muted.outline:hover, button.muted.outline:focus, .button.muted.outline:hover, .button.muted.outline:focus { background-color: #bbbbbb; border-color: #9f9f9f; color: white; }
+/* line 36, ../scss/simple/_buttons.scss */
+button.success.outline:hover, button.success.outline:focus, .button.success.outline:hover, .button.success.outline:focus { background-color: #2ecc71; border-color: #2ecc71; color: white; }
+/* line 43, ../scss/simple/_buttons.scss */
+button.success.outline.transparent, .button.success.outline.transparent { color: #2ecc71; border-color: #2ecc71; background-color: transparent; }
+/* line 48, ../scss/simple/_buttons.scss */
+button.success.outline.transparent:hover, button.success.outline.transparent:focus, .button.success.outline.transparent:hover, .button.success.outline.transparent:focus { background-color: #2ecc71; border-color: #2ecc71; color: white; }
+/* line 105, ../scss/simple/_buttons.scss */
+button.link, .button.link { color: #2ecc71; border-color: transparent; background-color: transparent; text-decoration: none; }
+/* line 111, ../scss/simple/_buttons.scss */
+button.link:hover, button.link:focus, .button.link:hover, .button.link:focus { color: #25a25a; background-color: transparent; }
+/* line 121, ../scss/simple/_buttons.scss */
+button.link.disabled, button.link[disabled], fieldset[disabled] button.link, .button.link.disabled, .button.link[disabled], fieldset[disabled] .button.link { pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
