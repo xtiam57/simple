@@ -27,7 +27,7 @@ a {
   color: $anchor-font-color;
   text-decoration: $anchor-text-decoration;
   line-height: inherit;
-  @include single-transition(color, .25s);
+  @include single-transition(color, $anchor-transition-time);
 
   &:hover,
   &:focus {
@@ -46,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: $header-font-style;
   color: $header-font-color;
   text-rendering: $header-text-rendering;
-  @include rem(margin-top, $header-top-margin);
-  @include rem(margin-bottom, $header-bottom-margin);
+  margin-top: $header-top-margin;
+  margin-bottom: $header-bottom-margin;
   line-height: $header-line-height;
   word-wrap: $header-word-wrap;
 
@@ -61,39 +61,45 @@ h1, h2, h3, h4, h5, h6 {
     line-height: $subheader-line-height;
     color: $subheader-font-color;
     font-weight: $subheader-font-weight;
-    @include rem(margin-top, $subheader-top-margin);
-    @include rem(margin-bottom, $subheader-bottom-margin);
+    margin-top: $subheader-top-margin;
+    margin-bottom: $subheader-bottom-margin;
+  }
+
+  &.page-header {
+    border-bottom: $page-header-border-width $page-header-border-style $page-header-border-color;
+    line-height: $page-header-line-height;
+    margin-bottom: $page-header-bottom-margin;
   }
 
   &.xlarge-header {
-    @include rem(font-size, $xlarge-font-size);
+    font-size: $xlarge-font-size;
     letter-spacing: $xlarge-letter-spacing;
   }
 
   &.xxlarge-header {
-    @include rem(font-size, $xxlarge-font-size);
+    font-size: $xxlarge-font-size;
     letter-spacing: $xxlarge-letter-spacing;
   }
 }
 
-h1 { @include rem(font-size, $h1-font-size); letter-spacing: $h1-letter-spacing; }
-h2 { @include rem(font-size, $h2-font-size); letter-spacing: $h2-letter-spacing; }
-h3 { @include rem(font-size, $h3-font-size); letter-spacing: $h3-letter-spacing; }
-h4 { @include rem(font-size, $h4-font-size); letter-spacing: $h4-letter-spacing; }
-h5 { @include rem(font-size, $h5-font-size); letter-spacing: $h5-letter-spacing; }
-h6 { @include rem(font-size, $h6-font-size); letter-spacing: $h6-letter-spacing; }
+h1 { font-size: $h1-font-size; letter-spacing: $h1-letter-spacing; }
+h2 { font-size: $h2-font-size; letter-spacing: $h2-letter-spacing; }
+h3 { font-size: $h3-font-size; letter-spacing: $h3-letter-spacing; }
+h4 { font-size: $h4-font-size; letter-spacing: $h4-letter-spacing; }
+h5 { font-size: $h5-font-size; letter-spacing: $h5-letter-spacing; }
+h6 { font-size: $h6-font-size; letter-spacing: $h6-letter-spacing; }
 
 p {
   font-family: $paragraph-font-family;
   font-weight: $paragraph-font-weight;
-  @include rem(font-size, $paragraph-font-size);
+  font-size: $paragraph-font-size;
   line-height: $paragraph-line-height;
-  @include rem(margin-bottom, $paragraph-margin-bottom);
+  margin-bottom: $paragraph-margin-bottom;
   text-rendering: $paragraph-text-rendering;
   color: $paragraph-font-color;
 
   &.lead {
-    @include rem(font-size, $paragraph-font-size * ($lead-scale / 100%));
+    font-size: $paragraph-font-size * ($lead-scale / 100%);
     line-height: $lead-line-height;
     color: $lead-font-color;
   }
@@ -109,7 +115,7 @@ hr {
   border: $hr-border-style $hr-border-color;
   border-width: $hr-border-width 0 0;
   clear: both;
-  @include rem(margin, ($hr-margin - $hr-border-width * 0.5) 0);
+  margin: ($hr-margin - $hr-border-width * 0.5) 0;
   height: 0;
 }
 
@@ -137,8 +143,8 @@ code {
   font-family: $code-font-family;
   font-weight: $code-font-weight;
   color: $code-color;
-  @include rem(padding, $code-padding);
-  @include rem(font-size, $base-font-size);
+  padding: $code-padding;
+  font-size: $base-font-size;
   background-color: $code-bg;
 }
 
@@ -148,8 +154,8 @@ pre {
   font-weight: $pre-font-weight;
   color: $pre-color;
   display: $pre-display;
-  @include rem(padding, $pre-padding);
-  @include rem(margin, 0 0 $pre-margin-bottom);
+  padding: $pre-padding;
+  margin: 0 0 $pre-margin-bottom;
   line-height: $pre-line-height;
   word-break: break-all;
   word-wrap: break-word;
@@ -166,21 +172,21 @@ pre {
 ul,
 ol,
 dl {
-  @include rem(font-size, $list-font-size);
+  font-size: $list-font-size;
   line-height: $list-line-height;
-  @include rem(margin-bottom, $list-margin-bottom);
+  margin-bottom: $list-margin-bottom;
   list-style-position: $list-style-position;
   font-family: $list-font-family;
 }
 
 ul {
-  @include rem(margin-#{$default-float}, $list-side-margin);
+  margin-#{$default-float}: $list-side-margin;
   &.no-bullet {
-    @include rem(margin-#{$default-float}, $list-side-margin-no-bullet);
+    margin-#{$default-float}: $list-side-margin-no-bullet;
     li {
       ul,
       ol {
-        @include rem(margin-#{$default-float}, $list-nested-margin);
+        margin-#{$default-float}: $list-nested-margin;
         margin-bottom: 0;
         list-style: none;
       }
@@ -193,7 +199,7 @@ ul {
   li {
     ul,
     ol {
-      @include rem(margin-#{$default-float}, $list-nested-margin);
+      margin-#{$default-float}: $list-nested-margin;
       margin-bottom: 0;
     }
   }
@@ -203,19 +209,19 @@ ul {
     li ul { list-style: inherit; }
   }
 
-  &.square { list-style-type: square; @include rem(margin-#{$default-float}, $list-side-margin); }
-  &.circle { list-style-type: circle; @include rem(margin-#{$default-float}, $list-side-margin); }
-  &.disc { list-style-type: disc; @include rem(margin-#{$default-float}, $list-side-margin); }
+  &.square { list-style-type: square; margin-#{$default-float}: $list-side-margin; }
+  &.circle { list-style-type: circle; margin-#{$default-float}: $list-side-margin; }
+  &.disc { list-style-type: disc; margin-#{$default-float}: $list-side-margin; }
   &.no-bullet { list-style: none; }
 }
 
 /* Ordered Lists */
 ol {
-  @include rem(margin-#{$default-float}, $list-ordered-side-margin);
+  margin-#{$default-float}: $list-ordered-side-margin;
   li {
     ul,
     ol {
-      @include rem(margin-#{$default-float}, $list-nested-margin);
+      margin-#{$default-float}: $list-nested-margin;
       margin-bottom: 0;
     }
   }
@@ -225,18 +231,18 @@ ol {
 ul,
 ol {
   &.inline-list {
-    @include rem(margin, $inline-list-top-margin auto $inline-list-bottom-margin auto);
-    @include rem(margin-#{$default-float}, $inline-list-default-float-margin);
-    @include rem(margin-#{$opposite-direction}, $inline-list-opposite-margin);
-    @include rem(padding, $inline-list-padding);
+    margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
+    margin-#{$default-float}: $inline-list-default-float-margin;
+    margin-#{$opposite-direction}: $inline-list-opposite-margin;
+    padding: $inline-list-padding;
     list-style: none;
     overflow: $inline-list-overflow;
 
     & > li {
-      @include rem(padding, $inline-list-children-padding);
+      padding: $inline-list-children-padding;
       list-style: none;
       float: $default-float;
-      @include rem(margin-#{$default-float}, $inline-list-default-float-list-margin);
+      margin-#{$default-float}: $inline-list-default-float-list-margin;
       display: $inline-list-display;
       &>* { display: $inline-list-children-display; }
     }
@@ -246,10 +252,10 @@ ol {
 /* Definition Lists */
 dl {
   dt {
-    @include rem(margin-bottom, $definition-list-header-margin-bottom);
+    margin-bottom: $definition-list-header-margin-bottom;
     font-weight: $definition-list-header-weight;
   }
-  dd { @include rem(margin-bottom, $definition-list-margin-bottom); }
+  dd { margin-bottom: $definition-list-margin-bottom; }
 }
 
 /* Abbreviations */
@@ -267,13 +273,13 @@ abbr {
 
 /* Blockquotes */
 blockquote {
-  @include rem(margin, 0 0 $paragraph-margin-bottom);
-  @include rem(padding, $blockquote-padding);
+  margin: 0 0 $paragraph-margin-bottom;
+  padding: $blockquote-padding;
   border-#{$default-float}: $blockquote-border;
 
   cite {
     display: block;
-    @include rem(font-size, $blockquote-cite-font-size);
+    font-size: $blockquote-cite-font-size;
     color: $blockquote-cite-font-color;
     &:before {
       content: "\2014 \0020";
@@ -285,7 +291,7 @@ blockquote {
     }
   }
 
-  &.right {
+  &.opposite {
     border-#{$default-float}: none;
     border-#{$opposite-direction}: $blockquote-border;
     text-align: $opposite-direction;
@@ -320,3 +326,4 @@ blockquote p {
 .text-warning { @include color-variant($warning-color); }
 .text-success { @include color-variant($success-color); }
 .text-white { @include color-variant(#fff); }
+.text-muted { @include color-variant($muted-color); }

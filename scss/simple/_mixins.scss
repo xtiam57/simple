@@ -8,12 +8,14 @@
 // We append according values to the lists depending on the unit of the given value
 // If the two lists are the same, we ouput only one (like margin-top: 0)
 // We output the result
+$rem-base: 16px !default;
+$px-only: false;
 
 @function parseInt($n) { /* 2 */
   @return $n / ($n * 0 + 1);
 }
 
-@mixin rem($property, $values, $base: $rem-base) {
+@function rem($values, $base: $rem-base) {
   $px : (); /* 3 */
   $rem: (); /* 3 */
 
@@ -40,11 +42,46 @@
     }
   }
 
-  @if $px == $rem {     /* 8 */
-    #{$property}: $px;  /* 9 */
-  } @else {
-    #{$property}: $px;  /* 9 */
-    #{$property}: $rem; /* 9 */
+  @if $px-only == true {
+    @return $px();
+  }
+  @else {
+    @return $rem();
+  }
+}
+
+@function em($values, $base: $rem-base) {
+  $px : (); /* 3 */
+  $em: (); /* 3 */
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $em: append($em, $value);
+    }
+
+    @else {
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $em: append($em, ($val / parseInt($base) + em));
+      }
+
+      @if $unit == "em" { /* 7 */
+        $px : append($px,  ($val * parseInt($base) + px));
+        $em: append($em, $value);
+      }
+    }
+  }
+
+  @if $px-only == true {
+    @return $px();
+  }
+  @else {
+    @return $em();
   }
 }
 

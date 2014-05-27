@@ -1,183 +1,190 @@
-// Container element
-@mixin container-fixed() {
-  padding-left:  ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+// Grid general info
+$column-gutter: 20px !default;
+$total-columns: 12 !default;
+
+// Media Query Ranges
+$small-range-min: 0;
+$small-range-max: em(640px); // 40em
+
+$medium-range-min: em(641px); // 40.063em
+$medium-range-max: em(1024px); // 64em
+
+$large-range-min: em(1025px); // 64.063em
+$large-range-max: em(1440px); // 90em
+
+$xlarge-range-min: em(1441px); // 90.063em
+$xlarge-range-max: em(1920px); // 120em
+
+$xxlarge-range-min: em(1921px); // 120.063em
+
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{$small-range-max})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{$medium-range-min})" !default;
+$medium-only: "#{$screen} and (min-width:#{$medium-range-min}) and (max-width:#{$medium-range-max})" !default;
+
+$large-up: "#{$screen} and (min-width:#{$large-range-min})" !default;
+$large-only: "#{$screen} and (min-width:#{$large-range-min}) and (max-width:#{$large-range-max})" !default;
+
+$xlarge-up: "#{$screen} and (min-width:#{$xlarge-range-min})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
+
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
+
+// Legacy
+$small: $medium-up;
+$medium: $medium-up;
+$large: $large-up;
+$hd: $xlarge-up;
+$uhd: $xxlarge-up;
+
+
+@function column-width($columnNumber, $totalColumns: $total-columns) {
+  @return percentage($columnNumber / $totalColumns);
+}
+
+@mixin make-column($column) {
+  background-color: magenta;
+  color: white;
+  border: 1px solid white;
+
+  width: column-width($column);
+}
+
+@mixin make-columns($size) {
+  .column,
+  .columns {
+    &.#{$size}-centered {
+      margin-#{$default-float}: auto;
+      margin-#{$opposite-direction}: auto;
+      float: none !important;
+    }
+
+    &.#{$size}-uncentered {
+      margin-#{$default-float}: 0;
+      margin-#{$opposite-direction}: 0;
+      float: $default-float !important;
+    }
+
+    &.#{$size}-uncentered.opposite {
+      float: $opposite-direction;
+    }
+  }
+
+  @for $i from 1 through $total-columns {
+    .#{$size}-#{$i} { @include make-column($column: $i); }
+  }
+
+  @for $i from 1 through $total-columns - 1 {
+    .#{$size}-offset-#{$i} { margin-#{$default-float}: column-width($i); }
+
+    // .#{$size}-push-#{$i} {
+    //   #{$default-float}: column-width($i);
+    //   #{$opposite-direction}: auto;
+    // }
+
+    // position: relative;
+
+    // .#{$size}-pull-#{$i} {
+    //   #{$opposite-direction}: column-width($i);
+    //   #{$default-float}: auto;
+    // }
+  }
+}
+
+@mixin make-row($nested: false) {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @if $nested == false {
+    width: 100%;
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+  }
+  @else {
+    width: auto;
+    margin-#{$default-float}: rem($column-gutter / -2);
+    margin-#{$opposite-direction}: rem($column-gutter / -2);
+  }
+
+  // Clearfix for all rows
   @include clearfix();
-
-  &.centered {
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 
-// Creates a wrapper for a series of columns
-@mixin make-row($gutter: $grid-gutter-width) {
-  margin-left:  ($gutter / -2);
-  margin-right: ($gutter / -2);
-  overflow: hidden;
-  @include clearfix();
-}
-
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `$grid-columns`.
-@mixin make-grid-columns($classes) {
-  $list: '';
-  $i: 1;
-  @each $class in $classes {
-    @for $i from 1 through $grid-columns {
-      @if $list == '' {
-        $list: ".col-#{$class}-#{$i}";
-      }
-      @else {
-        $list: "#{$list}, .col-#{$class}-#{$i}";
-      }
-    }
-  }
-  #{$list} {
-    position: relative;
-    // Prevent columns from collapsing when empty
-    min-height: 1px;
-    // Inner gutter via padding
-    padding-left:  ($grid-gutter-width / 2);
-    padding-right: ($grid-gutter-width / 2);
-    // padding: ($grid-gutter-width / 2);
-  }
-}
-
-// [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin float-grid-columns($class) {
-  $list: '';
-  $i: 1;
-  $list: ".col-#{$class}-#{$i}";
-  @for $i from 2 through $grid-columns {
-    $list: "#{$list}, .col-#{$class}-#{$i}";
-  }
-  #{$list} {
-    float: left;
-  }
-  // .row.equal {
-  //   #{$list} {
-  //     margin-bottom: -99999px;
-  //     padding-bottom: 99999px + ($grid-gutter-width / 2);
-  //   }
-  // }
-}
-
-
-@mixin calc-grid-column($index, $class, $type) {
-  @if ($type == width) and ($index > 0) {
-    .col-#{$class}-#{$index} {
-      width: percentage(($index / $grid-columns));
-    }
-  }
-  @if ($type == push) and ($index > 0) {
-    .col-#{$class}-push-#{$index} {
-      left: percentage(($index / $grid-columns));
-    }
-  }
-  @if ($type == push) and ($index == 0) {
-    .col-#{$class}-push-0 {
-      left: auto;
-    }
-  }
-  @if ($type == pull) and ($index > 0) {
-    .col-#{$class}-pull-#{$index} {
-      right: percentage(($index / $grid-columns));
-    }
-  }
-  @if ($type == pull) and ($index == 0) {
-    .col-#{$class}-pull-0 {
-      right: auto;
-    }
-  }
-  @if ($type == offset) {
-    .col-#{$class}-offset-#{$index} {
-      margin-left: percentage(($index / $grid-columns));
-    }
-  }
-}
-
-// [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin loop-grid-columns($columns, $class, $type) {
-  @for $i from 0 through $columns {
-    @include calc-grid-column($i, $class, $type);
-  }
-}
-
-// Create grid for specific class
-@mixin make-grid($class) {
-  @include float-grid-columns($class);
-  @include loop-grid-columns($grid-columns, $class, width);
-  @include loop-grid-columns($grid-columns, $class, pull);
-  @include loop-grid-columns($grid-columns, $class, push);
-  @include loop-grid-columns($grid-columns, $class, offset);
-}
-
-
-
-// Set the container width, and override it for fixed navbars in media queries.
-.container {
-  @include container-fixed();
-
-  @media (min-width: $screen-sm-min) {
-    width: $container-sm;
-  }
-  @media (min-width: $screen-md-min) {
-    width: $container-md;
-  }
-  @media (min-width: $screen-lg-min) {
-    width: $container-lg;
-  }
-  @media (min-width: $screen-xlg-min) {
-    width: $container-xlg;
-  }
-}
-
-// Utilizes the mixin meant for fixed width containers, but without any defined
-// width for fluid, full width layouts.
-.container-fluid {
-  @include container-fixed();
-}
-
-// Rows contain and clear the floats of your columns.
 .row {
+  background-color: chartreuse;
   @include make-row();
+
+  &.collapse {
+    > .column,
+    > .columns  {
+      padding-left: 0;
+      padding-right: 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .row {
+    @include make-row($nested: true);
+  }
 }
 
-// Common styles for small and large grid columns
-@include make-grid-columns((xs, sm, md, lg, xlg));
-
-// Extra small grid
-//
-// Columns, offsets, pushes, and pulls for extra small devices like
-// smartphones.
-@include make-grid(xs);
-
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-@media (min-width: $screen-sm-min) {
-  @include make-grid(sm);
+.column,
+.columns {
+  padding-right: rem($column-gutter / 2);
+  padding-left: rem($column-gutter / 2);
+  float: $default-float;
+  overflow: hidden;
 }
 
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-@media (min-width: $screen-md-min) {
-  @include make-grid(md);
+.container {
+  @media #{$small-up} {
+
+  }
+
+  @media #{$medium-up} {
+
+  }
+
+  @media #{$large-up} {
+
+  }
+
+  @media #{$xlarge-up} {
+
+  }
+
+  @media #{$xxlarge-up} {
+
+  }
 }
 
-// Large grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-@media (min-width: $screen-lg-min) {
-  @include make-grid(lg);
+@media #{$small-up} {
+  @include make-columns($size: small);
 }
 
-// xLarge grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-@media (min-width: $screen-xlg-min) {
-  @include make-grid(xlg);
+@media #{$medium-up} {
+  @include make-columns($size: medium);
+}
+
+@media #{$large-up} {
+  @include make-columns($size: large);
+}
+
+@media #{$xlarge-up} {
+  @include make-columns($size: xlarge);
+}
+
+@media #{$xxlarge-up} {
+  @include make-columns($size: xxlarge);
 }

@@ -1,10 +1,5 @@
-.pull-left {
-  float: left !important;
-}
-
-.pull-right {
-  float: right !important;
-}
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }
 
 .centered-block {
   display: block;
@@ -12,18 +7,26 @@
   margin-right: auto;
 }
 
-.clearfix {
-  @include clearfix();
-}
+.clearfix { @include clearfix(); }
 
-.rounded {
-  @include border-radius($global-rounded);
-}
+.rounded { @include border-radius($global-rounded); }
+.radius { @include border-radius($global-radius); }
 
-.radius {
-  @include border-radius($global-radius);
-}
+// .hug {
+//   margin-top: 0;
+// }
 
-.hug {
-  margin-top: 0;
-}
+
+// .valign {
+//   &:before {
+//     content:' ';
+//     display: inline-block;
+//     height: 9000px;
+//     vertical-align: middle;
+//     margin-right: -0.25em;
+//   }
+//   > div, > article, > section, > figure {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+// }

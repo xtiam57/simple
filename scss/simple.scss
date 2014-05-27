@@ -6,12 +6,12 @@
 @import "font-awesome/font-awesome";
 
 // The core and heart of Simple
-@import "simple/_settings";
 @import "simple/_mixins";
+@import "simple/_settings";
 
 // Here's where the magic of Simple truly begins!
 @import "simple/_scaffolding";
 @import "simple/_utilities";
 @import "simple/_grid";
 @import "simple/_type";
-@import "simple/_buttons";
+// @import "simple/_buttons";

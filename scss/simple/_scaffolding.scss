@@ -9,6 +9,7 @@ html, body {
   -ms-text-size-adjust: auto;
   -o-text-size-adjust: auto;
   text-size-adjust: auto;
+  -webkit-tap-highlight-color: $selection-bg;
 }
 
 // Set box-sizing globally to handle padding and border widths
@@ -32,3 +33,17 @@ body {
   position: relative;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Selection
+::selection {
+    background: $selection-bg;
+    color: $selection-font-color;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: $selection-bg;
+    color: $selection-font-color;
+    text-shadow: none;
+}
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
