@@ -2,23 +2,22 @@
 // Scaffolding
 // +++++
 
+// Grays
+$darker-gray-color: #1e1e1e;
+$dark-gray-color: #2a2a2b;
+$gray-color: #2d2f31;
+$light-gray-color: #333537;
+$lighter-gray-color: #3f4649;
+$muted-color: #999 !default;
+
 // We use these as default colors throughout
-$primary-color: #2ecc71 !default;
-$secundary-color: #2c3e50 !default;
-$default-color: #f2f2f2 !default;
+$primary-color: #0CBF84 !default;
+$secundary-color: $dark-gray-color !default;
+// $default-color: #FFF9D6 !default;
 $info-color: #00A9EC !default;
 $danger-color: #cf280e !default;
 $warning-color: #E76F00 !default;
-$success-color: #2ecc71 !default;
-$muted-color: #999 !default;
-
-$primary-contrast-color: #fff !default;
-$default-contrast-color: #666 !default;
-$info-contrast-color: #fff !default;
-$danger-contrast-color: #fff !default;
-$warning-contrast-color: #fff !default;
-$success-contrast-color: #fff !default;
-$dark-contrast-color: #fff !default;
+$success-color: #159E31 !default;
 
 // We use these to define body style
 $body-bg: #FFF;
@@ -36,11 +35,6 @@ $selection-font-color: #fff;
 // We use these to define default font weights
 $font-weight-bold: bold !default;
 $font-weight-normal: normal !default;
-
-// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
-// If you want your base font-size to be different and not have it affect the grid breakpoints,
-// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-$base-font-size: 16px !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
 $base-line-height: 1.5 !default;
@@ -68,7 +62,7 @@ $cursor-text-value: text !default;
 // +++++
 
 // We use these to make sure border radius matches unless we want it different.
-$global-radius: 5px;
+$global-radius: 10px;
 $global-rounded: 1000px;
 
 // This is the global margin bottom used for almost every element
@@ -86,7 +80,7 @@ $global-bottom-margin: rem(10px);
 $anchor-text-decoration: none !default;
 $anchor-text-decoration-hover: none !default;
 $anchor-font-color: $primary-color !default;
-$anchor-font-color-hover: darken($anchor-font-color, 20%) !default;
+$anchor-font-color-hover: darken($anchor-font-color, 10%) !default;
 $anchor-transition-time: .25s;
 
 // We use these to control header font styles
@@ -110,7 +104,7 @@ $h5-font-size: rem(16px);
 $h6-font-size: rem(12.003px);
 
 // This sizes are for big headings helpers
-$xxlarge-font-size: rem(89.763px) !default;
+$jumbo-font-size: rem(89.763px) !default;
 $xlarge-font-size: rem(67.339px) !default;
 
 // Custimizing letter spacing for each header (px)
@@ -120,7 +114,7 @@ $h3-letter-spacing: 0;
 $h4-letter-spacing: 0;
 $h5-letter-spacing: 0;
 $h6-letter-spacing: 0;
-$xxlarge-letter-spacing: 0;
+$jumbo-letter-spacing: 0;
 $xlarge-letter-spacing: 0;
 
 // These control how subheaders are styled.
@@ -155,14 +149,14 @@ $lead-font-color: darken($paragraph-font-color, 10%);
 
 // We use these to style <code> tags
 $code-color: darken($danger-color, 5%);
-$code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace;
 $code-font-weight: normal;
 $code-bg: #f9f2f4 !default;
 $code-padding: rem(2px 4px);
 
 // We use these to style <pre> tags
 $pre-color: darken($danger-color, 5%);
-$pre-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$pre-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace;
 $pre-font-weight: normal;
 $pre-display: block;
 $pre-padding: rem(15px);

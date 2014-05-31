@@ -1,16 +1,4 @@
 // rem convertion thanks to http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
-//
-// The mixin relies on a function to parse the integer from a value with a unit
-// We define a list of values for both units
-// We iterate through each value in the given parameter $values
-// If the value is either auto or 0, we append it to the list as-is
-// If the value has a unit, we split it to get both the unit and the raw value
-// We append according values to the lists depending on the unit of the given value
-// If the two lists are the same, we ouput only one (like margin-top: 0)
-// We output the result
-$rem-base: 16px !default;
-$px-only: false;
-
 @function parseInt($n) { /* 2 */
   @return $n / ($n * 0 + 1);
 }
@@ -50,7 +38,7 @@ $px-only: false;
   }
 }
 
-@function em($values, $base: $rem-base) {
+@function em($values, $base: $em-base) {
   $px : (); /* 3 */
   $em: (); /* 3 */
 

@@ -76,9 +76,9 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: $xlarge-letter-spacing;
   }
 
-  &.xxlarge-header {
-    font-size: $xxlarge-font-size;
-    letter-spacing: $xxlarge-letter-spacing;
+  &.jumbo-header {
+    font-size: $jumbo-font-size;
+    letter-spacing: $jumbo-letter-spacing;
   }
 }
 
@@ -308,19 +308,27 @@ blockquote p {
 }
 
 // Background colors
-.bg-primary { @include bg-variant($primary-color); }
-.bg-secundary { @include bg-variant($secundary-color); }
-.bg-default { @include bg-variant($default-color); }
-.bg-info { @include bg-variant($info-color); }
-.bg-danger { @include bg-variant($danger-color); }
-.bg-warning { @include bg-variant($warning-color); }
-.bg-success { @include bg-variant($success-color); }
-.bg-white { @include bg-variant(#fff); }
+.primary-bg { @include bg-variant($primary-color); }
+.secundary-bg { @include bg-variant($secundary-color); }
+.info-bg { @include bg-variant($info-color); }
+.danger-bg { @include bg-variant($danger-color); }
+.warning-bg { @include bg-variant($warning-color); }
+.success-bg { @include bg-variant($success-color); }
+
+.darker-gray-bg { @include bg-variant($darker-gray-color); }
+.dark-gray-bg { @include bg-variant($dark-gray-color); }
+.gray-bg { @include bg-variant($gray-color); }
+.light-gray-bg { @include bg-variant($light-gray-color); }
+.lighter-gray-bg { @include bg-variant($lighter-gray-color); }
+.muted-bg { @include bg-variant($muted-color); }
+
+// Helpers
+.white-bg { @include bg-variant(#fff); }
+.black-bg { @include bg-variant(#000); }
 
 // // Text color variant
 .text-primary { @include color-variant($primary-color); }
 .text-secundary { @include color-variant($secundary-color); }
-.text-default { @include color-variant($default-color); }
 .text-info { @include color-variant($info-color); }
 .text-danger { @include color-variant($danger-color); }
 .text-warning { @include color-variant($warning-color); }
