@@ -1,0 +1,15 @@
+.alert {
+  font-size: $alert-font-size;
+  padding: $alert-padding;
+
+  background-color: rgba(red($danger-color), green($danger-color), blue($danger-color), $alert-opacity);
+  color: $danger-color;
+
+  p {
+    color: $danger-color;
+
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+}

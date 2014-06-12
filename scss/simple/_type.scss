@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &.page-header {
-    border-bottom: $page-header-border-width $page-header-border-style $page-header-border-color;
+    border-bottom: $page-header-border;
     line-height: $page-header-line-height;
     margin-bottom: $page-header-bottom-margin;
   }
@@ -74,11 +74,6 @@ h1, h2, h3, h4, h5, h6 {
   &.xlarge-header {
     font-size: $xlarge-font-size;
     letter-spacing: $xlarge-letter-spacing;
-  }
-
-  &.jumbo-header {
-    font-size: $jumbo-font-size;
-    letter-spacing: $jumbo-letter-spacing;
   }
 }
 
@@ -112,7 +107,7 @@ p {
 .text-justify { text-align: justify !important; }
 
 hr {
-  border: $hr-border-style $hr-border-color;
+  border: $hr-border;
   border-width: $hr-border-width 0 0;
   clear: both;
   margin: ($hr-margin - $hr-border-width * 0.5) 0;
@@ -144,7 +139,7 @@ code {
   font-weight: $code-font-weight;
   color: $code-color;
   padding: $code-padding;
-  font-size: $base-font-size;
+  font-size: $code-font-size;
   background-color: $code-bg;
 }
 
@@ -160,7 +155,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: $pre-bg;
-  border: 1px solid $pre-border-color;
+  border: $pre-border;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -308,23 +303,17 @@ blockquote p {
 }
 
 // Background colors
-.primary-bg { @include bg-variant($primary-color); }
-.secundary-bg { @include bg-variant($secundary-color); }
-.info-bg { @include bg-variant($info-color); }
-.danger-bg { @include bg-variant($danger-color); }
-.warning-bg { @include bg-variant($warning-color); }
-.success-bg { @include bg-variant($success-color); }
-
-.darker-gray-bg { @include bg-variant($darker-gray-color); }
-.dark-gray-bg { @include bg-variant($dark-gray-color); }
-.gray-bg { @include bg-variant($gray-color); }
-.light-gray-bg { @include bg-variant($light-gray-color); }
-.lighter-gray-bg { @include bg-variant($lighter-gray-color); }
-.muted-bg { @include bg-variant($muted-color); }
+.bg-primary { @include bg-variant($primary-color, $primary-contrast-color); }
+.bg-secundary { @include bg-variant($secundary-color, $secundary-contrast-color); }
+.bg-default { @include bg-variant($default-color, $default-contrast-color); }
+.bg-info { @include bg-variant($info-color, $info-contrast-color); }
+.bg-danger { @include bg-variant($danger-color, $danger-contrast-color); }
+.bg-warning { @include bg-variant($warning-color, $warning-contrast-color); }
+.bg-success { @include bg-variant($success-color, $success-contrast-color); }
+.bg-muted { @include bg-variant($muted-color, $muted-contrast-color); }
 
 // Helpers
-.white-bg { @include bg-variant(#fff); }
-.black-bg { @include bg-variant(#000); }
+.bg-white { @include bg-variant(#fff); }
 
 // // Text color variant
 .text-primary { @include color-variant($primary-color); }
@@ -333,5 +322,8 @@ blockquote p {
 .text-danger { @include color-variant($danger-color); }
 .text-warning { @include color-variant($warning-color); }
 .text-success { @include color-variant($success-color); }
-.text-white { @include color-variant(#fff); }
 .text-muted { @include color-variant($muted-color); }
+
+// Helpers
+.text-white { @include color-variant(#fff); }
+.text-black { @include color-variant(#000); }

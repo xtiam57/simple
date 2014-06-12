@@ -11,6 +11,19 @@
 
 .rounded { @include border-radius($global-rounded); }
 .radius { @include border-radius($global-radius); }
+.circle { @include border-radius($global-circle); }
+
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
 
 // .hug {
 //   margin-top: 0;
