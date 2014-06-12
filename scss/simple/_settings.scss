@@ -3,48 +3,54 @@
 // +++++
 
 // Grays
-$darker-gray-color: #1e1e1e;
-$dark-gray-color: #2a2a2b;
-$gray-color: #2d2f31;
-$light-gray-color: #333537;
-$lighter-gray-color: #3f4649;
-$muted-color: #999 !default;
+// $darker-gray-color: #1e1e1e !default;
+// $dark-gray-color: #2a2a2b !default;
+// $gray-color: #2d2f31 !default;
+// $light-gray-color: #333537 !default;
+// $lighter-gray-color: #3f4649 !default;
 
 // We use these as default colors throughout
 $primary-color: #0CBF84 !default;
-$secundary-color: $dark-gray-color !default;
-// $default-color: #FFF9D6 !default;
+$secundary-color: #2a2a2b !default;
+$default-color: #f4f4f4 !default;
 $info-color: #00A9EC !default;
 $danger-color: #cf280e !default;
 $warning-color: #E76F00 !default;
 $success-color: #159E31 !default;
+$muted-color: #999 !default;
+
+// Contrast colors
+$primary-contrast-color: #fff !default;
+$secundary-contrast-color:#eee !default;
+$default-contrast-color: inherit !default;
+$info-contrast-color: #fff !default;
+$danger-contrast-color: #fff !default;
+$warning-contrast-color: #fff !default;
+$success-contrast-color: #fff !default;
+$muted-contrast-color: #fff !default;
 
 // We use these to define body style
-$body-bg: #FFF;
-$body-font-color: #666;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-weight: normal;
-$body-font-style: normal;
+$body-bg: #FFF !default;
+$body-font-color: #666 !default;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
+$body-font-style: normal !default;
 $body-padding: 0 !default;
 $body-margin: 0 !default;
 
 // Selection colors
-$selection-bg: $secundary-color;
-$selection-font-color: #fff;
-
-// We use these to define default font weights
-$font-weight-bold: bold !default;
-$font-weight-normal: normal !default;
+$selection-bg: $secundary-color !default;
+$selection-font-color: #fff !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
 $base-line-height: 1.5 !default;
 
 // We use this to control font-smoothing
-$font-smoothing: antialiased;
+$font-smoothing: antialiased !default;
 
 // We use these to control text direction settings
-$opposite-direction: right;
-$default-float: left;
+$opposite-direction: right !default;
+$default-float: left !default;
 
 // We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
 $cursor-crosshair-value: crosshair !default;
@@ -62,11 +68,12 @@ $cursor-text-value: text !default;
 // +++++
 
 // We use these to make sure border radius matches unless we want it different.
-$global-radius: 10px;
-$global-rounded: 1000px;
+$global-radius: 5px !default;
+$global-rounded: 13986px !default;
+$global-circle: 50% !default;
 
 // This is the global margin bottom used for almost every element
-$global-bottom-margin: rem(10px);
+$global-margin-bottom: rem(16px) !default;
 
 
 
@@ -81,139 +88,156 @@ $anchor-text-decoration: none !default;
 $anchor-text-decoration-hover: none !default;
 $anchor-font-color: $primary-color !default;
 $anchor-font-color-hover: darken($anchor-font-color, 10%) !default;
-$anchor-transition-time: .25s;
+$anchor-transition-time: .25s !default;
 
 // We use these to control header font styles
-$header-font-family: $body-font-family;
-$header-font-weight: $font-weight-normal;
-$header-font-style: normal;
-$header-font-color: #222;
-$header-line-height: 1.1;
-$header-top-margin: 0;
-$header-bottom-margin: $global-bottom-margin;
-$header-text-rendering: optimizeLegibility;
-$header-word-wrap: break-word;
+$header-font-family: $body-font-family !default;
+$header-font-weight: normal !default;
+$header-font-style: normal !default;
+$header-font-color: #222 !default;
+$header-line-height: 1.1 !default;
+$header-top-margin: 0 !default;
+$header-bottom-margin: $global-margin-bottom !default;
+$header-text-rendering: optimizeLegibility !default;
+$header-word-wrap: break-word !default;
 
 // We use these to control header font sizes
 // Modular scale: 16px @ 1:1.333
-$h1-font-size: rem(50.517px);
-$h2-font-size: rem(37.897px);
-$h3-font-size: rem(28.43px);
-$h4-font-size: rem(21.328px);
-$h5-font-size: rem(16px);
-$h6-font-size: rem(12.003px);
+$h1-font-size: rem(50.517px) !default;
+$h2-font-size: rem(37.897px) !default;
+$h3-font-size: rem(28.43px) !default;
+$h4-font-size: rem(21.328px) !default;
+$h5-font-size: rem(16px) !default;
+$h6-font-size: rem(12.003px) !default;
 
 // This sizes are for big headings helpers
-$jumbo-font-size: rem(89.763px) !default;
-$xlarge-font-size: rem(67.339px) !default;
+$xlarge-font-size: rem(89.763px) !default;
 
 // Custimizing letter spacing for each header (px)
-$h1-letter-spacing: 0;
-$h2-letter-spacing: 0;
-$h3-letter-spacing: 0;
-$h4-letter-spacing: 0;
-$h5-letter-spacing: 0;
-$h6-letter-spacing: 0;
-$jumbo-letter-spacing: 0;
-$xlarge-letter-spacing: 0;
+$h1-letter-spacing: 0 !default;
+$h2-letter-spacing: 0 !default;
+$h3-letter-spacing: 0 !default;
+$h4-letter-spacing: 0 !default;
+$h5-letter-spacing: 0 !default;
+$h6-letter-spacing: 0 !default;
+$xlarge-letter-spacing: 0 !default;
 
 // These control how subheaders are styled.
-$subheader-line-height: 1.4;
-$subheader-font-color: lighten($header-font-color, 35%);
-$subheader-font-weight: normal;
-$subheader-top-margin: 0;
-$subheader-bottom-margin: $global-bottom-margin;
+$subheader-line-height: 1.4 !default;
+$subheader-font-color: lighten($header-font-color, 35%) !default;
+$subheader-font-weight: normal !default;
+$subheader-top-margin: 0 !default;
+$subheader-bottom-margin: $global-margin-bottom !default;
 
 // This control the page headers class
-$page-header-line-height: 1.4;
-$page-header-border-width: 1px;
-$page-header-border-style: solid;
-$page-header-border-color: #eee;
-$page-header-bottom-margin: $global-bottom-margin;
+$page-header-line-height: 1.4 !default;
+$page-header-border: 1px solid #eee !default;
+$page-header-bottom-margin: $global-margin-bottom !default;
 
 // A general <small> styling
-$small-font-size: 65%;
-$small-font-color: lighten($header-font-color, 45%);
+$small-font-size: 65% !default;
+$small-font-color: lighten($header-font-color, 45%) !default;
 
 // We use these to style paragraphs
-$paragraph-font-family: inherit;
-$paragraph-font-weight: normal;
-$paragraph-font-color: $body-font-color;
-$paragraph-font-size: $base-font-size;
-$paragraph-line-height: 1.428;
-$paragraph-margin-bottom: $global-bottom-margin;
-$paragraph-text-rendering: optimizeLegibility;
-$lead-scale: 140%;
-$lead-line-height: 1.6;
-$lead-font-color: darken($paragraph-font-color, 10%);
+$paragraph-font-family: inherit !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-color: $body-font-color !default;
+$paragraph-font-size: $base-font-size !default;
+$paragraph-line-height: 1.5 !default;
+$paragraph-margin-bottom: $global-margin-bottom !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+$lead-scale: 140% !default;
+$lead-line-height: 1.6 !default;
+$lead-font-color: darken($paragraph-font-color, 15%) !default;
 
 // We use these to style <code> tags
-$code-color: darken($danger-color, 5%);
-$code-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace;
-$code-font-weight: normal;
-$code-bg: #f9f2f4 !default;
-$code-padding: rem(2px 4px);
+$code-color: darken($danger-color, 5%) !default;
+$code-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace !default;
+$code-font-weight: bold !default;
+$code-bg: #FFFEEE !default;
+$code-padding: rem(2px 4px) !default;
+$code-font-size: 95% !default;
 
 // We use these to style <pre> tags
-$pre-color: darken($danger-color, 5%);
-$pre-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace;
-$pre-font-weight: normal;
-$pre-display: block;
-$pre-padding: rem(15px);
-$pre-margin-bottom: $global-bottom-margin;
-$pre-line-height: $paragraph-line-height;
-$pre-bg: #f9f9f9;
-$pre-border-color: darken($pre-bg, 10%);
+$pre-color: darken($danger-color, 5%) !default;
+$pre-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace !default;
+$pre-font-weight: normal !default;
+$pre-display: block !default;
+$pre-padding: rem(15px) !default;
+$pre-margin-bottom: $global-margin-bottom !default;
+$pre-line-height: $paragraph-line-height !default;
+$pre-bg: #FFFEEE !default;
+$pre-border: none !default;
 
 // We use these to style the <hr> element
-$hr-border-width: 1px;
-$hr-border-style: solid;
-$hr-border-color: #ddd;
-$hr-margin: rem(20px);
+$hr-border-width: 1px !default;
+$hr-border: $hr-border-width solid #ddd !default;
+$hr-margin: rem(20px) !default;
 
 // We use these to style lists
-$list-font-family: $paragraph-font-family;
-$list-font-size: $paragraph-font-size;
-$list-line-height: $paragraph-line-height;
-$list-margin-bottom: $paragraph-margin-bottom;
-$list-style-position: outside;
-$list-side-margin: 1.1rem;
-$list-ordered-side-margin: 1.4rem;
-$list-side-margin-no-bullet: 0;
-$list-nested-margin: rem(20px);
-$definition-list-header-weight: bold;
-$definition-list-header-margin-bottom: $global-bottom-margin;
-$definition-list-margin-bottom: rem(12px);
+$list-font-family: $paragraph-font-family !default;
+$list-font-size: $paragraph-font-size !default;
+$list-line-height: $paragraph-line-height !default;
+$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-style-position: outside !default;
+$list-side-margin: 1.1rem !default;
+$list-ordered-side-margin: 1.4rem !default;
+$list-side-margin-no-bullet: 0 !default;
+$list-nested-margin: rem(20px) !default;
+$definition-list-header-weight: bold !default;
+$definition-list-header-margin-bottom: ($global-margin-bottom / 2) !default;
+$definition-list-margin-bottom: rem(12px) !default;
 
 // We use this to control the margins and padding of the inline list.
-$inline-list-top-margin: 0;
-$inline-list-opposite-margin: 0;
-$inline-list-bottom-margin: rem(17px);
-$inline-list-default-float-margin: rem(-22px);
-$inline-list-default-float-list-margin: rem(22px);
-$inline-list-padding: 0;
+$inline-list-top-margin: 0 !default;
+$inline-list-opposite-margin: 0 !default;
+$inline-list-bottom-margin: rem(17px) !default;
+$inline-list-default-float-margin: rem(-22px) !default;
+$inline-list-default-float-list-margin: rem(22px) !default;
+$inline-list-padding: 0 !default;
 
 // We use this to control the overflow of the inline list.
-$inline-list-overflow: hidden;
+$inline-list-overflow: hidden !default;
 
 // We use this to control the list items
-$inline-list-display: block;
+$inline-list-display: block !default;
 
 // We use this to control any elments within list items
-$inline-list-children-display: block;
-$inline-list-children-padding: 0;
+$inline-list-children-display: block !default;
+$inline-list-children-padding: 0 !default;
 
 // We use these to style blockquotes
-$blockquote-font-color: lighten($header-font-color, 45%);
-$blockquote-padding: rem(9px 20px);
-$blockquote-border: 1px solid #ddd;
-$blockquote-cite-font-size: rem(13px);
-$blockquote-cite-font-color: lighten($header-font-color, 10%);
-$blockquote-cite-link-color: $blockquote-cite-font-color;
+$blockquote-font-color: lighten($header-font-color, 45%) !default;
+$blockquote-padding: rem(9px 20px) !default;
+$blockquote-border: 1px solid #ddd !default;
+$blockquote-cite-font-size: rem(13px) !default;
+$blockquote-cite-font-color: lighten($header-font-color, 10%) !default;
+$blockquote-cite-link-color: $blockquote-cite-font-color !default;
 
 // Acronym styles
-$acronym-underline: 1px dotted #ddd;
-$acronym-font-size: 90%;
+$acronym-underline: 1px dotted #ddd !default;
+$acronym-font-size: 90% !default;
+
+
+
+
+// +++++
+// Alerts
+// +++++
+
+// We use this to control alert padding.
+$alert-padding: rem(12px);
+
+// We use these to control text style.
+$alert-font-weight: bold;
+$alert-font-size: rem($base-font-size - 1);
+
+// We use this for close hover effect.
+$alert-opacity: 0.6;
+
+// We use these to control border styles.
+$alert-border: 1px solid;
+$alert-bottom-margin: rem(20px);
 
 
 
@@ -223,31 +247,35 @@ $acronym-font-size: 90%;
 // +++++
 
 // We use these to build padding for buttons.
-$button-xs: 10px !default;
-$button-sm: 14px !default;
-$button-md: 16px !default;
-$button-lg: 18px !default;
-$button-padding: rem(10px 20px) !default;
+$button-xs: rem(10px 20px) !default;
+$button-sm: rem(14px 28px) !default;
+$button-md: rem(16px 32px) !default;
+$button-lg: rem(18px 36px) !default;
+$button-jumbo: rem(25px 50px) !default;
+$button-default: rem(9px 18px) !default;
+
 
 // We use this to control the display property.
 $button-display: inline-block !default;
-$button-margin-bottom: .5rem !default;
+$button-margin-bottom: $global-margin-bottom !default;
 $button-cursor: $cursor-pointer-value !default;
 
 // We use these to control button text styles.
 $button-font-family: $body-font-family !default;
-$button-font-color: #fff !default;
-$button-font-color-alt: #333 !default;
-$button-font-xs: rem-calc(11) !default;
-$button-font-sm: rem-calc(13) !default;
-$button-font-md: rem-calc(16) !default;
-$button-font-lg: rem-calc(20) !default;
-$button-font-default: $base-font-size - 2 !default;
-$button-font-weight: $font-weight-normal !default;
+$button-font-weight: normal !default;
 $button-font-align: center !default;
 
+
+// $button-font-color: #fff !default;
+// $button-font-color-alt: #333 !default;
+// $button-font-xs: rem-calc(11) !default;
+// $button-font-sm: rem-calc(13) !default;
+// $button-font-md: rem-calc(16) !default;
+// $button-font-lg: rem-calc(20) !default;
+$button-font-default: rem($base-font-size - 1) !default;
+
 // We use these to control various hover effects.
-$button-function-factor: 10% !default;
+$button-hover-factor: 10% !default;
 
 // We use these to control button border styles.
 $button-border-width: 1px !default;
@@ -264,104 +292,62 @@ $button-disabled-opacity: 0.8 !default;
 
 
 
-
-
-
-
-
 // +++++
-// Media queries breakpoints
+// Grid
 // +++++
+// Stats from: http://gs.statcounter.com/#resolution-ww-monthly-201306-201405-bar
 
-// Extra small screen / phone
-$screen-xs:                  480px !default;
-$screen-xs-min:              $screen-xs !default;
-$screen-phone:               $screen-xs-min !default;
+// Grid general info
+$column-gutter: 30px !default;
+$total-columns: 12 !default;
 
-// Small screen / tablet
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
+// Media Query Ranges:
 
-// Medium screen / desktop
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
+// from smartphones to tablets
+$small-range-min: em(480px);
+$small-range-max: em(767px);
 
-// Large screen / wide desktop
-$screen-lg:                  1300px !default;
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
+// from tablets
+$medium-range-min: em(768px);
+$medium-range-max: em(991px);
 
-// xLarge screen / HD desktop
-$screen-xlg:                  1900px !default;
-$screen-xlg-min:              $screen-xlg !default;
-$screen-xlg-desktop:          $screen-xlg-min !default;
+// from old computers
+$large-range-min: em(992px);
+$large-range-max: em(1024px);
 
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
-$screen-lg-max:              ($screen-xlg-min - 1) !default;
+// from old computers to widescreen laptops
+$xlarge-range-min: em(1025px);
+$xlarge-range-max: em(1440px);
+
+// from widescreen laptops to HD resolutions
+$xxlarge-range-min: em(1441px);
+$xxlarge-range-max: em(1920px);
 
 
+// Container sizes
+$container-medium: em(750px);
+$container-large: em(960px);
+$container-xlarge: em(1200px);
 
 
+// Media queries:
 
-// +++++
-// Grid System
-// +++++
+$screen: "only screen" !default;
 
-//** Number of columns in the grid.
-$grid-columns:              12 !default;
-//** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         20px !default;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
-//** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
 
-// Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width)) !default;
-//** For `$screen-sm-min` and up.
-$container-sm:                 $container-tablet !default;
+$small-up: $screen !default;
+$small-only: "#{$screen} and (min-width: #{$small-range-min}) and (max-width: #{$small-range-max})" !default;
 
-// Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width)) !default;
-//** For `$screen-md-min` and up.
-$container-md:                 $container-desktop !default;
+$medium-up: "#{$screen} and (min-width:#{$medium-range-min})" !default;
+$medium-only: "#{$screen} and (min-width:#{$medium-range-min}) and (max-width:#{$medium-range-max})" !default;
 
-// Large screen / wide desktop
-$container-large-desktop:      ((1240px + $grid-gutter-width)) !default;
-//** For `$screen-lg-min` and up.
-$container-lg:                 $container-large-desktop !default;
+$large-up: "#{$screen} and (min-width:#{$large-range-min})" !default;
+$large-only: "#{$screen} and (min-width:#{$large-range-min}) and (max-width:#{$large-range-max})" !default;
 
-// xLarge screen / HD desktop
-$container-xlarge-desktop:      ((1860px + $grid-gutter-width)) !default;
-//** For `$screen-lg-min` and up.
-$container-xlg:                 $container-xlarge-desktop !default;
+$xlarge-up: "#{$screen} and (min-width:#{$xlarge-range-min})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{$xxlarge-range-min}) and (max-width:#{$xxlarge-range-max})" !default;

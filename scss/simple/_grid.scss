@@ -1,59 +1,8 @@
-// Grid general info
-$column-gutter: 20px !default;
-$total-columns: 12 !default;
-
-// Media Query Ranges
-$small-range-min: 0;
-$small-range-max: em(640px); // 40em
-
-$medium-range-min: em(641px); // 40.063em
-$medium-range-max: em(1024px); // 64em
-
-$large-range-min: em(1025px); // 64.063em
-$large-range-max: em(1440px); // 90em
-
-$xlarge-range-min: em(1441px); // 90.063em
-$xlarge-range-max: em(1920px); // 120em
-
-$xxlarge-range-min: em(1921px); // 120.063em
-
-$screen: "only screen" !default;
-
-$landscape: "#{$screen} and (orientation: landscape)" !default;
-$portrait: "#{$screen} and (orientation: portrait)" !default;
-
-$small-up: $screen !default;
-$small-only: "#{$screen} and (max-width: #{$small-range-max})" !default;
-
-$medium-up: "#{$screen} and (min-width:#{$medium-range-min})" !default;
-$medium-only: "#{$screen} and (min-width:#{$medium-range-min}) and (max-width:#{$medium-range-max})" !default;
-
-$large-up: "#{$screen} and (min-width:#{$large-range-min})" !default;
-$large-only: "#{$screen} and (min-width:#{$large-range-min}) and (max-width:#{$large-range-max})" !default;
-
-$xlarge-up: "#{$screen} and (min-width:#{$xlarge-range-min})" !default;
-$xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
-
-$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
-$xxlarge-only: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
-
-// Legacy
-$small: $medium-up;
-$medium: $medium-up;
-$large: $large-up;
-$hd: $xlarge-up;
-$uhd: $xxlarge-up;
-
-
 @function column-width($columnNumber, $totalColumns: $total-columns) {
   @return percentage($columnNumber / $totalColumns);
 }
 
 @mixin make-column($column) {
-  background-color: magenta;
-  color: white;
-  border: 1px solid white;
-
   width: column-width($column);
 }
 
@@ -84,17 +33,15 @@ $uhd: $xxlarge-up;
   @for $i from 1 through $total-columns - 1 {
     .#{$size}-offset-#{$i} { margin-#{$default-float}: column-width($i); }
 
-    // .#{$size}-push-#{$i} {
-    //   #{$default-float}: column-width($i);
-    //   #{$opposite-direction}: auto;
-    // }
+    .#{$size}-push-#{$i} {
+      #{$default-float}: column-width($i);
+      #{$opposite-direction}: auto;
+    }
 
-    // position: relative;
-
-    // .#{$size}-pull-#{$i} {
-    //   #{$opposite-direction}: column-width($i);
-    //   #{$default-float}: auto;
-    // }
+    .#{$size}-pull-#{$i} {
+      #{$opposite-direction}: column-width($i);
+      #{$default-float}: auto;
+    }
   }
 }
 
@@ -118,7 +65,6 @@ $uhd: $xxlarge-up;
 }
 
 .row {
-  background-color: chartreuse;
   @include make-row();
 
   &.collapse {
@@ -148,26 +94,46 @@ $uhd: $xxlarge-up;
 }
 
 .container {
-  @media #{$small-up} {
+  width: 100%;
+  overflow: hidden;
+  padding-left: rem($column-gutter / 2);
+  padding-right: rem($column-gutter / 2);
 
+  .row {
+    @include make-row($nested: true);
+  }
+
+  &.centered {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none !important;
+  }
+
+  &.uncentered {
+    margin-#{$default-float}: 0;
+    margin-#{$opposite-direction}: 0;
+    float: $default-float !important;
+  }
+
+  &.uncentered.opposite {
+    float: $opposite-direction;
   }
 
   @media #{$medium-up} {
-
+    width: $container-medium;
   }
 
   @media #{$large-up} {
-
+    width: $container-large;
   }
 
   @media #{$xlarge-up} {
-
-  }
-
-  @media #{$xxlarge-up} {
-
+    width: $container-xlarge;
   }
 }
+
+
+
 
 @media #{$small-up} {
   @include make-columns($size: small);

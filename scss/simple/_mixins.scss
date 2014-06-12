@@ -101,6 +101,7 @@
 }
 
 // bg color
-@mixin bg-variant($bg-color) {
+@mixin bg-variant($bg-color, $color: inherit) {
   background-color: $bg-color !important;
+  color: $color !important;
 }
