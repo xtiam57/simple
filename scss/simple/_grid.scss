@@ -1,46 +1,46 @@
-@function column-width($columnNumber, $totalColumns: $total-columns) {
+@function column-width($columnNumber, $totalColumns) {
   @return percentage($columnNumber / $totalColumns);
 }
 
-@mixin make-column($column) {
-  width: column-width($column);
+@mixin make-column($column, $totalColumns) {
+  width: column-width($column, $totalColumns);
 }
 
-@mixin make-columns($size) {
+@mixin make-columns($size, $totalColumns: $total-columns) {
   .column,
   .columns {
     &.#{$size}-centered {
-      margin-#{$default-float}: auto;
-      margin-#{$opposite-direction}: auto;
+      margin-left: auto;
+      margin-right: auto;
       float: none !important;
     }
 
     &.#{$size}-uncentered {
-      margin-#{$default-float}: 0;
-      margin-#{$opposite-direction}: 0;
-      float: $default-float !important;
+      margin-left: 0;
+      margin-right: 0;
+      float: left !important;
     }
 
     &.#{$size}-uncentered.opposite {
-      float: $opposite-direction;
+      float: right;
     }
   }
 
-  @for $i from 1 through $total-columns {
-    .#{$size}-#{$i} { @include make-column($column: $i); }
+  @for $i from 1 through $totalColumns {
+    .#{$size}-#{$i} { @include make-column($column: $i, $totalColumns: $totalColumns); }
   }
 
-  @for $i from 1 through $total-columns - 1 {
-    .#{$size}-offset-#{$i} { margin-#{$default-float}: column-width($i); }
+  @for $i from 1 through $totalColumns - 1 {
+    .#{$size}-offset-#{$i} { margin-left: column-width($i, $totalColumns); }
 
     .#{$size}-push-#{$i} {
-      #{$default-float}: column-width($i);
-      #{$opposite-direction}: auto;
+      left: column-width($i, $totalColumns);
+      right: auto;
     }
 
     .#{$size}-pull-#{$i} {
-      #{$opposite-direction}: column-width($i);
-      #{$default-float}: auto;
+      right: column-width($i, $totalColumns);
+      left: auto;
     }
   }
 }
@@ -51,13 +51,13 @@
 
   @if $nested == false {
     width: 100%;
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   @else {
     width: auto;
-    margin-#{$default-float}: rem($column-gutter / -2);
-    margin-#{$opposite-direction}: rem($column-gutter / -2);
+    margin-left: rem($column-gutter / -2);
+    margin-right: rem($column-gutter / -2);
   }
 
   // Clearfix for all rows
@@ -89,7 +89,7 @@
 .columns {
   padding-right: rem($column-gutter / 2);
   padding-left: rem($column-gutter / 2);
-  float: $default-float;
+  float: left;
   overflow: hidden;
 }
 
@@ -98,25 +98,30 @@
   overflow: hidden;
   padding-left: rem($column-gutter / 2);
   padding-right: rem($column-gutter / 2);
+  @include clearfix();
 
   .row {
     @include make-row($nested: true);
   }
 
   &.centered {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
+    margin-left: auto;
+    margin-right: auto;
     float: none !important;
   }
 
   &.uncentered {
-    margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: 0;
-    float: $default-float !important;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
   }
 
   &.uncentered.opposite {
-    float: $opposite-direction;
+    float: right;
+  }
+
+  @media #{$small-up} {
+    width: $container-small;
   }
 
   @media #{$medium-up} {
@@ -126,14 +131,11 @@
   @media #{$large-up} {
     width: $container-large;
   }
-
-  @media #{$xlarge-up} {
-    width: $container-xlarge;
-  }
 }
 
-
-
+@media #{$xsmall-up} {
+  @include make-columns($size: xsmall);
+}
 
 @media #{$small-up} {
   @include make-columns($size: small);
@@ -149,8 +151,4 @@
 
 @media #{$xlarge-up} {
   @include make-columns($size: xlarge);
-}
-
-@media #{$xxlarge-up} {
-  @include make-columns($size: xxlarge);
 }

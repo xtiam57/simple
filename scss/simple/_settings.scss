@@ -10,8 +10,8 @@
 // $lighter-gray-color: #3f4649 !default;
 
 // We use these as default colors throughout
-$primary-color: #0CBF84 !default;
-$secundary-color: #2a2a2b !default;
+$primary-color: #2980b9 !default; // #0CBF84 //#16a085
+$secundary-color: #2d2f31 !default;
 $default-color: #f4f4f4 !default;
 $info-color: #00A9EC !default;
 $danger-color: #cf280e !default;
@@ -47,10 +47,6 @@ $base-line-height: 1.5 !default;
 
 // We use this to control font-smoothing
 $font-smoothing: antialiased !default;
-
-// We use these to control text direction settings
-$opposite-direction: right !default;
-$default-float: left !default;
 
 // We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
 $cursor-crosshair-value: crosshair !default;
@@ -111,7 +107,8 @@ $h5-font-size: rem(16px) !default;
 $h6-font-size: rem(12.003px) !default;
 
 // This sizes are for big headings helpers
-$xlarge-font-size: rem(89.763px) !default;
+$xlarge-font-size: rem(67.339px) !default;
+$xxlarge-font-size: rem(89.763px) !default;
 
 // Custimizing letter spacing for each header (px)
 $h1-letter-spacing: 0 !default;
@@ -121,6 +118,7 @@ $h4-letter-spacing: 0 !default;
 $h5-letter-spacing: 0 !default;
 $h6-letter-spacing: 0 !default;
 $xlarge-letter-spacing: 0 !default;
+$xxlarge-letter-spacing: 0 !default;
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4 !default;
@@ -247,13 +245,11 @@ $alert-bottom-margin: rem(20px);
 // +++++
 
 // We use these to build padding for buttons.
-$button-xs: rem(10px 20px) !default;
-$button-sm: rem(14px 28px) !default;
-$button-md: rem(16px 32px) !default;
-$button-lg: rem(18px 36px) !default;
-$button-jumbo: rem(25px 50px) !default;
-$button-default: rem(9px 18px) !default;
-
+$button-default-padding: rem(9px 18px) !default;
+$button-small-padding: rem(9px 18px) !default;
+$button-large-padding: rem(9px 18px) !default;
+$button-xlarge-padding: rem(9px 18px) !default;
+$button-xxlarge-padding: rem(9px 18px) !default;
 
 // We use this to control the display property.
 $button-display: inline-block !default;
@@ -265,14 +261,12 @@ $button-font-family: $body-font-family !default;
 $button-font-weight: normal !default;
 $button-font-align: center !default;
 
-
-// $button-font-color: #fff !default;
-// $button-font-color-alt: #333 !default;
-// $button-font-xs: rem-calc(11) !default;
-// $button-font-sm: rem-calc(13) !default;
-// $button-font-md: rem-calc(16) !default;
-// $button-font-lg: rem-calc(20) !default;
+// Font sizes
 $button-font-default: rem($base-font-size - 1) !default;
+$button-font-small: rem($base-font-size - 1) !default;
+$button-font-large: rem($base-font-size - 1) !default;
+$button-font-xlarge: rem($base-font-size - 1) !default;
+$button-font-xxlarge: rem($base-font-size - 1) !default;
 
 // We use these to control various hover effects.
 $button-hover-factor: 10% !default;
@@ -280,14 +274,32 @@ $button-hover-factor: 10% !default;
 // We use these to control button border styles.
 $button-border-width: 1px !default;
 $button-border-style: solid !default;
-$button-bg: $primary-color !default;
+$button-border-color-factor: 5%;
 
-// We use this to set the default radius used throughout the core.
-$button-radius: $global-radius !default;
-$button-round: $global-rounded !default;
+// Background and font colors
+$button-primary-bg: $primary-color !default;
+$button-primary-font-color: $primary-contrast-color !default;
+
+$button-secundary-bg: $secundary-color !default;
+$button-secundary-font-color: $secundary-contrast-color !default;
+
+$button-info-bg: $info-color !default;
+$button-info-font-color: $info-contrast-color !default;
+
+$button-warning-bg: $warning-color !default;
+$button-warning-font-color: $warning-contrast-color !default;
+
+$button-success-bg: $success-color !default;
+$button-success-font-color: $success-contrast-color !default;
+
+$button-default-bg: $default-color !default;
+$button-default-font-color: $default-contrast-color !default;
+
+$button-danger-bg: $danger-color !default;
+$button-danger-font-color: $danger-contrast-color !default;
 
 // We use this to set default opacity for disabled buttons.
-$button-disabled-opacity: 0.8 !default;
+$button-disabled-opacity: 0.65 !default;
 
 
 
@@ -304,41 +316,41 @@ $total-columns: 12 !default;
 // Media Query Ranges:
 
 // from smartphones to tablets
-$small-range-min: em(480px);
-$small-range-max: em(767px);
+$xsmall-range-min: em(480px);
+$xsmall-range-max: em(767px);
 
 // from tablets
-$medium-range-min: em(768px);
-$medium-range-max: em(991px);
+$small-range-min: em(768px);
+$small-range-max: em(991px);
 
 // from old computers
-$large-range-min: em(992px);
-$large-range-max: em(1024px);
+$medium-range-min: em(992px);
+$medium-range-max: em(1024px);
 
 // from old computers to widescreen laptops
-$xlarge-range-min: em(1025px);
-$xlarge-range-max: em(1440px);
+$large-range-min: em(1025px);
+$large-range-max: em(1440px);
 
 // from widescreen laptops to HD resolutions
-$xxlarge-range-min: em(1441px);
-$xxlarge-range-max: em(1920px);
-
+$xlarge-range-min: em(1441px);
+$xlarge-range-max: em(1920px);
 
 // Container sizes
-$container-medium: em(750px);
-$container-large: em(960px);
-$container-xlarge: em(1200px);
-
+$container-small: em(750px);
+$container-medium: em(960px);
+$container-large: em(1200px);
 
 // Media queries:
-
 $screen: "only screen" !default;
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;
 
-$small-up: $screen !default;
-$small-only: "#{$screen} and (min-width: #{$small-range-min}) and (max-width: #{$small-range-max})" !default;
+$xsmall-up: $screen !default;
+$xsmall-only: "#{$screen} and (min-width: #{$xsmall-range-min}) and (max-width: #{$xsmall-range-max})" !default;
+
+$small-up: "#{$screen} and (min-width:#{$small-range-min})" !default;
+$small-only: "#{$screen} and (min-width:#{$small-range-min}) and (max-width:#{$small-range-max})" !default;
 
 $medium-up: "#{$screen} and (min-width:#{$medium-range-min})" !default;
 $medium-only: "#{$screen} and (min-width:#{$medium-range-min}) and (max-width:#{$medium-range-max})" !default;
@@ -348,6 +360,3 @@ $large-only: "#{$screen} and (min-width:#{$large-range-min}) and (max-width:#{$l
 
 $xlarge-up: "#{$screen} and (min-width:#{$xlarge-range-min})" !default;
 $xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
-
-$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-range-min})" !default;
-$xxlarge-only: "#{$screen} and (min-width:#{$xxlarge-range-min}) and (max-width:#{$xxlarge-range-max})" !default;

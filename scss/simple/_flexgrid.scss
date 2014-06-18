@@ -1,0 +1,126 @@
+@mixin make-grid($size, $totalColumns: $total-columns) {
+  @include make-colums($size: $size);
+
+  // Aligment
+  .row {
+    // Horizontal
+    &.#{$size}-left { justify-content: flex-start; }
+    &.#{$size}-center { justify-content: center; }
+    &.#{$size}-right { justify-content: flex-end; }
+    &.#{$size}-justify { justify-content: space-between; }
+    &.#{$size}-around { justify-content: space-around; }
+
+    // Vertical
+    &.#{$size}-top { align-items: flex-start; }
+    &.#{$size}-middle { align-items: center; }
+    &.#{$size}-bottom { align-items: flex-end; }
+
+    // Reverse
+    &.#{$size}-reverse {
+      flex-direction: row-reverse;
+      flex-wrap: row-reverse;
+
+      &.#{$size}-left { justify-content: flex-end; }
+      &.#{$size}-right { justify-content: flex-start; }
+    }
+  }
+}
+
+@mixin make-colums($size, $totalColumns: $total-columns) {
+  @for $i from 1 through $totalColumns {
+    .#{$size}-#{$i} {
+      flex-basis: percentage($i / $totalColumns);
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  @for $i from 1 through $totalColumns - 1 {
+    .#{$size}-offset-#{$i} { margin-left: percentage($i / $totalColumns); }
+  }
+
+  // Auto width
+  .#{$size}-auto {
+    flex-grow: 1;
+    flex-basis: 0%;
+  }
+
+  .#{$size}-first { order: -1; }
+  .#{$size}-last { order: 1; }
+}
+
+.column,
+.columns {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 rem($column-gutter / 2);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  padding-left: rem($column-gutter / 2);
+  padding-right: rem($column-gutter / 2);
+  @include clearfix();
+
+  // .row {
+  //   @include make-row($nested: true);
+  // }
+
+  // &.centered {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   float: none !important;
+  // }
+
+  // &.uncentered {
+  //   margin-left: 0;
+  //   margin-right: 0;
+  //   float: left !important;
+  // }
+
+  // &.uncentered.opposite {
+  //   float: right;
+  // }
+
+  @media #{$small-up} {
+    width: $container-small;
+  }
+
+  @media #{$medium-up} {
+    width: $container-medium;
+  }
+
+  @media #{$large-up} {
+    width: $container-large;
+  }
+}
+
+
+
+@media #{$xsmall-only} {
+  @include make-grid($size: xsmall);
+}
+
+@media #{$small-only} {
+  @include make-grid($size: small);
+}
+
+@media #{$medium-only} {
+  @include make-grid($size: medium);
+}
+
+@media #{$large-only} {
+  @include make-grid($size: large);
+}
+
+@media #{$xlarge-only} {
+  @include make-grid($size: xlarge);
+}

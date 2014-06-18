@@ -1,23 +1,6 @@
+
 /* Typography resets */
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0;
   position: relative;
@@ -74,6 +57,11 @@ h1, h2, h3, h4, h5, h6 {
   &.xlarge-header {
     font-size: $xlarge-font-size;
     letter-spacing: $xlarge-letter-spacing;
+  }
+
+  &.xxlarge-header {
+    font-size: $xxlarge-font-size;
+    letter-spacing: $xxlarge-letter-spacing;
   }
 }
 
@@ -175,13 +163,13 @@ dl {
 }
 
 ul {
-  margin-#{$default-float}: $list-side-margin;
+  margin-left: $list-side-margin;
   &.no-bullet {
-    margin-#{$default-float}: $list-side-margin-no-bullet;
+    margin-left: $list-side-margin-no-bullet;
     li {
       ul,
       ol {
-        margin-#{$default-float}: $list-nested-margin;
+        margin-left: $list-nested-margin;
         margin-bottom: 0;
         list-style: none;
       }
@@ -194,7 +182,7 @@ ul {
   li {
     ul,
     ol {
-      margin-#{$default-float}: $list-nested-margin;
+      margin-left: $list-nested-margin;
       margin-bottom: 0;
     }
   }
@@ -204,19 +192,19 @@ ul {
     li ul { list-style: inherit; }
   }
 
-  &.square { list-style-type: square; margin-#{$default-float}: $list-side-margin; }
-  &.circle { list-style-type: circle; margin-#{$default-float}: $list-side-margin; }
-  &.disc { list-style-type: disc; margin-#{$default-float}: $list-side-margin; }
+  &.square { list-style-type: square; margin-left: $list-side-margin; }
+  &.circle { list-style-type: circle; margin-left: $list-side-margin; }
+  &.disc { list-style-type: disc; margin-left: $list-side-margin; }
   &.no-bullet { list-style: none; }
 }
 
 /* Ordered Lists */
 ol {
-  margin-#{$default-float}: $list-ordered-side-margin;
+  margin-left: $list-ordered-side-margin;
   li {
     ul,
     ol {
-      margin-#{$default-float}: $list-nested-margin;
+      margin-left: $list-nested-margin;
       margin-bottom: 0;
     }
   }
@@ -227,8 +215,8 @@ ul,
 ol {
   &.inline-list {
     margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
-    margin-#{$default-float}: $inline-list-default-float-margin;
-    margin-#{$opposite-direction}: $inline-list-opposite-margin;
+    margin-left: $inline-list-default-float-margin;
+    margin-right: $inline-list-opposite-margin;
     padding: $inline-list-padding;
     list-style: none;
     overflow: $inline-list-overflow;
@@ -236,8 +224,8 @@ ol {
     & > li {
       padding: $inline-list-children-padding;
       list-style: none;
-      float: $default-float;
-      margin-#{$default-float}: $inline-list-default-float-list-margin;
+      float: left;
+      margin-left: $inline-list-default-float-list-margin;
       display: $inline-list-display;
       &>* { display: $inline-list-children-display; }
     }
@@ -270,7 +258,7 @@ abbr {
 blockquote {
   margin: 0 0 $paragraph-margin-bottom;
   padding: $blockquote-padding;
-  border-#{$default-float}: $blockquote-border;
+  border-left: $blockquote-border;
 
   cite {
     display: block;
@@ -287,12 +275,12 @@ blockquote {
   }
 
   &.opposite {
-    border-#{$default-float}: none;
-    border-#{$opposite-direction}: $blockquote-border;
-    text-align: $opposite-direction;
+    border-left: none;
+    border-right: $blockquote-border;
+    text-align: right;
 
     cite {
-      text-align: $opposite-direction;
+      text-align: right;
     }
   }
 }
