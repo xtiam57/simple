@@ -31,6 +31,7 @@ $muted-contrast-color: #fff !default;
 
 // We use these to define body style
 $body-bg: #FFF !default;
+$container-bg: $body-bg !default;
 $body-font-color: #666 !default;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
 $body-font-weight: normal !default;
@@ -311,27 +312,34 @@ $button-disabled-opacity: 0.65 !default;
 
 // Grid general info
 $column-gutter: 30px !default;
+$column-top-padding: 0 !default;
+$column-bottom-padding: 0 !default;
 $total-columns: 12 !default;
 
 // Media Query Ranges:
 
 // from smartphones to tablets
+$xsmall-name: xsmall !default;
 $xsmall-range-min: em(480px);
 $xsmall-range-max: em(767px);
 
 // from tablets
+$small-name: small !default;
 $small-range-min: em(768px);
 $small-range-max: em(991px);
 
 // from old computers
+$medium-name: medium !default;
 $medium-range-min: em(992px);
 $medium-range-max: em(1024px);
 
 // from old computers to widescreen laptops
+$large-name: large !default;
 $large-range-min: em(1025px);
 $large-range-max: em(1440px);
 
 // from widescreen laptops to HD resolutions
+$xlarge-name: xlarge !default;
 $xlarge-range-min: em(1441px);
 $xlarge-range-max: em(1920px);
 
@@ -360,3 +368,29 @@ $large-only: "#{$screen} and (min-width:#{$large-range-min}) and (max-width:#{$l
 
 $xlarge-up: "#{$screen} and (min-width:#{$xlarge-range-min})" !default;
 $xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
+
+
+
+// +++++
+// Print
+// +++++
+
+// Media query
+$print: "only print" !default;
+
+// Grid name
+$print-name: print !default;
+
+
+
+
+// +++++
+// Cover
+// +++++
+
+//
+$cover-height: 100% !default;
+$cover-background-repeat: no-repeat !default;
+$cover-background-attachment: fixed !default;
+$cover-background-position: 50% 50% !default;
+$cover-background-size: cover !default;
