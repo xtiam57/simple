@@ -1,0 +1,15 @@
+@mixin make-cover($imageUrl: false) {
+  height: $cover-height;
+
+  @if $imageUrl != false {
+    background-image: url("#{$imageUrl}");
+    background-repeat: $cover-background-repeat;
+    background-attachment: $cover-background-attachment;
+    background-position: $cover-background-position;
+    -webkit-background-size: $cover-background-size;
+       -moz-background-size: $cover-background-size;
+        -ms-background-size: $cover-background-size;
+         -o-background-size: $cover-background-size;
+            background-size: $cover-background-size;
+  }
+}
