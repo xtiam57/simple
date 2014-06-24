@@ -1,15 +1,21 @@
-.alert {
-  font-size: $alert-font-size;
-  padding: $alert-padding;
+@include exports("alerts") {
+  @if $include-alerts {
 
-  background-color: rgba(red($danger-color), green($danger-color), blue($danger-color), $alert-opacity);
-  color: $danger-color;
+    .alert {
+      font-size: $alert-font-size;
+      padding: $alert-padding;
 
-  p {
-    color: $danger-color;
+      background-color: rgba(red($danger-color), green($danger-color), blue($danger-color), $alert-opacity);
+      color: $danger-color;
 
-    &:last-child {
-      margin-bottom: 0
+      p {
+        color: $danger-color;
+
+        &:last-child {
+          margin-bottom: 0
+        }
+      }
     }
+
   }
 }

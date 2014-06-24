@@ -1,317 +1,327 @@
+@include exports("type") {
+  @if $include-type {
 
-/* Typography resets */
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-a {
-  color: $anchor-font-color;
-  text-decoration: $anchor-text-decoration;
-  line-height: inherit;
-  @include single-transition(color, $anchor-transition-time);
-
-  &:hover,
-  &:focus {
-    color: $anchor-font-color-hover;
-    @if $anchor-text-decoration-hover != $anchor-text-decoration {
-      text-decoration: $anchor-text-decoration-hover;
+    /* Typography resets */
+    div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, xmp, form, p, blockquote, th, td {
+      margin: 0;
+      padding: 0;
+      position: relative;
     }
-  }
 
-  img { border:none; }
-}
+    a {
+      color: $anchor-font-color;
+      text-decoration: $anchor-text-decoration;
+      line-height: inherit;
+      @include single-transition(color, $anchor-transition-time);
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
-  font-weight: $header-font-weight;
-  font-style: $header-font-style;
-  color: $header-font-color;
-  text-rendering: $header-text-rendering;
-  margin-top: $header-top-margin;
-  margin-bottom: $header-bottom-margin;
-  line-height: $header-line-height;
-  word-wrap: $header-word-wrap;
+      &:hover,
+      &:focus {
+        color: $anchor-font-color-hover;
+        @if $anchor-text-decoration-hover != $anchor-text-decoration {
+          text-decoration: $anchor-text-decoration-hover;
+        }
+      }
 
-  small {
-    font-size: $small-font-size;
-    color: $small-font-color;
-    line-height: 0;
-  }
+      img { border:none; }
+    }
 
-  &.subheader {
-    line-height: $subheader-line-height;
-    color: $subheader-font-color;
-    font-weight: $subheader-font-weight;
-    margin-top: $subheader-top-margin;
-    margin-bottom: $subheader-bottom-margin;
-  }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $header-font-family;
+      font-weight: $header-font-weight;
+      font-style: $header-font-style;
+      color: $header-font-color;
+      text-rendering: $header-text-rendering;
+      margin: $header-margin;
+      line-height: $header-line-height;
+      word-wrap: $header-word-wrap;
 
-  &.page-header {
-    border-bottom: $page-header-border;
-    line-height: $page-header-line-height;
-    margin-bottom: $page-header-bottom-margin;
-  }
+      small {
+        font-size: $small-font-size;
+        color: $small-font-color;
+        line-height: 0;
+      }
 
-  &.xlarge-header {
-    font-size: $xlarge-font-size;
-    letter-spacing: $xlarge-letter-spacing;
-  }
+      &.subheader {
+        line-height: $subheader-line-height;
+        color: $subheader-font-color;
+        font-weight: $subheader-font-weight;
+        margin: $subheader-margin;
+      }
 
-  &.xxlarge-header {
-    font-size: $xxlarge-font-size;
-    letter-spacing: $xxlarge-letter-spacing;
-  }
-}
+      &.page-header {
+        border-bottom: $page-header-border;
+        line-height: $page-header-line-height;
+        margin: $page-header-margin;
+      }
 
-h1 { font-size: $h1-font-size; letter-spacing: $h1-letter-spacing; }
-h2 { font-size: $h2-font-size; letter-spacing: $h2-letter-spacing; }
-h3 { font-size: $h3-font-size; letter-spacing: $h3-letter-spacing; }
-h4 { font-size: $h4-font-size; letter-spacing: $h4-letter-spacing; }
-h5 { font-size: $h5-font-size; letter-spacing: $h5-letter-spacing; }
-h6 { font-size: $h6-font-size; letter-spacing: $h6-letter-spacing; }
+      &.xlarge-header {
+        font-size: $xlarge-font-size;
+        letter-spacing: $xlarge-letter-spacing;
+      }
 
-p {
-  font-family: $paragraph-font-family;
-  font-weight: $paragraph-font-weight;
-  font-size: $paragraph-font-size;
-  line-height: $paragraph-line-height;
-  margin-bottom: $paragraph-margin-bottom;
-  text-rendering: $paragraph-text-rendering;
-  color: $paragraph-font-color;
-
-  &.lead {
-    font-size: $paragraph-font-size * ($lead-scale / 100%);
-    line-height: $lead-line-height;
-    color: $lead-font-color;
-  }
-}
-
-// Generates text align and justify classes
-.text-left { text-align: left !important; }
-.text-right { text-align: right !important; }
-.text-center { text-align: center !important; }
-.text-justify { text-align: justify !important; }
-
-hr {
-  border: $hr-border;
-  border-width: $hr-border-width 0 0;
-  clear: both;
-  margin: ($hr-margin - $hr-border-width * 0.5) 0;
-  height: 0;
-}
-
-/* Helpful Typography Defaults */
-em,
-i {
-  font-style: italic;
-  line-height: inherit;
-}
-
-strong,
-b,
-.text-bold,
-.text-strong {
-  font-weight: bold;
-  line-height: inherit;
-}
-
-small {
-  font-size: $small-font-size;
-  line-height: inherit;
-}
-
-code {
-  font-family: $code-font-family;
-  font-weight: $code-font-weight;
-  color: $code-color;
-  padding: $code-padding;
-  font-size: $code-font-size;
-  background-color: $code-bg;
-}
-
-// Blocks of code
-pre {
-  font-family: $pre-font-family;
-  font-weight: $pre-font-weight;
-  color: $pre-color;
-  display: $pre-display;
-  padding: $pre-padding;
-  margin: 0 0 $pre-margin-bottom;
-  line-height: $pre-line-height;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: $pre-bg;
-  border: $pre-border;
-
-  // Account for some code outputs that place code tags in pre tags
-  code {
-    white-space: pre-wrap;
-  }
-}
-
-/* Lists */
-ul,
-ol,
-dl {
-  font-size: $list-font-size;
-  line-height: $list-line-height;
-  margin-bottom: $list-margin-bottom;
-  list-style-position: $list-style-position;
-  font-family: $list-font-family;
-}
-
-ul {
-  margin-left: $list-side-margin;
-  &.no-bullet {
-    margin-left: $list-side-margin-no-bullet;
-    li {
-      ul,
-      ol {
-        margin-left: $list-nested-margin;
-        margin-bottom: 0;
-        list-style: none;
+      &.xxlarge-header {
+        font-size: $xxlarge-font-size;
+        letter-spacing: $xxlarge-letter-spacing;
       }
     }
-  }
-}
 
-/* Unordered Lists */
-ul {
-  li {
+    h1 { font-size: $h1-font-size; letter-spacing: $h1-letter-spacing; }
+    h2 { font-size: $h2-font-size; letter-spacing: $h2-letter-spacing; }
+    h3 { font-size: $h3-font-size; letter-spacing: $h3-letter-spacing; }
+    h4 { font-size: $h4-font-size; letter-spacing: $h4-letter-spacing; }
+    h5 { font-size: $h5-font-size; letter-spacing: $h5-letter-spacing; }
+    h6 { font-size: $h6-font-size; letter-spacing: $h6-letter-spacing; }
+
+    p {
+      font-family: $paragraph-font-family;
+      font-weight: $paragraph-font-weight;
+      font-size: $paragraph-font-size;
+      line-height: $paragraph-line-height;
+      margin: $paragraph-margin;
+      text-rendering: $paragraph-text-rendering;
+      color: $paragraph-font-color;
+
+      &.lead {
+        font-size: $paragraph-font-size * ($lead-scale / 100%);
+        line-height: $lead-line-height;
+        color: $lead-font-color;
+      }
+    }
+
+    // Generates text align and justify classes
+    .text-left { text-align: left !important; }
+    .text-right { text-align: right !important; }
+    .text-center { text-align: center !important; }
+    .text-justify { text-align: justify !important; }
+
+    hr {
+      border: $hr-border;
+      border-width: $hr-border-width 0 0;
+      clear: both;
+      margin: ($hr-margin - $hr-border-width * 0.5) 0;
+      height: 0;
+    }
+
+    /* Helpful Typography Defaults */
+    em,
+    i {
+      font-style: italic;
+      line-height: inherit;
+    }
+
+    strong,
+    b,
+    .text-bold,
+    .text-strong {
+      font-weight: bold;
+      line-height: inherit;
+    }
+
+    small {
+      font-size: $small-font-size;
+      line-height: inherit;
+    }
+
+    code {
+      font-family: $code-font-family;
+      font-weight: $code-font-weight;
+      color: $code-color;
+      padding: $code-padding;
+      font-size: $code-font-size;
+      background-color: $code-bg;
+    }
+
+    // Blocks of code
+    pre,
+    xmp {
+      font-family: $pre-font-family;
+      font-size: $pre-font-size;
+      font-weight: $pre-font-weight;
+      color: $pre-color;
+      display: $pre-display;
+      padding: $pre-padding;
+      margin: $pre-margin;
+      line-height: $pre-line-height;
+      word-break: break-all;
+      word-wrap: break-word;
+      background-color: $pre-bg;
+      border: $pre-border;
+
+      // Account for some code outputs that place code tags in pre tags
+      code {
+        white-space: pre-wrap;
+      }
+    }
+
+    /* Lists */
+    ul,
+    ol,
+    dl {
+      font-size: $list-font-size;
+      line-height: $list-line-height;
+      margin: $list-margin;
+      list-style-position: $list-style-position;
+      font-family: $list-font-family;
+    }
+
+    ul {
+      margin-left: $list-side-margin;
+      &.no-bullet {
+        margin-left: $list-side-margin-no-bullet;
+        li {
+          ul,
+          ol {
+            margin-left: $list-nested-margin;
+            margin-bottom: 0;
+            list-style: none;
+          }
+        }
+      }
+    }
+
+    /* Unordered Lists */
+    ul {
+      li {
+        ul,
+        ol {
+          margin-left: $list-nested-margin;
+          margin-bottom: 0;
+        }
+      }
+      &.square,
+      &.circle,
+      &.disc {
+        li ul { list-style: inherit; }
+      }
+
+      &.square { list-style-type: square; margin-left: $list-side-margin; }
+      &.circle { list-style-type: circle; margin-left: $list-side-margin; }
+      &.disc { list-style-type: disc; margin-left: $list-side-margin; }
+      &.no-bullet { list-style: none; }
+    }
+
+    /* Ordered Lists */
+    ol {
+      margin-left: $list-ordered-side-margin;
+      li {
+        ul,
+        ol {
+          margin-left: $list-nested-margin;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    /* Inline list */
     ul,
     ol {
-      margin-left: $list-nested-margin;
-      margin-bottom: 0;
-    }
-  }
-  &.square,
-  &.circle,
-  &.disc {
-    li ul { list-style: inherit; }
-  }
+      &.inline-list {
+        margin: $inline-list-margin;
+        padding: $inline-list-padding;
+        list-style: none;
+        overflow: $inline-list-overflow;
 
-  &.square { list-style-type: square; margin-left: $list-side-margin; }
-  &.circle { list-style-type: circle; margin-left: $list-side-margin; }
-  &.disc { list-style-type: disc; margin-left: $list-side-margin; }
-  &.no-bullet { list-style: none; }
-}
-
-/* Ordered Lists */
-ol {
-  margin-left: $list-ordered-side-margin;
-  li {
-    ul,
-    ol {
-      margin-left: $list-nested-margin;
-      margin-bottom: 0;
-    }
-  }
-}
-
-/* Inline list */
-ul,
-ol {
-  &.inline-list {
-    margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
-    margin-left: $inline-list-default-float-margin;
-    margin-right: $inline-list-opposite-margin;
-    padding: $inline-list-padding;
-    list-style: none;
-    overflow: $inline-list-overflow;
-
-    & > li {
-      padding: $inline-list-children-padding;
-      list-style: none;
-      float: left;
-      margin-left: $inline-list-default-float-list-margin;
-      display: $inline-list-display;
-      &>* { display: $inline-list-children-display; }
-    }
-  }
-}
-
-/* Definition Lists */
-dl {
-  dt {
-    margin-bottom: $definition-list-header-margin-bottom;
-    font-weight: $definition-list-header-weight;
-  }
-  dd { margin-bottom: $definition-list-margin-bottom; }
-}
-
-/* Abbreviations */
-abbr,
-acronym {
-  text-transform: uppercase;
-  font-size: $acronym-font-size;
-  color: $body-font-color;
-  border-bottom: $acronym-underline;
-  cursor: $cursor-help-value;
-}
-abbr {
-  text-transform: none;
-}
-
-/* Blockquotes */
-blockquote {
-  margin: 0 0 $paragraph-margin-bottom;
-  padding: $blockquote-padding;
-  border-left: $blockquote-border;
-
-  cite {
-    display: block;
-    font-size: $blockquote-cite-font-size;
-    color: $blockquote-cite-font-color;
-    &:before {
-      content: "\2014 \0020";
+        & > li {
+          padding: $inline-list-children-padding;
+          list-style: none;
+          float: left;
+          margin: $inline-list-chlidren-margin;
+          display: $inline-list-display;
+          &>* { display: $inline-list-children-display; }
+        }
+      }
     }
 
-    a,
-    a:visited {
-      color: $blockquote-cite-link-color;
+    /* Definition Lists */
+    dl {
+      dt {
+        margin-bottom: $definition-list-header-margin-bottom;
+        font-weight: $definition-list-header-weight;
+      }
+      dd { margin-bottom: $definition-list-margin-bottom; }
     }
-  }
 
-  &.opposite {
-    border-left: none;
-    border-right: $blockquote-border;
-    text-align: right;
-
-    cite {
-      text-align: right;
+    /* Abbreviations */
+    abbr,
+    acronym {
+      text-transform: uppercase;
+      font-size: $acronym-font-size;
+      color: $body-font-color;
+      border-bottom: $acronym-underline;
+      cursor: $cursor-help-value;
     }
+    abbr {
+      text-transform: none;
+    }
+
+    /* Blockquotes */
+    blockquote {
+      margin: $paragraph-margin;
+      padding: $blockquote-padding;
+      border-left: $blockquote-border;
+
+      cite {
+        display: block;
+        font-size: $blockquote-cite-font-size;
+        color: $blockquote-cite-font-color;
+        &:before {
+          content: "\2014 \0020";
+        }
+
+        a,
+        a:visited {
+          color: $blockquote-cite-link-color;
+        }
+      }
+
+      &.opposite {
+        border-left: none;
+        border-right: $blockquote-border;
+        text-align: right;
+
+        cite {
+          text-align: right;
+        }
+      }
+    }
+    blockquote,
+    blockquote p {
+      line-height: $paragraph-line-height;
+      color: $blockquote-font-color;
+    }
+
+    .text-truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    // Background colors
+    .bg-primary { @include bg-variant($primary-color); }
+    .bg-secundary { @include bg-variant($secundary-color); }
+    .bg-default { @include bg-variant($default-color); }
+    .bg-info { @include bg-variant($info-color); }
+    .bg-danger { @include bg-variant($danger-color); }
+    .bg-warning { @include bg-variant($warning-color); }
+    .bg-success { @include bg-variant($success-color); }
+    .bg-muted { @include bg-variant($muted-color); }
+
+    // Helpers
+    .bg-white { @include bg-variant(#fff); }
+
+    // // Text color variant
+    .text-primary { @include color-variant($primary-color); }
+    .text-secundary { @include color-variant($secundary-color); }
+    .text-default { @include color-variant($default-color); }
+    .text-info { @include color-variant($info-color); }
+    .text-danger { @include color-variant($danger-color); }
+    .text-warning { @include color-variant($warning-color); }
+    .text-success { @include color-variant($success-color); }
+    .text-muted { @include color-variant($muted-color); }
+
+    // Helpers
+    .text-white { @include color-variant(#fff); }
+    .text-black { @include color-variant(#000); }
+
   }
 }
-blockquote,
-blockquote p {
-  line-height: $paragraph-line-height;
-  color: $blockquote-font-color;
-}
-
-// Background colors
-.bg-primary { @include bg-variant($primary-color, $primary-contrast-color); }
-.bg-secundary { @include bg-variant($secundary-color, $secundary-contrast-color); }
-.bg-default { @include bg-variant($default-color, $default-contrast-color); }
-.bg-info { @include bg-variant($info-color, $info-contrast-color); }
-.bg-danger { @include bg-variant($danger-color, $danger-contrast-color); }
-.bg-warning { @include bg-variant($warning-color, $warning-contrast-color); }
-.bg-success { @include bg-variant($success-color, $success-contrast-color); }
-.bg-muted { @include bg-variant($muted-color, $muted-contrast-color); }
-
-// Helpers
-.bg-white { @include bg-variant(#fff); }
-
-// // Text color variant
-.text-primary { @include color-variant($primary-color); }
-.text-secundary { @include color-variant($secundary-color); }
-.text-info { @include color-variant($info-color); }
-.text-danger { @include color-variant($danger-color); }
-.text-warning { @include color-variant($warning-color); }
-.text-success { @include color-variant($success-color); }
-.text-muted { @include color-variant($muted-color); }
-
-// Helpers
-.text-white { @include color-variant(#fff); }
-.text-black { @include color-variant(#000); }

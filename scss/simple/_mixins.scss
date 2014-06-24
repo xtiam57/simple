@@ -2,7 +2,16 @@
 @import "mixins/_rem";
 @import "mixins/_clearfix";
 @import "mixins/_flexgrid";
+@import "mixins/_buttons";
 @import "mixins/_cover";
+
+$modules: () !default;
+@mixin exports($name) {
+  @if (index($modules, $name) == false) {
+    $modules: append($modules, $name);
+    @content;
+  }
+}
 
 // Text color
 @mixin color-variant($color) {
@@ -10,7 +19,13 @@
 }
 
 // bg color
-@mixin bg-variant($bg-color, $color: inherit) {
-  background-color: $bg-color !important;
+@mixin bg-variant($bg, $color-alt: $font-color-alt) {
+  $color: #fff;
+
+  @if lightness($bg) > 49 {
+    $color: $color-alt;
+  }
+
+  background-color: $bg !important;
   color: $color !important;
 }

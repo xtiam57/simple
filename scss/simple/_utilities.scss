@@ -1,45 +1,26 @@
-.pull-left { float: left !important; }
-.pull-right { float: right !important; }
+@include exports("utilities") {
+  @if $include-utilities {
 
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    .pull-left { float: left !important; }
+    .pull-right { float: right !important; }
+
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .clearfix { @include clearfix(); }
+
+    .rounded { @include border-radius($global-rounded); }
+    .radius { @include border-radius($global-radius); }
+    .circle { @include border-radius($global-circle); }
+
+    .show { display: block !important; }
+    .hidden, .hide { display: none !important; visibility: hidden !important; }
+    .invisible { visibility: hidden; }
+
+    .hug { margin-top: 0 !important; }
+
+  }
 }
-
-.clearfix { @include clearfix(); }
-
-.rounded { @include border-radius($global-rounded); }
-.radius { @include border-radius($global-radius); }
-.circle { @include border-radius($global-circle); }
-
-.show {
-  display: block !important;
-}
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-.invisible {
-  visibility: hidden;
-}
-
-
-// .hug {
-//   margin-top: 0;
-// }
-
-
-// .valign {
-//   &:before {
-//     content:' ';
-//     display: inline-block;
-//     height: 9000px;
-//     vertical-align: middle;
-//     margin-right: -0.25em;
-//   }
-//   > div, > article, > section, > figure {
-//     display: inline-block;
-//     vertical-align: middle;
-//   }
-// }

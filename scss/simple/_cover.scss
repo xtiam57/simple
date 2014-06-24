@@ -1,3 +1,13 @@
-.cover {
-  @include make-cover();
+@include exports("cover") {
+  @if $include-cover {
+
+    .cover-container {
+      height: $cover-container-height;
+
+      .cover {
+        @include make-cover();
+      }
+    }
+
+  }
 }

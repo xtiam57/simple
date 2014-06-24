@@ -11,23 +11,16 @@
 
 // We use these as default colors throughout
 $primary-color: #2980b9 !default; // #0CBF84 //#16a085
-$secundary-color: #2d2f31 !default;
-$default-color: #f4f4f4 !default;
+$secundary-color: #333537 !default;
+$default-color: #f3f3f3 !default;
 $info-color: #00A9EC !default;
 $danger-color: #cf280e !default;
 $warning-color: #E76F00 !default;
 $success-color: #159E31 !default;
 $muted-color: #999 !default;
 
-// Contrast colors
-$primary-contrast-color: #fff !default;
-$secundary-contrast-color:#eee !default;
-$default-contrast-color: inherit !default;
-$info-contrast-color: #fff !default;
-$danger-contrast-color: #fff !default;
-$warning-contrast-color: #fff !default;
-$success-contrast-color: #fff !default;
-$muted-contrast-color: #fff !default;
+// We use this when bg-* helper use a bg too light
+$font-color-alt: #555 !default;
 
 // We use these to define body style
 $body-bg: #FFF !default;
@@ -70,7 +63,7 @@ $global-rounded: 13986px !default;
 $global-circle: 50% !default;
 
 // This is the global margin bottom used for almost every element
-$global-margin-bottom: rem(16px) !default;
+$global-margin-bottom: rem(15px) !default;
 
 
 
@@ -93,21 +86,20 @@ $header-font-weight: normal !default;
 $header-font-style: normal !default;
 $header-font-color: #222 !default;
 $header-line-height: 1.1 !default;
-$header-top-margin: 0 !default;
-$header-bottom-margin: $global-margin-bottom !default;
+$header-margin: 0 0 $global-margin-bottom !default;
 $header-text-rendering: optimizeLegibility !default;
 $header-word-wrap: break-word !default;
 
 // We use these to control header font sizes
-// Modular scale: 16px @ 1:1.333
-$h1-font-size: rem(50.517px) !default;
-$h2-font-size: rem(37.897px) !default;
-$h3-font-size: rem(28.43px) !default;
-$h4-font-size: rem(21.328px) !default;
-$h5-font-size: rem(16px) !default;
+// Modular scale: 16px @ 1:1.333 (perfect 4th)
 $h6-font-size: rem(12.003px) !default;
+$h5-font-size: rem(16px) !default;
+$h4-font-size: rem(21.328px) !default;
+$h3-font-size: rem(28.43px) !default;
+$h2-font-size: rem(37.897px) !default;
+$h1-font-size: rem(50.517px) !default;
 
-// This sizes are for big headings helpers
+// This sizes are for huge headings
 $xlarge-font-size: rem(67.339px) !default;
 $xxlarge-font-size: rem(89.763px) !default;
 
@@ -125,17 +117,16 @@ $xxlarge-letter-spacing: 0 !default;
 $subheader-line-height: 1.4 !default;
 $subheader-font-color: lighten($header-font-color, 35%) !default;
 $subheader-font-weight: normal !default;
-$subheader-top-margin: 0 !default;
-$subheader-bottom-margin: $global-margin-bottom !default;
+$subheader-margin: 0 0 $global-margin-bottom !default;
 
 // This control the page headers class
 $page-header-line-height: 1.4 !default;
 $page-header-border: 1px solid #eee !default;
-$page-header-bottom-margin: $global-margin-bottom !default;
+$page-header-margin: 0 0 $global-margin-bottom !default;
 
 // A general <small> styling
 $small-font-size: 65% !default;
-$small-font-color: lighten($header-font-color, 45%) !default;
+$small-font-color: lighten($header-font-color, 40%) !default;
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit !default;
@@ -143,8 +134,10 @@ $paragraph-font-weight: normal !default;
 $paragraph-font-color: $body-font-color !default;
 $paragraph-font-size: $base-font-size !default;
 $paragraph-line-height: 1.5 !default;
-$paragraph-margin-bottom: $global-margin-bottom !default;
+$paragraph-margin: 0 0 $global-margin-bottom !default;
 $paragraph-text-rendering: optimizeLegibility !default;
+
+// Paragraphs leads
 $lead-scale: 140% !default;
 $lead-line-height: 1.6 !default;
 $lead-font-color: darken($paragraph-font-color, 15%) !default;
@@ -153,46 +146,46 @@ $lead-font-color: darken($paragraph-font-color, 15%) !default;
 $code-color: darken($danger-color, 5%) !default;
 $code-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace !default;
 $code-font-weight: bold !default;
-$code-bg: #FFFEEE !default;
+$code-bg: transparent !default;
 $code-padding: rem(2px 4px) !default;
 $code-font-size: 95% !default;
 
 // We use these to style <pre> tags
 $pre-color: darken($danger-color, 5%) !default;
 $pre-font-family: 'Source Code Pro', Monaco, Consolas, 'Lucida Console', 'Liberation Mono', Courier, monospace !default;
+$pre-font-size: rem(14px) !default;
 $pre-font-weight: normal !default;
 $pre-display: block !default;
 $pre-padding: rem(15px) !default;
-$pre-margin-bottom: $global-margin-bottom !default;
+$pre-margin: 0 0 $global-margin-bottom !default;
 $pre-line-height: $paragraph-line-height !default;
-$pre-bg: #FFFEEE !default;
+$pre-bg: #FAFAFA !default;
 $pre-border: none !default;
 
 // We use these to style the <hr> element
 $hr-border-width: 1px !default;
 $hr-border: $hr-border-width solid #ddd !default;
-$hr-margin: rem(20px) !default;
+$hr-margin: 20px !default;
 
 // We use these to style lists
 $list-font-family: $paragraph-font-family !default;
 $list-font-size: $paragraph-font-size !default;
 $list-line-height: $paragraph-line-height !default;
-$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-margin: 0 0 $global-margin-bottom !default;
 $list-style-position: outside !default;
 $list-side-margin: 1.1rem !default;
 $list-ordered-side-margin: 1.4rem !default;
 $list-side-margin-no-bullet: 0 !default;
 $list-nested-margin: rem(20px) !default;
+
+// Definition lists
 $definition-list-header-weight: bold !default;
 $definition-list-header-margin-bottom: ($global-margin-bottom / 2) !default;
 $definition-list-margin-bottom: rem(12px) !default;
 
 // We use this to control the margins and padding of the inline list.
-$inline-list-top-margin: 0 !default;
-$inline-list-opposite-margin: 0 !default;
-$inline-list-bottom-margin: rem(17px) !default;
-$inline-list-default-float-margin: rem(-22px) !default;
-$inline-list-default-float-list-margin: rem(22px) !default;
+$inline-list-margin: 0 0 $global-margin-bottom !default;
+$inline-list-chlidren-margin: 0 !default;
 $inline-list-padding: 0 !default;
 
 // We use this to control the overflow of the inline list.
@@ -246,62 +239,68 @@ $alert-bottom-margin: rem(20px);
 // +++++
 
 // We use these to build padding for buttons.
-$button-default-padding: rem(9px 18px) !default;
-$button-small-padding: rem(9px 18px) !default;
-$button-large-padding: rem(9px 18px) !default;
-$button-xlarge-padding: rem(9px 18px) !default;
-$button-xxlarge-padding: rem(9px 18px) !default;
+$button-xsmall-padding: rem(4px 12px) !default;
+$button-small-padding: rem(6px 16px) !default;
+$button-medium-padding: rem(8px 20px) !default;
+$button-large-padding: rem(12px 28px) !default;
+$button-xlarge-padding: rem(16px 36px) !default;
+$button-xxlarge-padding: rem(20px 44px) !default;
+
+// We use these for font sizes.
+$button-xsmall-font-size: rem($base-font-size - 6) !default;
+$button-small-font-size: rem($base-font-size - 3) !default;
+$button-medium-font-size: rem($base-font-size - 2) !default;
+$button-large-font-size: rem($base-font-size + 1) !default;
+$button-xlarge-font-size: rem($base-font-size + 2) !default;
+$button-xxlarge-font-size: rem($base-font-size + 4) !default;
 
 // We use this to control the display property.
 $button-display: inline-block !default;
 $button-margin-bottom: $global-margin-bottom !default;
 $button-cursor: $cursor-pointer-value !default;
+$button-transition-time: .5s !default;
+$button-line-height: $base-line-height !default;
 
 // We use these to control button text styles.
 $button-font-family: $body-font-family !default;
 $button-font-weight: normal !default;
 $button-font-align: center !default;
-
-// Font sizes
-$button-font-default: rem($base-font-size - 1) !default;
-$button-font-small: rem($base-font-size - 1) !default;
-$button-font-large: rem($base-font-size - 1) !default;
-$button-font-xlarge: rem($base-font-size - 1) !default;
-$button-font-xxlarge: rem($base-font-size - 1) !default;
+$button-text-rendering: optimizeLegibility !default;
 
 // We use these to control various hover effects.
 $button-hover-factor: 10% !default;
+$button-border-color-hover-factor: 5%;
 
 // We use these to control button border styles.
 $button-border-width: 1px !default;
 $button-border-style: solid !default;
-$button-border-color-factor: 5%;
-
-// Background and font colors
-$button-primary-bg: $primary-color !default;
-$button-primary-font-color: $primary-contrast-color !default;
-
-$button-secundary-bg: $secundary-color !default;
-$button-secundary-font-color: $secundary-contrast-color !default;
-
-$button-info-bg: $info-color !default;
-$button-info-font-color: $info-contrast-color !default;
-
-$button-warning-bg: $warning-color !default;
-$button-warning-font-color: $warning-contrast-color !default;
-
-$button-success-bg: $success-color !default;
-$button-success-font-color: $success-contrast-color !default;
-
-$button-default-bg: $default-color !default;
-$button-default-font-color: $default-contrast-color !default;
-
-$button-danger-bg: $danger-color !default;
-$button-danger-font-color: $danger-contrast-color !default;
 
 // We use this to set default opacity for disabled buttons.
 $button-disabled-opacity: 0.65 !default;
 
+// Background and font colors
+$button-background-image: none !default;
+
+// We use this font color when the bg is too light
+$button-font-colot-alt: $font-color-alt !default;
+
+$button-primary-bg: $primary-color !default;
+$button-secundary-bg: $secundary-color !default;
+$button-info-bg: $info-color !default;
+$button-warning-bg: $warning-color !default;
+$button-success-bg: $success-color !default;
+$button-default-bg: $default-color !default;
+$button-danger-bg: $danger-color !default;
+
+
+
+// +++++
+// Button Groups
+// +++++
+
+$button-group-margin: 0 0 $global-margin-bottom !default;
+$button-group-radius: $global-radius !default;
+$button-group-rounded: $global-rounded!default;
 
 
 
@@ -319,27 +318,27 @@ $total-columns: 12 !default;
 // Media Query Ranges:
 
 // from smartphones to tablets
-$xsmall-name: xsmall !default;
+$xsmall-grid-name: xsmall !default;
 $xsmall-range-min: em(480px);
 $xsmall-range-max: em(767px);
 
 // from tablets
-$small-name: small !default;
+$small-grid-name: small !default;
 $small-range-min: em(768px);
 $small-range-max: em(991px);
 
 // from old computers
-$medium-name: medium !default;
+$medium-grid-name: medium !default;
 $medium-range-min: em(992px);
 $medium-range-max: em(1024px);
 
 // from old computers to widescreen laptops
-$large-name: large !default;
+$large-grid-name: large !default;
 $large-range-min: em(1025px);
 $large-range-max: em(1440px);
 
 // from widescreen laptops to HD resolutions
-$xlarge-name: xlarge !default;
+$xlarge-grid-name: xlarge !default;
 $xlarge-range-min: em(1441px);
 $xlarge-range-max: em(1920px);
 
@@ -379,7 +378,7 @@ $xlarge-only: "#{$screen} and (min-width:#{$xlarge-range-min}) and (max-width:#{
 $print: "only print" !default;
 
 // Grid name
-$print-name: print !default;
+$print-grid-name: print !default;
 
 
 
@@ -388,7 +387,7 @@ $print-name: print !default;
 // Cover
 // +++++
 
-//
+$cover-container-height: 100% !default;
 $cover-height: 100% !default;
 $cover-background-repeat: no-repeat !default;
 $cover-background-attachment: fixed !default;

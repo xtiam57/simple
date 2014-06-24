@@ -1,155 +1,60 @@
-@mixin button-variant($bg, $color) {
-  color: $color;
-  border-color: darken($bg, $button-border-color-factor);
-  background-color: $bg;
+@include exports("buttons") {
+  @if $include-buttons {
 
-  &:hover,
-  &:focus {
-    color: $color;
-    background-color: darken($bg, $button-hover-factor);
-    border-color: darken($bg, $button-border-color-factor);
-  }
+    button,
+    .button {
+      @include button-base();
 
-  &:active,
-  &.active {
-    color: $color;
-    background-image: none;
-    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
-  }
+      // Sizes
+      &.xsmall { @include button-size($button-xsmall-padding, $button-xsmall-font-size); }
+      &.small { @include button-size($button-small-padding, $button-small-font-size); }
+      &.medium { @include button-size($button-medium-padding, $button-medium-font-size); }
+      &.large { @include button-size($button-large-padding, $button-large-font-size); }
+      &.xlarge { @include button-size($button-xlarge-padding, $button-xlarge-font-size); }
+      &.xxlarge { @include button-size($button-xxlarge-padding, $button-xxlarge-font-size); }
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    pointer-events: none;
-    @include opacity($button-disabled-opacity);
-    @include box-shadow(none);
-  }
-}
+      // Setting the colors
+      &.primary { @include make-button($button-primary-bg); }
+      &.secundary { @include make-button($button-secundary-bg); }
+      &.info { @include make-button($button-info-bg); }
+      &.warning { @include make-button($button-warning-bg); }
+      &.success { @include make-button($button-success-bg); }
+      &.danger { @include make-button($button-danger-bg); }
+      &.default { @include make-button($button-default-bg); }
 
-@mixin button-outline($bg, $color) {
-  &.outline {
-    color: $color;
-    border-color: $color;
-    background-color: $bg;
+      // Special link button
+      &.link {
+        color: $anchor-font-color;
+        background-color: transparent;
+        text-decoration: $anchor-text-decoration;
 
-    &:hover,
-    &:focus {
-      background-color: $color;
-      border-color: $color;
-      color: $bg;
-    }
+        &:hover,
+        &:focus {
+          color: darken($anchor-font-color, $button-hover-factor);
+          background-color: transparent;
 
-    &.transparent {
-      color: $bg;
-      border-color: $bg;
-      background-color: transparent;
+          @if $anchor-text-decoration-hover != $anchor-text-decoration {
+            text-decoration: $anchor-text-decoration-hover;
+          }
+        }
 
-      &:hover,
-      &:focus {
-        background-color: $bg;
-        border-color: $bg;
-        color: $color;
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+          pointer-events: none;
+          @include opacity($button-disabled-opacity);
+          @include box-shadow(none);
+        }
+      }
+
+      // Block button
+      &.block {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
+
   }
 }
-
-button,
-.button {
-  outline: none;
-  padding: $button-default-padding;
-  margin-bottom: $button-margin-bottom;
-  display: $button-display;
-  font-size: $button-font-default;
-  border-width: $button-border-width;
-  border-style: $button-border-style;
-  border-color: transparent;
-  white-space: nowrap;
-  font-weight: $button-font-weight;
-  text-align: $button-font-align;
-  cursor: $button-cursor;
-  background-image: none;
-  background-color: #DDD;
-  color: #666;
-  @include single-transition(all, .5s);
-
-  &:hover {
-    color: #666;
-  }
-
-  &.primary {
-    @include button-variant($button-primary-bg, $button-primary-font-color);
-  }
-
-  &.secundary {
-    @include button-variant($button-secundary-bg, $button-secundary-font-color);
-  }
-
-  &.info {
-    @include button-variant($button-info-bg, $button-info-font-color);
-  }
-
-  &.warning {
-    @include button-variant($button-warning-bg, $button-warning-font-color);
-  }
-
-  &.success {
-    @include button-variant($button-success-bg, $button-success-font-color);
-    @include button-outline($button-success-font-color, $button-success-bg);
-  }
-
-  &.danger {
-    @include button-variant($button-danger-bg, $button-danger-font-color);
-  }
-
-  &.default {
-    @include button-variant($button-default-bg, $button-default-font-color);
-  }
-
-
-
-
-
-  // &.link {
-  //   color: $success-color;
-  //   border-color: darken(transparent, $button-function-factor * 0.5);
-  //   background-color: transparent;
-  //   text-decoration: $anchor-text-decoration;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: darken($success-color, $button-function-factor);
-  //     background-color: transparent;
-
-  //     @if $anchor-text-decoration-hover != $anchor-text-decoration {
-  //       text-decoration: $anchor-text-decoration-hover;
-  //     }
-  //   }
-
-  //   &.disabled,
-  //   &[disabled],
-  //   fieldset[disabled] & {
-  //     pointer-events: none;
-  //     @include opacity($button-disabled-opacity);
-  //     @include box-shadow(none);
-  //   }
-  // }
-}
-
-
-// .custom-button-class {
-//   @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
-// }
-
-// // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
-// $padding: 12px;
-// // Primary color set in settings file. Default: $primary-color.
-// $bg: orange;
-// // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
-// $radius: true;
-// // We can set $full-width:true to remove side padding extend width. Default:false
-// $full-width: false;
-// // We can set $disabled:true to create a disabled transparent button. Default:false
-// $disabled: false;
-// // $is-input - <input>'s and <button>'s take on strange padding. We added this to help fix that. Default:false
-// $is-input: false;
