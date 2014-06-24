@@ -1,0 +1,65 @@
+@include exports("button-groups") {
+  @if $include-button-groups {
+
+    .button-group {
+      margin: $button-group-margin;
+      display: inline-block;
+      vertical-align: middle;
+      @include clearfix();
+
+      button,
+      .button {
+        margin: 0;
+        float: left;
+        border-left-width: 0;
+
+        &:first-child {
+          border-left-width: $button-border-width;
+        }
+      }
+
+      // Sizes
+      &.xsmall {
+        button,
+        .button { @extend button.xsmall; }
+      }
+      &.small {
+        button,
+        .button { @extend button.small; }
+      }
+      &.medium {
+        button,
+        .button { @extend button.medium; }
+      }
+      &.large {
+        button,
+        .button { @extend button.large; }
+      }
+      &.xlarge {
+        button,
+        .button { @extend button.xlarge; }
+      }
+      &.xxlarge {
+        button,
+        .button { @extend button.xxlarge; }
+      }
+
+      // Shape
+      &.rounded {
+        button,
+        .button {
+          &:last-child { @include border-right-radius($button-group-rounded); }
+          &:first-child { @include border-left-radius($button-group-rounded); }
+        }
+      }
+      &.radius {
+        button,
+        .button {
+          &:last-child { @include border-right-radius($button-group-radius); }
+          &:first-child { @include border-left-radius($button-group-radius); }
+        }
+      }
+    }
+
+  }
+}

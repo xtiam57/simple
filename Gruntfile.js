@@ -4,13 +4,13 @@ module.exports = function (grunt) {
     app: {
       src: "src",
       dist: "dist",
-      temp: ".temp",
+      temp: ".temp"
     },
 
     clean: {
       dist: [
         "<%= app.dist %>/"
-      ],
+      ]
     },
 
     connect: {
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
           livereload: false
         },
         files: [
-          "scss/**/*.scss",
+          "scss/**/*.scss"
         ],
         tasks: ["sass"]
       },
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
           lineNumbers: true,
           banner: '/* the banner */',
           quiet: true,
-          compass: true,
+          compass: true
         },
         files: {
           'css/simple.css': 'scss/simple.scss'
