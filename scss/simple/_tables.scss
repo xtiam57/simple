@@ -1,0 +1,172 @@
+@include exports("tables") {
+  @if $include-tables {
+
+    table,
+    .table {
+      background-color: $table-bg;
+      border: transparent;
+      border-collapse: separate;
+      margin: $table-margin;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+
+      tr {
+        th,
+        td {
+          padding: $table-row-padding;
+          font-size: $table-row-font-size;
+          color: $table-row-font-color;
+          text-align: left;
+          @include single-transition(all, $table-transition-time);
+
+          // Removing button margin
+          button,
+          .button {
+            margin: 0;
+          }
+        }
+      }
+
+      thead tr th,
+      tfoot tr th,
+      tfoot tr td,
+      tbody tr th,
+      tbody tr td,
+      tr td { display: $table-display; line-height: $table-line-height; }
+
+      thead {
+        background-color: $table-head-bg;
+        font-size: $table-head-font-size;
+        color: $table-head-font-color;
+        font-weight: $table-head-font-weight;
+        padding: $table-head-padding;
+      }
+
+      tfoot {
+        background: $table-foot-bg;
+        tr {
+          th,
+          td {
+            padding: $table-foot-padding;
+            font-size: $table-foot-font-size;
+            font-weight: $table-foot-font-weight;
+            color: $table-foot-font-color;
+          }
+        }
+      }
+
+      caption {
+        background: $table-caption-bg;
+        color: $table-caption-font-color;
+        font-size: $table-caption-font-size;
+        font-weight: $table-caption-font-weight;
+      }
+
+      // This class gives a rounded border to the table
+      &.radius {
+        @include border-top-radius($table-top-radius);
+        @include border-bottom-radius($table-bottom-radius);
+      }
+
+      // Use this if you want alternate row colors
+      &.striped {
+        tr {
+          &.even,
+          &.alt,
+          &:nth-of-type(even) { background: $table-even-row-bg; }
+        }
+      }
+
+      // Table with less padding
+      &.condensed {
+        tr {
+          th,
+          td {
+            padding: $table-row-condensed-padding;
+          }
+        }
+      }
+
+      // We can use a different internal border color when the table is striped and bordered
+      &.bordered.striped {
+        tr {
+          th,
+          td {
+            border-right: $table-column-striped-border;
+          }
+        }
+      }
+
+      // Add borders
+      &.bordered {
+        border: $table-border;
+
+        tr {
+          th,
+          td {
+            border-top: $table-row-border;
+            border-right: $table-column-border;
+          }
+        }
+
+        // Remove right border from last column
+        tr {
+          th:last-child,
+          td:last-child {
+            border-right: 0;
+          }
+        }
+
+        // Remove top border from thead by default
+        > caption + thead,
+        > colgroup + thead,
+        > thead:first-child {
+          > tr:first-child {
+            > th,
+            > td {
+              border-top: 0;
+            }
+          }
+        }
+      }
+
+      // Hover effect
+      &.hover {
+        tbody {
+          tr:hover {
+            th,
+            td {
+              background-color: $table-hover-bg;
+
+              $color: #fff;
+              @if lightness($table-hover-bg) > 49% {
+                $color: $table-hover-font-color-alt;
+              }
+              color: $color;
+            }
+          }
+        }
+      }
+
+      // No wrap cells
+      &.nowrap {
+        tr {
+          td,
+          th {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      // Aligment
+      @include table-aligment();
+
+      // Row variants
+      tr {
+        &.danger { @include table-row-variant($danger-color); }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,110 @@
+@mixin table-row-aligment() {
+  tr {
+    &.text-left {
+      th,
+      td {
+        text-align: left;
+      }
+    }
+
+    &.text-right {
+      th,
+      td {
+        text-align: right;
+      }
+    }
+
+    &.text-center {
+      th,
+      td {
+        text-align: center;
+      }
+    }
+
+    &.text-justify {
+      th,
+      td {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@mixin table-aligment() {
+  th,
+  td {
+    &.text-left {
+      text-align: left;
+    }
+
+    &.text-right {
+      text-align: right;
+    }
+
+    &.text-center {
+      text-align: center;
+    }
+
+    &.text-justify {
+      text-align: justify;
+    }
+  }
+
+  @include table-row-aligment();
+
+  thead,
+  tbody,
+  tfoot {
+    &.text-left {
+      tr {
+        th,
+        td {
+          text-align: left;
+        }
+      }
+    }
+
+    &.text-right {
+      tr {
+        th,
+        td {
+          text-align: right;
+        }
+      }
+    }
+
+    &.text-center {
+      tr {
+        th,
+        td {
+          text-align: center;
+        }
+      }
+    }
+
+    &.text-justify {
+      tr {
+        th,
+        td {
+          text-align: justify;
+        }
+      }
+    }
+
+    @include table-row-aligment();
+  }
+}
+
+@mixin table-row-variant($bg) {
+  $color: #fff;
+
+  @if lightness($bg) > 49% {
+    $color: $table-hover-font-color-alt;
+  }
+
+  td,
+  th {
+    background-color: $bg;
+    color: $color;
+  }
+}
