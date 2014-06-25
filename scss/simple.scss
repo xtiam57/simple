@@ -11,14 +11,15 @@
 @import "simple/_settings";
 
 // Control variables. Which modules do you want to include?
-$include-scaffolding : true;
-$include-utilities   : true;
-$include-flexgrid    : true;
-$include-type        : true;
-$include-cover       : true;
-$include-alerts      : true;
-$include-buttons     : true;
-$include-button-groups: true;
+$include-scaffolding   : true;
+$include-utilities     : true;
+$include-flexgrid      : true;
+$include-type          : true;
+$include-cover         : true;
+$include-alerts        : true;
+$include-buttons       : true;
+$include-button-groups : true;
+$include-tables        : true;
 
 // Here's where the magic of Simple truly begins!
 @import "simple/_scaffolding";
@@ -29,6 +30,7 @@ $include-button-groups: true;
 @import "simple/_alerts";
 @import "simple/_buttons";
 @import "simple/_button-groups";
+@import "simple/_tables";
 
 // Put your custom SASS code here
 @import "simple/_custom";

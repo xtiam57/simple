@@ -1,6 +1,6 @@
 @mixin button-base() {
   outline: none;
-  padding: nth($button-medium-padding, 1);
+  padding: $button-medium-padding;
   margin-bottom: $button-margin-bottom;
   display: $button-display;
   font-size: $button-medium-font-size;
@@ -63,7 +63,7 @@
   }
 }
 
-@mixin make-button($bg) {
+@mixin button-variant($bg) {
   $border: darken($bg, $button-border-color-hover-factor);
   $border-hover: darken($bg, $button-border-color-hover-factor);
   $bg-hover: darken($bg, $button-hover-factor);

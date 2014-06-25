@@ -14,13 +14,13 @@
       &.xxlarge { @include button-size($button-xxlarge-padding, $button-xxlarge-font-size); }
 
       // Setting the colors
-      &.primary { @include make-button($button-primary-bg); }
-      &.secundary { @include make-button($button-secundary-bg); }
-      &.info { @include make-button($button-info-bg); }
-      &.warning { @include make-button($button-warning-bg); }
-      &.success { @include make-button($button-success-bg); }
-      &.danger { @include make-button($button-danger-bg); }
-      &.default { @include make-button($button-default-bg); }
+      &.primary { @include button-variant($button-primary-bg); }
+      &.secundary { @include button-variant($button-secundary-bg); }
+      &.info { @include button-variant($button-info-bg); }
+      &.warning { @include button-variant($button-warning-bg); }
+      &.success { @include button-variant($button-success-bg); }
+      &.danger { @include button-variant($button-danger-bg); }
+      &.default { @include button-variant($button-default-bg); }
 
       // Special link button
       &.link {

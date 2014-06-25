@@ -4,6 +4,7 @@
 @import "mixins/_flexgrid";
 @import "mixins/_buttons";
 @import "mixins/_cover";
+@import "mixins/_tables";
 
 $modules: () !default;
 @mixin exports($name) {

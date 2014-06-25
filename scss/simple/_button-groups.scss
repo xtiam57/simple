@@ -20,28 +20,22 @@
 
       // Sizes
       &.xsmall {
-        button,
-        .button { @extend button.xsmall; }
+        button, .button { @extend button.xsmall; }
       }
       &.small {
-        button,
-        .button { @extend button.small; }
+        button, .button { @extend button.small; }
       }
       &.medium {
-        button,
-        .button { @extend button.medium; }
+        button, .button { @extend button.medium; }
       }
       &.large {
-        button,
-        .button { @extend button.large; }
+        button, .button { @extend button.large; }
       }
       &.xlarge {
-        button,
-        .button { @extend button.xlarge; }
+        button, .button { @extend button.xlarge; }
       }
       &.xxlarge {
-        button,
-        .button { @extend button.xxlarge; }
+        button, .button { @extend button.xxlarge; }
       }
 
       // Shape

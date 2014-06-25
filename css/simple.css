@@ -1432,7 +1432,7 @@ img::-moz-selection { background: transparent; }
 .invisible { visibility: hidden; }
 
 /* line 23, ../scss/simple/_utilities.scss */
-.hug { margin-top: 0 !important; }
+.hug { margin: 0 !important; }
 
 /* line 4, ../scss/simple/_flexgrid.scss */
 .column, .columns { margin-top: 0; margin-bottom: 0; padding: 0 0.9375rem 0; flex-basis: 100%; }
@@ -2302,11 +2302,82 @@ button.block, .button.block { display: block; width: 100%; padding-left: 0; padd
 .button-group button, .button-group .button { margin: 0; float: left; border-left-width: 0; }
 /* line 16, ../scss/simple/_button-groups.scss */
 .button-group button:first-child, .button-group .button:first-child { border-left-width: 1px; }
-/* line 51, ../scss/simple/_button-groups.scss */
+/* line 45, ../scss/simple/_button-groups.scss */
 .button-group.rounded button:last-child, .button-group.rounded .button:last-child { -moz-border-radius-topright: 13986px; -webkit-border-top-right-radius: 13986px; border-top-right-radius: 13986px; -moz-border-radius-bottomright: 13986px; -webkit-border-bottom-right-radius: 13986px; border-bottom-right-radius: 13986px; }
-/* line 52, ../scss/simple/_button-groups.scss */
+/* line 46, ../scss/simple/_button-groups.scss */
 .button-group.rounded button:first-child, .button-group.rounded .button:first-child { -moz-border-radius-topleft: 13986px; -webkit-border-top-left-radius: 13986px; border-top-left-radius: 13986px; -moz-border-radius-bottomleft: 13986px; -webkit-border-bottom-left-radius: 13986px; border-bottom-left-radius: 13986px; }
-/* line 58, ../scss/simple/_button-groups.scss */
+/* line 52, ../scss/simple/_button-groups.scss */
 .button-group.radius button:last-child, .button-group.radius .button:last-child { -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
-/* line 59, ../scss/simple/_button-groups.scss */
+/* line 53, ../scss/simple/_button-groups.scss */
 .button-group.radius button:first-child, .button-group.radius .button:first-child { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; }
+
+/* line 4, ../scss/simple/_tables.scss */
+table, .table { background-color: white; border: transparent; border-collapse: separate; margin: 0 0 0.9375rem; overflow: hidden; width: 100%; max-width: 100%; }
+/* line 15, ../scss/simple/_tables.scss */
+table tr th, table tr td, .table tr th, .table tr td { padding: 0.5625rem 0.625rem; font-size: 0.875rem; color: #222222; text-align: left; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; }
+/* line 24, ../scss/simple/_tables.scss */
+table tr th button, table tr th .button, table tr td button, table tr td .button, .table tr th button, .table tr th .button, .table tr td button, .table tr td .button { margin: 0; }
+/* line 31, ../scss/simple/_tables.scss */
+table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td, .table thead tr th, .table tfoot tr th, .table tfoot tr td, .table tbody tr th, .table tbody tr td, .table tr td { display: table-cell; line-height: 1.125rem; }
+/* line 38, ../scss/simple/_tables.scss */
+table thead, .table thead { background-color: whitesmoke; font-size: 0.875rem; color: #222222; font-weight: bold; padding: 0.5rem 0.625rem 0.625rem; }
+/* line 46, ../scss/simple/_tables.scss */
+table tfoot, .table tfoot { background: whitesmoke; }
+/* line 49, ../scss/simple/_tables.scss */
+table tfoot tr th, table tfoot tr td, .table tfoot tr th, .table tfoot tr td { padding: 0.5rem 0.625rem 0.625rem; font-size: 0.875rem; font-weight: bold; color: #222222; }
+/* line 59, ../scss/simple/_tables.scss */
+table caption, .table caption { background: transparent; color: #222222; font-size: 1rem; font-weight: bold; }
+/* line 67, ../scss/simple/_tables.scss */
+table.radius, .table.radius { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
+/* line 75, ../scss/simple/_tables.scss */
+table.striped tr.even, table.striped tr.alt, table.striped tr:nth-of-type(even), .table.striped tr.even, .table.striped tr.alt, .table.striped tr:nth-of-type(even) { background: #f9f9f9; }
+/* line 84, ../scss/simple/_tables.scss */
+table.condensed tr th, table.condensed tr td, .table.condensed tr th, .table.condensed tr td { padding: 0.375rem 0.4375rem; }
+/* line 94, ../scss/simple/_tables.scss */
+table.bordered.striped tr th, table.bordered.striped tr td, .table.bordered.striped tr th, .table.bordered.striped tr td { border-right: 1px solid #dddddd; }
+/* line 102, ../scss/simple/_tables.scss */
+table.bordered, .table.bordered { border: 1px solid #dddddd; }
+/* line 106, ../scss/simple/_tables.scss */
+table.bordered tr th, table.bordered tr td, .table.bordered tr th, .table.bordered tr td { border-top: 1px solid #dddddd; border-right: 1px solid #dddddd; }
+/* line 115, ../scss/simple/_tables.scss */
+table.bordered tr th:last-child, table.bordered tr td:last-child, .table.bordered tr th:last-child, .table.bordered tr td:last-child { border-right: 0; }
+/* line 126, ../scss/simple/_tables.scss */
+table.bordered > caption + thead > tr:first-child > th, table.bordered > caption + thead > tr:first-child > td, table.bordered > colgroup + thead > tr:first-child > th, table.bordered > colgroup + thead > tr:first-child > td, table.bordered > thead:first-child > tr:first-child > th, table.bordered > thead:first-child > tr:first-child > td, .table.bordered > caption + thead > tr:first-child > th, .table.bordered > caption + thead > tr:first-child > td, .table.bordered > colgroup + thead > tr:first-child > th, .table.bordered > colgroup + thead > tr:first-child > td, .table.bordered > thead:first-child > tr:first-child > th, .table.bordered > thead:first-child > tr:first-child > td { border-top: 0; }
+/* line 138, ../scss/simple/_tables.scss */
+table.hover tbody tr:hover th, table.hover tbody tr:hover td, .table.hover tbody tr:hover th, .table.hover tbody tr:hover td { background-color: #f4f4f4; color: #222222; }
+/* line 155, ../scss/simple/_tables.scss */
+table.nowrap tr td, table.nowrap tr th, .table.nowrap tr td, .table.nowrap tr th { white-space: nowrap; }
+/* line 36, ../scss/simple/mixins/_tables.scss */
+table th.text-left, table td.text-left, .table th.text-left, .table td.text-left { text-align: left; }
+/* line 40, ../scss/simple/mixins/_tables.scss */
+table th.text-right, table td.text-right, .table th.text-right, .table td.text-right { text-align: right; }
+/* line 44, ../scss/simple/mixins/_tables.scss */
+table th.text-center, table td.text-center, .table th.text-center, .table td.text-center { text-align: center; }
+/* line 48, ../scss/simple/mixins/_tables.scss */
+table th.text-justify, table td.text-justify, .table th.text-justify, .table td.text-justify { text-align: justify; }
+/* line 4, ../scss/simple/mixins/_tables.scss */
+table tr.text-left th, table tr.text-left td, .table tr.text-left th, .table tr.text-left td { text-align: left; }
+/* line 11, ../scss/simple/mixins/_tables.scss */
+table tr.text-right th, table tr.text-right td, .table tr.text-right th, .table tr.text-right td { text-align: right; }
+/* line 18, ../scss/simple/mixins/_tables.scss */
+table tr.text-center th, table tr.text-center td, .table tr.text-center th, .table tr.text-center td { text-align: center; }
+/* line 25, ../scss/simple/mixins/_tables.scss */
+table tr.text-justify th, table tr.text-justify td, .table tr.text-justify th, .table tr.text-justify td { text-align: justify; }
+/* line 60, ../scss/simple/mixins/_tables.scss */
+table thead.text-left tr th, table thead.text-left tr td, table tbody.text-left tr th, table tbody.text-left tr td, table tfoot.text-left tr th, table tfoot.text-left tr td, .table thead.text-left tr th, .table thead.text-left tr td, .table tbody.text-left tr th, .table tbody.text-left tr td, .table tfoot.text-left tr th, .table tfoot.text-left tr td { text-align: left; }
+/* line 69, ../scss/simple/mixins/_tables.scss */
+table thead.text-right tr th, table thead.text-right tr td, table tbody.text-right tr th, table tbody.text-right tr td, table tfoot.text-right tr th, table tfoot.text-right tr td, .table thead.text-right tr th, .table thead.text-right tr td, .table tbody.text-right tr th, .table tbody.text-right tr td, .table tfoot.text-right tr th, .table tfoot.text-right tr td { text-align: right; }
+/* line 78, ../scss/simple/mixins/_tables.scss */
+table thead.text-center tr th, table thead.text-center tr td, table tbody.text-center tr th, table tbody.text-center tr td, table tfoot.text-center tr th, table tfoot.text-center tr td, .table thead.text-center tr th, .table thead.text-center tr td, .table tbody.text-center tr th, .table tbody.text-center tr td, .table tfoot.text-center tr th, .table tfoot.text-center tr td { text-align: center; }
+/* line 87, ../scss/simple/mixins/_tables.scss */
+table thead.text-justify tr th, table thead.text-justify tr td, table tbody.text-justify tr th, table tbody.text-justify tr td, table tfoot.text-justify tr th, table tfoot.text-justify tr td, .table thead.text-justify tr th, .table thead.text-justify tr td, .table tbody.text-justify tr th, .table tbody.text-justify tr td, .table tfoot.text-justify tr th, .table tfoot.text-justify tr td { text-align: justify; }
+/* line 4, ../scss/simple/mixins/_tables.scss */
+table thead tr.text-left th, table thead tr.text-left td, table tbody tr.text-left th, table tbody tr.text-left td, table tfoot tr.text-left th, table tfoot tr.text-left td, .table thead tr.text-left th, .table thead tr.text-left td, .table tbody tr.text-left th, .table tbody tr.text-left td, .table tfoot tr.text-left th, .table tfoot tr.text-left td { text-align: left; }
+/* line 11, ../scss/simple/mixins/_tables.scss */
+table thead tr.text-right th, table thead tr.text-right td, table tbody tr.text-right th, table tbody tr.text-right td, table tfoot tr.text-right th, table tfoot tr.text-right td, .table thead tr.text-right th, .table thead tr.text-right td, .table tbody tr.text-right th, .table tbody tr.text-right td, .table tfoot tr.text-right th, .table tfoot tr.text-right td { text-align: right; }
+/* line 18, ../scss/simple/mixins/_tables.scss */
+table thead tr.text-center th, table thead tr.text-center td, table tbody tr.text-center th, table tbody tr.text-center td, table tfoot tr.text-center th, table tfoot tr.text-center td, .table thead tr.text-center th, .table thead tr.text-center td, .table tbody tr.text-center th, .table tbody tr.text-center td, .table tfoot tr.text-center th, .table tfoot tr.text-center td { text-align: center; }
+/* line 25, ../scss/simple/mixins/_tables.scss */
+table thead tr.text-justify th, table thead tr.text-justify td, table tbody tr.text-justify th, table tbody tr.text-justify td, table tfoot tr.text-justify th, table tfoot tr.text-justify td, .table thead tr.text-justify th, .table thead tr.text-justify td, .table tbody tr.text-justify th, .table tbody tr.text-justify td, .table tfoot tr.text-justify th, .table tfoot tr.text-justify td { text-align: justify; }
+/* line 105, ../scss/simple/mixins/_tables.scss */
+table tr.danger td, table tr.danger th, .table tr.danger td, .table tr.danger th { background-color: #cf280e; color: white; }
