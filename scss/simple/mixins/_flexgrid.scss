@@ -3,22 +3,21 @@
 
   .row {
     // Aligment:
-
-    // Horizontal
+    // 1. Horizontal
     &.#{$size}-left { justify-content: flex-start; }
     &.#{$size}-center { justify-content: center; }
     &.#{$size}-right { justify-content: flex-end; }
     &.#{$size}-justify { justify-content: space-between; }
     &.#{$size}-around { justify-content: space-around; }
 
-    // Vertical
+    // 2. Vertical
     &.#{$size}-top { align-items: flex-start; }
     &.#{$size}-middle { align-items: center; }
     &.#{$size}-bottom { align-items: flex-end; }
     &.#{$size}-baseline { align-items: baseline; }
     &.#{$size}-stretch { align-items: stretch; }
 
-    // Reverse
+    // Reverse:
     &.#{$size}-reverse {
       flex-direction: row-reverse;
       flex-wrap: row-reverse;

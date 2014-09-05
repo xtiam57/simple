@@ -5,7 +5,7 @@
       font-size: $alert-font-size;
       padding: $alert-padding;
 
-      background-color: rgba(red($danger-color), green($danger-color), blue($danger-color), $alert-opacity);
+      background-color: $danger-color;
       color: $danger-color;
 
       p {

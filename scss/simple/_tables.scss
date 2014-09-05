@@ -1,7 +1,6 @@
 @include exports("tables") {
   @if $include-tables {
 
-    table,
     .table {
       background-color: $table-bg;
       border: transparent;

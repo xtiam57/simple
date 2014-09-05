@@ -1,0 +1,8 @@
+@function contrast-color(
+  $color,
+  $dark: #000,
+  $light: #fff,
+  $threshold: 50%
+) {
+  @return if(lightness($color) < $threshold, $light, $dark)
+}

@@ -12,8 +12,9 @@
   background-image: $button-background-image;
   text-rendering: $button-text-rendering;
   -webkit-font-smoothing: $font-smoothing;
-  vertical-align: middle;
+  text-decoration: none;
   line-height: $button-line-height;
+  position: relative;
   @include single-transition(all, $button-transition-time);
 
   // Default style. This will be applied when there is not a
@@ -23,20 +24,16 @@
 
   &:hover {
     color: #666;
+    text-decoration: none;
   }
 }
 
 @mixin button-outline($color) {
   $bg: #fff;
   $bg-hover: $color;
-  $border-hover: $color;
-  $color-hover: #fff;
-
-  @if lightness($color) > 49% {
-    $color: $button-font-colot-alt;
-    $border-hover: $button-font-colot-alt;
-    $color-hover: $button-font-colot-alt;
-  }
+  $border-hover: contrast-color($color, $button-font-color-alt, $color);
+  $color-hover: contrast-color($color, $button-font-color-alt);
+  $color: contrast-color($color, $button-font-color-alt, $color);
 
   &.outline {
     color: $color;
@@ -67,11 +64,7 @@
   $border: darken($bg, $button-border-color-hover-factor);
   $border-hover: darken($bg, $button-border-color-hover-factor);
   $bg-hover: darken($bg, $button-hover-factor);
-  $color: #fff;
-
-  @if lightness($bg) > 49% {
-    $color: $button-font-colot-alt;
-  }
+  $color: contrast-color($bg, $button-font-color-alt);
 
   color: $color;
   border-color: $border;

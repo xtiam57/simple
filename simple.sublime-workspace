@@ -1,0 +1,2096 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"isal",
+				"isAllDownloaded"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"import",
+				"importTable"
+			],
+			[
+				"table",
+				"tableName"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"Dri",
+				"DrillingParameterModel"
+			],
+			[
+				"act",
+				"activity_id"
+			],
+			[
+				"ac",
+				"activityId"
+			],
+			[
+				"fun",
+				"func	JS function"
+			],
+			[
+				"an",
+				"angular	Angular.js"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"actti",
+				"activity_list"
+			],
+			[
+				"acy",
+				"activity_list"
+			],
+			[
+				"sec",
+				"section_id"
+			],
+			[
+				"geal",
+				"getAllWhere"
+			],
+			[
+				"casi",
+				"casing"
+			],
+			[
+				"forma",
+				"formation"
+			],
+			[
+				"Dail",
+				"DailyCostModel"
+			],
+			[
+				"getal",
+				"getAllWhere"
+			],
+			[
+				"Wll",
+				"WellboreModel"
+			],
+			[
+				"get",
+				"getAll"
+			],
+			[
+				"Surve",
+				"SurveyStationModel"
+			],
+			[
+				"well",
+				"wellbore_id"
+			],
+			[
+				"surve",
+				"survey"
+			],
+			[
+				"xedi",
+				"xeditnumber	XEditable Number"
+			],
+			[
+				"fail",
+				"failure"
+			],
+			[
+				"DD",
+				"DDRHelper"
+			],
+			[
+				"casin",
+				"casingsCatalog"
+			],
+			[
+				"motroc",
+				"motorsCatalog"
+			],
+			[
+				"stab",
+				"stabilizerCatalog"
+			],
+			[
+				"job_",
+				"job_number"
+			],
+			[
+				"sync",
+				"syncStructure"
+			],
+			[
+				"DDR",
+				"DDRHelper"
+			],
+			[
+				"setst",
+				"setStructure"
+			],
+			[
+				"Bitbeas",
+				"BitBearingSealModel"
+			],
+			[
+				"plbitbea",
+				"plBitBearingSeals"
+			],
+			[
+				"Bitbea",
+				"BitBearingStyle"
+			],
+			[
+				"plbitbe",
+				"plBitBearingStyels"
+			],
+			[
+				"Bitsi",
+				"BitSizeModel"
+			],
+			[
+				"Bitma",
+				"BitManufacturerModel"
+			],
+			[
+				"Stab",
+				"StablizerFinOuterDiameterModel"
+			],
+			[
+				"plstabi",
+				"plStabilizerFinOds"
+			],
+			[
+				"Stabt",
+				"StabTypeModel"
+			],
+			[
+				"Motromo",
+				"MotorModelModel"
+			],
+			[
+				"plmotrom",
+				"plMotorModels"
+			],
+			[
+				"Motrostab",
+				"MotorStabOuterDiameterModel"
+			],
+			[
+				"Motorpa",
+				"MotorPadOuterDiameterModel"
+			],
+			[
+				"Motorma",
+				"MotorManufacturerModel"
+			],
+			[
+				"COst",
+				"CostUnitModel"
+			],
+			[
+				"plmw",
+				"plMwdManufacturer"
+			],
+			[
+				"Connect",
+				"ConnectionSizeModel"
+			],
+			[
+				"plcon",
+				"plConnectionTypes"
+			],
+			[
+				"plbha",
+				"plBhaComponentOds"
+			],
+			[
+				"Bhaco",
+				"BhaComponentIdModel"
+			],
+			[
+				"plbhacom",
+				"plBhaComponentIds"
+			],
+			[
+				"Bito",
+				"BitOuterDiameterModel"
+			],
+			[
+				"plBi",
+				"plBitOds"
+			],
+			[
+				"Welb",
+				"WellboreObjectiveModel"
+			],
+			[
+				"plwel",
+				"plWellboreObjectives"
+			],
+			[
+				"Wel",
+				"WellboreShapeModel"
+			],
+			[
+				"Wellb",
+				"WellboreNameModel"
+			],
+			[
+				"Sectinm",
+				"SectionNameModel"
+			],
+			[
+				"Reaso",
+				"ReasonPoohModel"
+			],
+			[
+				"Phasena",
+				"PhaseNameModel"
+			],
+			[
+				"plMwd",
+				"plMWDCompanies"
+			],
+			[
+				"Mudco",
+				"MudCompanyModel"
+			],
+			[
+				"Direc",
+				"DirectionalCompanyModel"
+			],
+			[
+				"Act",
+				"ActivityCodeModel"
+			],
+			[
+				"jo",
+				"job"
+			],
+			[
+				"jobnu",
+				"jobNumber"
+			],
+			[
+				"Lwd",
+				"LwdModel"
+			],
+			[
+				"Bhac",
+				"BhaComponentFailureModel"
+			],
+			[
+				"bhacom",
+				"BhaComponentModel"
+			],
+			[
+				"Surves",
+				"SurveyStationModel"
+			],
+			[
+				"Pum",
+				"PumpSettingModel"
+			],
+			[
+				"res",
+				"resolve"
+			],
+			[
+				"job",
+				"job_number"
+			],
+			[
+				"ngcl",
+				"ng-class	AngularJS"
+			],
+			[
+				"ngre",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"per",
+				"personnel"
+			],
+			[
+				"remo",
+				"remove"
+			],
+			[
+				"sycn",
+				"syncStatus"
+			],
+			[
+				"syc",
+				"sync_status"
+			],
+			[
+				"p",
+				"prototype"
+			],
+			[
+				"Elo",
+				"EloquentProvider"
+			],
+			[
+				"getA",
+				"getAll"
+			],
+			[
+				"Sur",
+				"SurveyTypeModel"
+			],
+			[
+				"Fail",
+				"FailureTypeMolde"
+			],
+			[
+				"Issu",
+				"IssueTypeModel"
+			],
+			[
+				"Bha",
+				"BhaComponentFailureModel"
+			],
+			[
+				"bhaco",
+				"bhaComponent_id"
+			],
+			[
+				"BhaComponentFailureMo",
+				"BhaComponentFailureModel"
+			],
+			[
+				"bha",
+				"BhaComponentFailure"
+			],
+			[
+				"bhaCompo",
+				"openBhaComponentFailureModal"
+			],
+			[
+				"comp",
+				"componente"
+			],
+			[
+				"geta",
+				"getAll"
+			],
+			[
+				"Bham",
+				"BhaModel"
+			],
+			[
+				"Bh",
+				"BhaComponentModel"
+			],
+			[
+				"mot",
+				"motor"
+			],
+			[
+				"rem",
+				"remove"
+			],
+			[
+				"getAllW",
+				"getAllWhere"
+			],
+			[
+				"all",
+				"allIssues"
+			],
+			[
+				"Dep",
+				"DepthIssueModel"
+			],
+			[
+				"WEllbo",
+				"WellboreModel"
+			],
+			[
+				"Su",
+				"SurveyStationModel"
+			],
+			[
+				"Sue",
+				"SurveyModel"
+			],
+			[
+				"Perso",
+				"PersonnelModel"
+			],
+			[
+				"Motro",
+				"MotorStallModel"
+			],
+			[
+				"Job",
+				"JobModel"
+			],
+			[
+				"From",
+				"FormationModel"
+			],
+			[
+				"Casi",
+				"CasingModel"
+			],
+			[
+				"Acti",
+				"ActivityModel"
+			],
+			[
+				"im",
+				"importContent"
+			],
+			[
+				"coo",
+				"coordinator"
+			],
+			[
+				"dis",
+				"districtFilters"
+			],
+			[
+				"dropT",
+				"dropTable"
+			],
+			[
+				"wellb",
+				"wellbores"
+			],
+			[
+				"surv",
+				"surveyStations"
+			],
+			[
+				"secti",
+				"sections"
+			],
+			[
+				"motr",
+				"motorStalls"
+			],
+			[
+				"dail",
+				"dailyData"
+			],
+			[
+				"bhac",
+				"bhaComponentFailures"
+			],
+			[
+				"motor",
+				"motor_id"
+			],
+			[
+				"re",
+				"rec_id"
+			],
+			[
+				"tu",
+				"true"
+			],
+			[
+				"sele",
+				"selectedDay"
+			],
+			[
+				"selec",
+				"selectedSurvey"
+			],
+			[
+				"rec",
+				"rec_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1085,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/simple/_flexgrid.scss",
+			"settings":
+			{
+				"buffer_size": 1899,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/simple/mixins/_flexgrid.scss",
+			"settings":
+			{
+				"buffer_size": 1403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/simple/_settings.scss",
+			"settings":
+			{
+				"buffer_size": 13984,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/simple/_type.scss",
+			"settings":
+			{
+				"buffer_size": 8444,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 154.0,
+		"selected_items":
+		[
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"comi",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"psuh",
+				"Git: Push"
+			],
+			[
+				"newta",
+				"Git: New Tag"
+			],
+			[
+				"puh",
+				"Git: Push"
+			],
+			[
+				"ull",
+				"Git: Pull"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"us",
+				"Git: Push"
+			],
+			[
+				"todo",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"htmlprettify",
+				"HTMLPrettify: Set `node` Path"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"bold",
+				"Snippet: bold"
+			],
+			[
+				"bol",
+				"Snippet: bold"
+			],
+			[
+				"new ta",
+				"Git: New Tag"
+			],
+			[
+				"show",
+				"Git: Show Tags"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"upperc",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upers",
+				"Convert Case: Upper Case"
+			],
+			[
+				"diff",
+				"Git: Diff All Files"
+			],
+			[
+				"dif",
+				"Git: Diff All Files (Ignore Whitespace)"
+			],
+			[
+				"git: ",
+				"Git: Diff All Files"
+			],
+			[
+				"push tag",
+				"Git: Push Tags"
+			],
+			[
+				"newt",
+				"Git: New Tag"
+			],
+			[
+				"show tag",
+				"Git: Show Tags"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"rese",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"reset",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"git reset",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"COMI",
+				"Git: Commit"
+			],
+			[
+				"ADD",
+				"Git: Add..."
+			],
+			[
+				"new",
+				"Git: New Tag"
+			],
+			[
+				"push ",
+				"Git: Push Tags"
+			],
+			[
+				"new ",
+				"Git: New Tag"
+			],
+			[
+				"showta",
+				"Git: Show Tags"
+			],
+			[
+				"tag",
+				"Git: Show Tags"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"log",
+				"Git: Log All"
+			],
+			[
+				"PULL",
+				"Git: Pull"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"pusht",
+				"Git: Push Tags"
+			],
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"cmi",
+				"Git: Commit"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ush",
+				"Git: Push"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"blo",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"new tag",
+				"Git: New Tag"
+			],
+			[
+				"new t",
+				"Git: New Tag"
+			],
+			[
+				"p",
+				"Git: Pull"
+			],
+			[
+				"git:",
+				"Git: Amend Commit"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"coi",
+				"Git: Commit"
+			],
+			[
+				"pul",
+				"Git: Pull"
+			],
+			[
+				"ps",
+				"Git: Push"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"bod",
+				"Snippet: bold"
+			],
+			[
+				"puhs",
+				"Git: Push"
+			],
+			[
+				"psh",
+				"Git: Push"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"COM",
+				"Git: Commit"
+			],
+			[
+				"gists",
+				"Gist: Create Public Gist"
+			],
+			[
+				"gist",
+				"Gist: Create Public Gist"
+			],
+			[
+				"a",
+				"Git: Add..."
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"gis",
+				"Gist: Open Gist in Browser"
+			],
+			[
+				"loremp",
+				"Snippet: Lorempixel"
+			],
+			[
+				"ope",
+				"Gist: Open Gist"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"git: po",
+				"Git: Stash Pop"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"aligme",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"alig",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"Package Control: is",
+				"Package Control: Install Package"
+			],
+			[
+				"LOWE",
+				"Convert Case: Lower Case"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"fetch",
+				"Fetch: Manage"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 309.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Documents/Projects/simple/scss/simple/_type.scss",
+		"/D/Documents/Projects/simple/assets/logo.svg",
+		"/D/Documents/Projects/simple/scss/test/test-1.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/router.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/directives/navigation.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/run.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/vendor/bootstrap/navbar.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/theme/navbar.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/images/navbarlogo.svg",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/reports/completedJobs_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/charts/dailyFootage_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/js/app.min.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/constants.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/daily.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/directives/dateRange_directive.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/jobs/ddr.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/ddrLoader_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/bhas.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/motorStall_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/picklists.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/ddrSync_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/ddr_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/offline.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/bha.tpl.html",
+		"/C/Users/Christiam/Desktop/this one.json",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/directives/notFound.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/motorStalls_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/motorStalls.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/motor_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-contrib-less/node_modules/less/test/browser/test-runner-template.tmpl",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/motorDetails.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/reports/morningDaily_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/node_modules/async/Makefile",
+		"/D/Documents/Projects/addsoftware/frontends/console/package.json",
+		"/D/Documents/Projects/addsoftware/frontends/console/tasks.TODO",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/vendor/bootstrap/mixins/text-overflow.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/directives/typeaheadOpenOnFocus_directive.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/vendor/bootstrap/tooltip.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/toollist.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/confirmationModals_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-docular/node_modules/docular/node_modules/request/node_modules/tough-cookie/node_modules/punycode/LICENSE-GPL.txt",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/eloquent_model.js",
+		"/C/Users/Christiam/Desktop/export_JobCode 4_01Aug2014_1800.json",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/lib/grunt/event.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/localStorage_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/LICENSE-MIT",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/drillingParameter_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/drillingParameters_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/drillingParameters.tpl.html",
+		"/C/Users/Christiam/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/surveyStation_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/activity_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/vendor/angular/angular-cache.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/app.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/stabilizerDetails.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/assets/surveys.txt",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/charts/activityHistograph_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/modals/view/activities_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/view/activities.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/issues.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/issues_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-subfolder1.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/reports/slidesheet_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/rigContract_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/reports/daily_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/rig_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/directives/navigation_directive.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/vendor/bootstrap/mixins/nav-vertical-align.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/ddr/slideSheet.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-contrib-connect/node_modules/connect/lib/middleware/static.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/completedJobs.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/bhas_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/morningDailyDetails.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/morningdaily.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-newer/test/integration/newer-modify-one.spec.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-newer/test/integration/newer-modify-none.spec.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/bhaSelection_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-cli/lib/completion.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/config.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/vendor/jquery/daterangepicker.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/theme/daterange.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/less/theme/datepickers.less",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/node_modules/js-yaml/HISTORY.md",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-contrib-concat/test/expected/handling_invalid_files",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/helper_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/bhaProposed.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/bhaComponentFailures.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/reports/bha_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/.gitignore",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/internal-tasks/subgrunt.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/index.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/reports/daily_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/reports/ddr/daily.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/motorDetails_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/stabilizerDetails_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/bitDetails_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/stabilizer_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/bit_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/bitDetails.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/vendor/angular/angular-xeditable.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/ddrHelper_service.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/charts/depthDays_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/build/suffix-utils.jsm",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-docular/node_modules/docular/node_modules/docular-doc-api-doc/node_modules/showdown/test/cases/list-with-blockquote.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt-docular/node_modules/docular/node_modules/docular-doc-api-doc/node_modules/showdown/test/cases/automatic-anchors.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/images/standby.svg",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/directives/stickyTable_directive.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/bhaComponent_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/mwds.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/lwds.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/node_modules/iconv-lite/test/big5-test.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/node_modules/grunt/node_modules/rimraf/bin.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/mwd_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/sections.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/phases.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/formations.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/personnel_model.js",
+		"/C/Users/Christiam/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/Christiam/Desktop/test.html",
+		"/C/Users/Christiam/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Christiam/Desktop/pa jordan.json",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/personnel_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/ddr/personnel.tpl.html",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/formations_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/phase_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/controllers/ddr/modals/phases_controller.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/app/services/ddr/models/section_model.js",
+		"/D/Documents/Projects/addsoftware/frontends/console/src/views/modals/create/sectionPhases.tpl.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$global-radius",
+			"button",
+			"table",
+			"even",
+			"odd",
+			"margin-",
+			"1EBBEE",
+			"getTable: function() {",
+			"$stateParams",
+			"jobNumber",
+			"Export Panel",
+			"remove-margin-top",
+			"new Date()",
+			"Download",
+			"upload",
+			"getTable: function() {\n                    return ",
+			"setTable: function(response, jobNumber) {",
+			"getall",
+			"initTable: function(jobNumber) {\n                    return",
+			"ng-if=\"prev && parameters.",
+			"ng-if=\"prev",
+			"ng-if=\"prev\" ng-click=\"parameters.",
+			"fa-paste",
+			"{{ parameters.",
+			"{{ parameters.s_p_p_on_bottom_avg",
+			"</span>&nbsp;",
+			"&nbsp;<i cl",
+			"available }} /</span>",
+			"Previous ",
+			"\"text-muted\">{{ parameters",
+			"{{ parameters",
+			"DailyDataModel",
+			"rigs",
+			"RigModel",
+			"Bha",
+			"depthIssues",
+			"completedJobs",
+			"+ 100",
+			"UNCHANGED",
+			"impor",
+			"chec",
+			"e-required",
+			"wei",
+			"@ HH:mm",
+			" e-min=\"0\"",
+			"format_selection_only",
+			"| available | number }}",
+			"activity_list[i]",
+			"angular",
+			"$location",
+			"$state",
+			"$log",
+			"getHours()",
+			"start.getHours()",
+			"start",
+			"contr",
+			"cost",
+			"code",
+			"bhaComponentsFailures",
+			"BhaComponentFailureModel",
+			"The collection is not an array",
+			"The collection is not an array ",
+			"temp_",
+			"e-step=\"any\"",
+			"start_de",
+			"start-de",
+			"e-min=\"0\"",
+			"e-required",
+			"alertse",
+			"\"",
+			"surveyty",
+			"setst",
+			"plBitOds",
+			"plPersonnel",
+			":",
+			"plPipes",
+			"db.",
+			"\"",
+			",",
+			":",
+			".setTable(db.",
+			"BitBearingStyle",
+			"plBitBearingStyles",
+			"plBitBearingStyels",
+			"plLwdManufacturers",
+			"plLwdManufacturer",
+			"plMwdManufacturers",
+			"plMwdManufacturer",
+			"plReasonPoohModel",
+			"plBhaTypeModel",
+			"bhaty",
+			"plBhaObjectiveModel",
+			"bhaob",
+			"plActivyCodes",
+			"codes",
+			"activitie",
+			"plBhaTypes",
+			"plBhaObjectives",
+			"plActivityCodes",
+			"import",
+			"export",
+			"import",
+			"export",
+			"DDRLoader",
+			"getDownloadStatus",
+			",",
+			"importContent",
+			":",
+			"btn",
+			"ng-class=\"{ 'remove-margin-bottom': !getNumberOfChanges() }\"",
+			"\"",
+			"textFromFileLoaded",
+			"\"",
+			"textFileAsBlob",
+			"destroyClickedElement",
+			"getExportContent",
+			"Rows",
+			"dailydat",
+			":",
+			"\"",
+			"syncStatus",
+			"change",
+			"surveyty",
+			"surveyt",
+			"surveyty",
+			"lwd",
+			"surveystation",
+			"surveys"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"HelperService.generateGUID()",
+			"fa-plus",
+			"function",
+			"div"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								438,
+								438
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scss/simple/_flexgrid.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1407461011.82,
+							"tabs_extra_last_activated_view_index": 1,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scss/simple/mixins/_flexgrid.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								426,
+								426
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scss/simple/_settings.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1570,
+								1506
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 703.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scss/simple/_type.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								679,
+								247
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 285.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "simple.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"navigat",
+				"src\\views\\directives\\navigation.tpl.html"
+			],
+			[
+				"router",
+				"src\\app\\router.js"
+			],
+			[
+				"navi",
+				"src\\views\\directives\\navigation.tpl.html"
+			],
+			[
+				"naviga",
+				"src\\views\\directives\\navigation.tpl.html"
+			],
+			[
+				"comple",
+				"src\\app\\controllers\\reports\\completedJobs_controller.js"
+			],
+			[
+				"dailyf",
+				"src\\app\\services\\charts\\dailyFootage_service.js"
+			],
+			[
+				"offli",
+				"src\\app\\offline.js"
+			],
+			[
+				"run",
+				"src\\app\\run.js"
+			],
+			[
+				"bha",
+				"src\\views\\modals\\ddr\\bhas.tpl.html"
+			],
+			[
+				"motrosta",
+				"src\\app\\services\\ddr\\models\\motorStall_model.js"
+			],
+			[
+				"pickl",
+				"src\\app\\services\\ddr\\models\\picklists.js"
+			],
+			[
+				"offline",
+				"src\\app\\offline.js"
+			],
+			[
+				"ddrtp",
+				"src\\views\\jobs\\ddr.tpl.html"
+			],
+			[
+				"ddrcon",
+				"src\\app\\controllers\\ddr\\ddr_controller.js"
+			],
+			[
+				"ddrs",
+				"src\\app\\services\\ddr\\ddrSync_service.js"
+			],
+			[
+				"eloq",
+				"src\\app\\services\\ddr\\models\\eloquent_model.js"
+			],
+			[
+				"loader",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"acti",
+				"src\\app\\services\\ddr\\models\\activity_model.js"
+			],
+			[
+				"drillingpa",
+				"src\\app\\controllers\\ddr\\modals\\drillingParameters_controller.js"
+			],
+			[
+				"drillinga",
+				"src\\views\\modals\\ddr\\drillingParameters.tpl.html"
+			],
+			[
+				"station",
+				"src\\app\\services\\ddr\\models\\surveyStation_model.js"
+			],
+			[
+				"activitmo",
+				"src\\app\\services\\ddr\\models\\activity_model.js"
+			],
+			[
+				"dril",
+				"src\\app\\services\\ddr\\models\\drillingParameter_model.js"
+			],
+			[
+				"issu",
+				"src\\views\\modals\\ddr\\issues.tpl.html"
+			],
+			[
+				"ddr",
+				"src\\views\\jobs\\ddr.tpl.html"
+			],
+			[
+				"stationmod",
+				"src\\app\\services\\ddr\\models\\surveyStation_model.js"
+			],
+			[
+				"morni",
+				"src\\app\\controllers\\reports\\morningDaily_controller.js"
+			],
+			[
+				"bhascon",
+				"src\\app\\controllers\\ddr\\modals\\bhas_controller.js"
+			],
+			[
+				"bhastp",
+				"src\\views\\modals\\ddr\\bhas.tpl.html"
+			],
+			[
+				"complete",
+				"src\\views\\reports\\completedJobs.tpl.html"
+			],
+			[
+				"date",
+				"src\\app\\directives\\dateRange_directive.js"
+			],
+			[
+				"histogr",
+				"src\\app\\services\\charts\\activityHistograph_service.js"
+			],
+			[
+				"bhatpl",
+				"src\\views\\reports\\bha.tpl.html"
+			],
+			[
+				"issue",
+				"src\\views\\modals\\ddr\\issues.tpl.html"
+			],
+			[
+				"dail",
+				"src\\views\\reports\\daily.tpl.html"
+			],
+			[
+				"eloque",
+				"src\\app\\services\\ddr\\models\\eloquent_model.js"
+			],
+			[
+				"eloqu",
+				"src\\app\\services\\ddr\\models\\eloquent_model.js"
+			],
+			[
+				"stabili",
+				"src\\app\\controllers\\ddr\\modals\\stabilizerDetails_controller.js"
+			],
+			[
+				"stabilizem",
+				"src\\app\\services\\ddr\\models\\stabilizer_model.js"
+			],
+			[
+				"bit",
+				"src\\app\\controllers\\ddr\\modals\\bitDetails_controller.js"
+			],
+			[
+				"motorcon",
+				"src\\app\\controllers\\ddr\\modals\\motorDetails_controller.js"
+			],
+			[
+				"ddhelp",
+				"src\\app\\services\\ddr\\ddrHelper_service.js"
+			],
+			[
+				"ddrt",
+				"src\\views\\jobs\\ddr.tpl.html"
+			],
+			[
+				"ddrlaode",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"index",
+				"src\\index.html"
+			],
+			[
+				"motorde",
+				"src\\views\\modals\\ddr\\motorDetails.tpl.html"
+			],
+			[
+				"stabilimo",
+				"src\\app\\services\\ddr\\models\\stabilizer_model.js"
+			],
+			[
+				"stabi",
+				"src\\views\\modals\\ddr\\stabilizerDetails.tpl.html"
+			],
+			[
+				"stabilize",
+				"src\\app\\controllers\\ddr\\modals\\stabilizerDetails_controller.js"
+			],
+			[
+				"bhacommode",
+				"src\\app\\services\\ddr\\models\\bhaComponent_model.js"
+			],
+			[
+				"bitstpl",
+				"src\\views\\modals\\ddr\\bitDetails.tpl.html"
+			],
+			[
+				"bhas",
+				"src\\views\\modals\\ddr\\bhas.tpl.html"
+			],
+			[
+				"lwds",
+				"src\\views\\modals\\ddr\\lwds.tpl.html"
+			],
+			[
+				"mwd",
+				"src\\views\\modals\\ddr\\mwds.tpl.html"
+			],
+			[
+				"daily",
+				"src\\views\\reports\\daily.tpl.html"
+			],
+			[
+				"personne",
+				"src\\app\\services\\ddr\\models\\personnel_model.js"
+			],
+			[
+				"forma",
+				"src\\views\\modals\\ddr\\formations.tpl.html"
+			],
+			[
+				"phase",
+				"src\\views\\modals\\ddr\\phases.tpl.html"
+			],
+			[
+				"section",
+				"src\\views\\modals\\ddr\\sections.tpl.html"
+			],
+			[
+				"dailytpl",
+				"src\\views\\reports\\daily.tpl.html"
+			],
+			[
+				"ddrtpl",
+				"src\\views\\jobs\\ddr.tpl.html"
+			],
+			[
+				"issues",
+				"src\\app\\controllers\\ddr\\modals\\issues_controller.js"
+			],
+			[
+				"notfou",
+				"src\\views\\directives\\notFound.tpl.html"
+			],
+			[
+				"activitymode",
+				"src\\app\\services\\ddr\\models\\activity_model.js"
+			],
+			[
+				"ddrloade",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"dailycosnco",
+				"src\\app\\controllers\\ddr\\modals\\dailyCosts_controller.js"
+			],
+			[
+				"pickli",
+				"src\\app\\services\\ddr\\models\\picklists.js"
+			],
+			[
+				"ddrhelp",
+				"src\\app\\services\\ddr\\ddrHelper_service.js"
+			],
+			[
+				"drillingpara",
+				"src\\views\\modals\\ddr\\drillingParameters.tpl.html"
+			],
+			[
+				"well",
+				"src\\app\\controllers\\ddr\\modals\\wellbores_controller.js"
+			],
+			[
+				"casingscon",
+				"src\\app\\controllers\\ddr\\modals\\casings_controller.js"
+			],
+			[
+				"casinsgtpl",
+				"src\\views\\modals\\ddr\\casings.tpl.html"
+			],
+			[
+				"dailycosts",
+				"src\\views\\modals\\ddr\\dailyCosts.tpl.html"
+			],
+			[
+				"dailycos",
+				"src\\views\\modals\\create\\dailyCosts.tpl.html"
+			],
+			[
+				"ddrloa",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"pump",
+				"src\\views\\modals\\ddr\\pumps.tpl.html"
+			],
+			[
+				"wellbore",
+				"src\\views\\modals\\ddr\\wellbores.tpl.html"
+			],
+			[
+				"muds",
+				"src\\views\\modals\\ddr\\muds.tpl.html"
+			],
+			[
+				"formation",
+				"src\\views\\modals\\ddr\\formations.tpl.html"
+			],
+			[
+				"phasescon",
+				"src\\app\\controllers\\ddr\\modals\\phases_controller.js"
+			],
+			[
+				"activimode",
+				"src\\app\\services\\ddr\\models\\activity_model.js"
+			],
+			[
+				"sectioncon",
+				"src\\app\\controllers\\ddr\\modals\\sections_controller.js"
+			],
+			[
+				"surveystat",
+				"src\\app\\services\\ddr\\models\\surveyStation_model.js"
+			],
+			[
+				"surv",
+				"src\\app\\services\\ddr\\models\\survey_model.js"
+			],
+			[
+				"wellborescon",
+				"src\\app\\controllers\\ddr\\modals\\wellbores_controller.js"
+			],
+			[
+				"mudst",
+				"src\\views\\modals\\ddr\\muds.tpl.html"
+			],
+			[
+				"mudmod",
+				"src\\app\\services\\ddr\\models\\mud_model.js"
+			],
+			[
+				"pumpsetin",
+				"src\\app\\services\\ddr\\models\\pumpSetting_model.js"
+			],
+			[
+				"pumpst",
+				"src\\views\\modals\\ddr\\pumps.tpl.html"
+			],
+			[
+				"bhafai",
+				"src\\app\\controllers\\ddr\\modals\\bhaComponentFailures_controller.js"
+			],
+			[
+				"local",
+				"src\\app\\services\\localStorage_service.js"
+			],
+			[
+				"bhasc",
+				"src\\app\\controllers\\ddr\\modals\\bhas_controller.js"
+			],
+			[
+				"helperse",
+				"src\\app\\services\\helper_service.js"
+			],
+			[
+				"ddrco",
+				"src\\app\\controllers\\ddr\\ddr_controller.js"
+			],
+			[
+				"bhacomm",
+				"src\\app\\services\\ddr\\models\\bhaComponent_model.js"
+			],
+			[
+				"lwdmode",
+				"src\\app\\services\\ddr\\models\\lwd_model.js"
+			],
+			[
+				"mwdm",
+				"src\\app\\services\\ddr\\models\\mwd_model.js"
+			],
+			[
+				"ddrhelpe",
+				"src\\app\\services\\ddr\\ddrHelper_service.js"
+			],
+			[
+				"synctpl",
+				"src\\views\\modals\\ddr\\sync.tpl.html"
+			],
+			[
+				"cleantpl",
+				"src\\views\\modals\\ddr\\clean.tpl.html"
+			],
+			[
+				"constan",
+				"src\\app\\constants.js"
+			],
+			[
+				"conta",
+				"node_modules\\grunt-docular\\node_modules\\docular\\node_modules\\q-io\\spec\\fs\\contains-spec.js"
+			],
+			[
+				"ddrsy",
+				"src\\app\\services\\ddr\\ddrSync_service.js"
+			],
+			[
+				"ddrlo",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"ddrsyn",
+				"src\\app\\services\\ddr\\ddrSync_service.js"
+			],
+			[
+				"newdil",
+				"src\\views\\modals\\ddr\\newDaily.tpl.html"
+			],
+			[
+				"index.t",
+				"src\\index.html"
+			],
+			[
+				"index.hm",
+				"src\\index.html"
+			],
+			[
+				"dailydatam",
+				"src\\app\\services\\ddr\\models\\dailyData_model.js"
+			],
+			[
+				"postser",
+				"src\\app\\services\\post_service.js"
+			],
+			[
+				"syncse",
+				"src\\app\\services\\ddr\\ddrSync_service.js"
+			],
+			[
+				"ddrhep",
+				"src\\app\\services\\ddr\\ddrHelper_service.js"
+			],
+			[
+				"helper",
+				"src\\app\\services\\helper_service.js"
+			],
+			[
+				"loder",
+				"node_modules\\grunt-ngmin\\node_modules\\ngmin\\test\\loader.js"
+			],
+			[
+				"lwd",
+				"src\\views\\modals\\ddr\\lwds.tpl.html"
+			],
+			[
+				"lwdmo",
+				"src\\app\\services\\ddr\\models\\lwd_model.js"
+			],
+			[
+				"surveysta",
+				"src\\app\\services\\ddr\\models\\surveyStation_model.js"
+			],
+			[
+				"porpos",
+				"src\\app\\controllers\\reports\\bhaProposed_controller.js"
+			],
+			[
+				"propose",
+				"src\\views\\reports\\bhaProposed.tpl.html"
+			],
+			[
+				"bha.tpl",
+				"src\\views\\reports\\bha.tpl.html"
+			],
+			[
+				"bhacon",
+				"src\\app\\controllers\\reports\\bha_controller.js"
+			],
+			[
+				"fail",
+				"src\\views\\modals\\ddr\\bhaComponentFailures.tpl.html"
+			],
+			[
+				"failurec",
+				"src\\app\\controllers\\ddr\\modals\\bhaComponentFailures_controller.js"
+			],
+			[
+				"issuesco",
+				"src\\app\\controllers\\ddr\\modals\\issues_controller.js"
+			],
+			[
+				"picklis",
+				"src\\app\\services\\ddr\\models\\picklists.js"
+			],
+			[
+				"drload",
+				"src\\app\\services\\ddr\\ddrLoader_service.js"
+			],
+			[
+				"storage",
+				"src\\app\\services\\localStorage_service.js"
+			],
+			[
+				"ddrhel",
+				"src\\app\\services\\ddr\\ddrHelper_service.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Documents\\Projects\\gridr\\gridr.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

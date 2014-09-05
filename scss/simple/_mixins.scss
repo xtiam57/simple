@@ -1,5 +1,6 @@
 // Some Compass modules
 @import "mixins/_rem";
+@import "mixins/_contrast-color";
 @import "mixins/_clearfix";
 @import "mixins/_flexgrid";
 @import "mixins/_buttons";
@@ -21,11 +22,7 @@ $modules: () !default;
 
 // bg color
 @mixin bg-variant($bg, $color-alt: $font-color-alt) {
-  $color: #fff;
-
-  @if lightness($bg) > 49 {
-    $color: $color-alt;
-  }
+  $color: contrast-color($bg, $color-alt);
 
   background-color: $bg !important;
   color: $color !important;
